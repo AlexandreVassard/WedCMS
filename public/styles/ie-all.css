@@ -1,0 +1,40 @@
+#tabmenu-content, div.blackbubble-body, div.portlet-scale-content, div.content-white {
+	height: 1%;
+}
+
+table.content-home div.portlet-scale-content, 
+table.content-section-2col div.portlet-scale-content, 
+table.content-section-3col div.portlet-scale-content {
+	height: auto;
+}
+
+div.portlet-scale-content{
+    zoom:1;
+}
+
+#topbar-menu ul li div { float: left; padding-top: 10px; }
+#topbar-menu ul li a { display: inline; }
+#topbar-menu ul li a span { display: inline; }
+
+#topdim { filter: alpha(opacity=30); }
+
+#promoheader ul { padding: 10px 10px 2px 0; }
+
+#registration-start { width: 100%; }
+
+#room_wrapper {
+	height:expression(this.scrollHeight > 200? "200px": "auto" );
+}
+
+div.widget, div.sticker, div.stickie { margin-left: -3px; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+p.widget-inventory-description-p{
+    zoom:1; 
+}
+
+

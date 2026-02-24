@@ -1,0 +1,1415 @@
+#playground, #playground-outer {
+    width: 740px;
+    height: 1360px;
+}
+
+div.s_sticker_arrow_down {
+    width: 32px; height: 56px;
+    background-image: url(/images/homes/sticker_arrow_down.gif);
+}
+div.inventory-item div.s_sticker_arrow_down_pre {
+    background-image: url(/images/homes/sticker_arrow_down.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_arrow_left {
+    width: 45px; height: 32px;
+    background-image: url(/images/homes/sticker_arrow_left.gif);
+}
+div.inventory-item div.s_sticker_arrow_left_pre {
+    background-image: url(/images/homes/sticker_arrow_left.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_arrow_up {
+    width: 36px; height: 56px;
+    background-image: url(/images/homes/sticker_arrow_up.gif);
+}
+div.inventory-item div.s_sticker_arrow_up_pre {
+    background-image: url(/images/homes/sticker_arrow_up.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_arrow_right {
+    width: 45px; height: 34px;
+    background-image: url(/images/homes/sticker_arrow_right.gif);
+}
+div.inventory-item div.s_sticker_arrow_right_pre {
+    background-image: url(/images/homes/sticker_arrow_right.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_finger_push {
+    width: 73px; height: 43px;
+    background-image: url(/images/homes/finger_push.gif);
+}
+div.inventory-item div.s_finger_push_pre {
+    background-image: url(/images/homes/finger_push.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_pointing_hand_1 {
+    width: 150px; height: 90px;
+    background-image: url(/images/homes/sticker_pointing_hand_1.gif);
+}
+div.inventory-item div.s_sticker_pointing_hand_1_pre {
+    background-image: url(/images/homes/sticker_pointing_hand_1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_pointing_hand_2 {
+    width: 90px; height: 150px;
+    background-image: url(/images/homes/sticker_pointing_hand_2.gif);
+}
+div.inventory-item div.s_sticker_pointing_hand_2_pre {
+    background-image: url(/images/homes/sticker_pointing_hand_2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_pointing_hand_3 {
+    width: 90px; height: 150px;
+    background-image: url(/images/homes/sticker_pointing_hand_3.gif);
+}
+div.inventory-item div.s_sticker_pointing_hand_3_pre {
+    background-image: url(/images/homes/sticker_pointing_hand_3.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_pointing_hand_4 {
+    width: 150px; height: 90px;
+    background-image: url(/images/homes/sticker_pointing_hand_4.gif);
+}
+div.inventory-item div.s_sticker_pointing_hand_4_pre {
+    background-image: url(/images/homes/sticker_pointing_hand_4.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_gorillahand1 {
+    width: 146px; height: 110px;
+    background-image: url(/images/homes/gorillahand1.gif);
+}
+div.inventory-item div.s_gorillahand1_pre {
+    background-image: url(/images/homes/gorillahand1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_gorillahand2 {
+    width: 146px; height: 104px;
+    background-image: url(/images/homes/gorillahand2.gif);
+}
+div.inventory-item div.s_gorillahand2_pre {
+    background-image: url(/images/homes/gorillahand2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_lightbulb {
+    width: 32px; height: 32px;
+    background-image: url(/images/homes/lightbulb.gif);
+}
+div.inventory-item div.s_lightbulb_pre {
+    background-image: url(/images/homes/lightbulb.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_redlamp {
+    width: 86px; height: 140px;
+    background-image: url(/images/homes/redlamp.gif);
+}
+div.inventory-item div.s_redlamp_pre {
+    background-image: url(/images/homes/redlamp.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_blingblingstars {
+    width: 146px; height: 146px;
+    background-image: url(/images/homes/blingblingstars.gif);
+}
+div.inventory-item div.s_blingblingstars_pre {
+    background-image: url(/images/homes/blingblingstars.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_blinghearts {
+    width: 146px; height: 146px;
+    background-image: url(/images/homes/blinghearts.gif);
+}
+div.inventory-item div.s_blinghearts_pre {
+    background-image: url(/images/homes/blinghearts.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_heartbeat {
+    width: 70px; height: 74px;
+    background-image: url(/images/homes/sticker_heartbeat.gif);
+}
+div.inventory-item div.s_sticker_heartbeat_pre {
+    background-image: url(/images/homes/sticker_heartbeat.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_bobbaskull {
+    width: 90px; height: 90px;
+    background-image: url(/images/homes/sticker_bobbaskull.gif);
+}
+div.inventory-item div.s_sticker_bobbaskull_pre {
+    background-image: url(/images/homes/sticker_bobbaskull.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_chain_vertical {
+    width: 28px; height: 146px;
+    background-image: url(/images/homes/chain_vertical.gif);
+}
+div.inventory-item div.s_chain_vertical_pre {
+    background-image: url(/images/homes/chain_vertical.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_chain_horizontal {
+    width: 146px; height: 28px;
+    background-image: url(/images/homes/chain_horizontal.gif);
+}
+div.inventory-item div.s_chain_horizontal_pre {
+    background-image: url(/images/homes/chain_horizontal.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_nail2 {
+    width: 61px; height: 60px;
+    background-image: url(/images/homes/nail2.gif);
+}
+div.inventory-item div.s_nail2_pre {
+    background-image: url(/images/homes/nail2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_nail3 {
+    width: 61px; height: 60px;
+    background-image: url(/images/homes/nail3.gif);
+}
+div.inventory-item div.s_nail3_pre {
+    background-image: url(/images/homes/nail3.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_i_love_bobba {
+    width: 93px; height: 93px;
+    background-image: url(/images/homes/i_love_bobba2.gif);
+}
+div.inventory-item div.s_i_love_bobba_pre {
+    background-image: url(/images/homes/i_love_bobba2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_chewed_bubblegum {
+    width: 71px; height: 46px;
+    background-image: url(/images/homes/chewed_bubblegum.gif);
+}
+div.inventory-item div.s_chewed_bubblegum_pre {
+    background-image: url(/images/homes/chewed_bubblegum.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bullet1 {
+    width: 25px; height: 26px;
+    background-image: url(/images/homes/bullet1.gif);
+}
+div.inventory-item div.s_bullet1_pre {
+    background-image: url(/images/homes/bullet1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_spill1 {
+    width: 118px; height: 113px;
+    background-image: url(/images/homes/spill1.gif);
+}
+div.inventory-item div.s_spill1_pre {
+    background-image: url(/images/homes/spill1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_spill2 {
+    width: 119px; height: 108px;
+    background-image: url(/images/homes/spill2.gif);
+}
+div.inventory-item div.s_spill2_pre {
+    background-image: url(/images/homes/spill2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_spill3 {
+    width: 81px; height: 112px;
+    background-image: url(/images/homes/spill3.gif);
+}
+div.inventory-item div.s_spill3_pre {
+    background-image: url(/images/homes/spill3.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_coffee_stain {
+    width: 135px; height: 122px;
+    background-image: url(/images/homes/sticker_coffee_stain.gif);
+}
+div.inventory-item div.s_sticker_coffee_stain_pre {
+    background-image: url(/images/homes/sticker_coffee_stain.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_hole {
+    width: 107px; height: 105px;
+    background-image: url(/images/homes/sticker_hole.gif);
+}
+div.inventory-item div.s_sticker_hole_pre {
+    background-image: url(/images/homes/sticker_hole.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_flames {
+    width: 26px; height: 42px;
+    background-image: url(/images/homes/sticker_flames.gif);
+}
+div.inventory-item div.s_sticker_flames_pre {
+    background-image: url(/images/homes/sticker_flames.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_paper_clip_1 {
+    width: 20px; height: 58px;
+    background-image: url(/images/homes/paper_clip_1.gif);
+}
+div.inventory-item div.s_paper_clip_1_pre {
+    background-image: url(/images/homes/paper_clip_1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_paper_clip_2 {
+    width: 48px; height: 46px;
+    background-image: url(/images/homes/paper_clip_2.gif);
+}
+div.inventory-item div.s_paper_clip_2_pre {
+    background-image: url(/images/homes/paper_clip_2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_paper_clip_3 {
+    width: 48px; height: 46px;
+    background-image: url(/images/homes/paper_clip_3.gif);
+}
+div.inventory-item div.s_paper_clip_3_pre {
+    background-image: url(/images/homes/paper_clip_3.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_needle_1 {
+    width: 44px; height: 44px;
+    background-image: url(/images/homes/needle_1.gif);
+}
+div.inventory-item div.s_needle_1_pre {
+    background-image: url(/images/homes/needle_1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_needle_2 {
+    width: 38px; height: 37px;
+    background-image: url(/images/homes/needle_2.gif);
+}
+div.inventory-item div.s_needle_2_pre {
+    background-image: url(/images/homes/needle_2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_needle_3 {
+    width: 32px; height: 33px;
+    background-image: url(/images/homes/needle_3.gif);
+}
+div.inventory-item div.s_needle_3_pre {
+    background-image: url(/images/homes/needle_3.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_needle_4 {
+    width: 54px; height: 18px;
+    background-image: url(/images/homes/needle_4.gif);
+}
+div.inventory-item div.s_needle_4_pre {
+    background-image: url(/images/homes/needle_4.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_needle_5 {
+    width: 33px; height: 22px;
+    background-image: url(/images/homes/needle_5.gif);
+}
+div.inventory-item div.s_needle_5_pre {
+    background-image: url(/images/homes/needle_5.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_highlighter_1 {
+    width: 137px; height: 79px;
+    background-image: url(/images/homes/highlighter_1.gif);
+}
+div.inventory-item div.s_highlighter_1_pre {
+    background-image: url(/images/homes/highlighter_1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_highlighter_mark5 {
+    width: 139px; height: 117px;
+    background-image: url(/images/homes/highlighter_mark5.gif);
+}
+div.inventory-item div.s_highlighter_mark5_pre {
+    background-image: url(/images/homes/highlighter_mark5.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_highlighter_mark6 {
+    width: 141px; height: 139px;
+    background-image: url(/images/homes/highlighter_mark6.gif);
+}
+div.inventory-item div.s_highlighter_mark6_pre {
+    background-image: url(/images/homes/highlighter_mark6.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_highlighter_mark4b {
+    width: 86px; height: 93px;
+    background-image: url(/images/homes/highlighter_mark4b.gif);
+}
+div.inventory-item div.s_highlighter_mark4b_pre {
+    background-image: url(/images/homes/highlighter_mark4b.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_highlighter_2 {
+    width: 137px; height: 79px;
+    background-image: url(/images/homes/highlighter_2.gif);
+}
+div.inventory-item div.s_highlighter_2_pre {
+    background-image: url(/images/homes/highlighter_2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_highlighter_mark1 {
+    width: 83px; height: 107px;
+    background-image: url(/images/homes/highlighter_mark1.gif);
+}
+div.inventory-item div.s_highlighter_mark1_pre {
+    background-image: url(/images/homes/highlighter_mark1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_highlighter_mark2 {
+    width: 130px; height: 117px;
+    background-image: url(/images/homes/highlighter_mark2.gif);
+}
+div.inventory-item div.s_highlighter_mark2_pre {
+    background-image: url(/images/homes/highlighter_mark2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_highlighter_mark3 {
+    width: 81px; height: 81px;
+    background-image: url(/images/homes/highlighter_mark3.gif);
+}
+div.inventory-item div.s_highlighter_mark3_pre {
+    background-image: url(/images/homes/highlighter_mark3.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_ruler_horizontal {
+    width: 122px; height: 32px;
+    background-image: url(/images/homes/ruler_horizontal.gif);
+}
+div.inventory-item div.s_ruler_horizontal_pre {
+    background-image: url(/images/homes/ruler_horizontal.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_ruler_vertical {
+    width: 32px; height: 122px;
+    background-image: url(/images/homes/ruler_vertical.gif);
+}
+div.inventory-item div.s_ruler_vertical_pre {
+    background-image: url(/images/homes/ruler_vertical.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_plaster {
+    width: 85px; height: 82px;
+    background-image: url(/images/homes/plaster.gif);
+}
+div.inventory-item div.s_plaster_pre {
+    background-image: url(/images/homes/plaster.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_plaster2 {
+    width: 85px; height: 79px;
+    background-image: url(/images/homes/plaster2.gif);
+}
+div.inventory-item div.s_plaster2_pre {
+    background-image: url(/images/homes/plaster2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_cactus_anim {
+    width: 86px; height: 80px;
+    background-image: url(/images/homes/sticker_cactus_anim.gif);
+}
+div.inventory-item div.s_sticker_cactus_anim_pre {
+    background-image: url(/images/homes/sticker_cactus_anim.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_spaceduck {
+    width: 25px; height: 37px;
+    background-image: url(/images/homes/sticker_spaceduck.gif);
+}
+div.inventory-item div.s_sticker_spaceduck_pre {
+    background-image: url(/images/homes/sticker_spaceduck.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_moonpig {
+    width: 146px; height: 84px;
+    background-image: url(/images/homes/sticker_moonpig.gif);
+}
+div.inventory-item div.s_sticker_moonpig_pre {
+    background-image: url(/images/homes/sticker_moonpig.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_catinabox {
+    width: 46px; height: 48px;
+    background-image: url(/images/homes/sticker_catinabox.gif);
+}
+div.inventory-item div.s_sticker_catinabox_pre {
+    background-image: url(/images/homes/sticker_catinabox.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_croco {
+    width: 87px; height: 59px;
+    background-image: url(/images/homes/sticker_croco.gif);
+}
+div.inventory-item div.s_sticker_croco_pre {
+    background-image: url(/images/homes/sticker_croco.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bear {
+    width: 53px; height: 77px;
+    background-image: url(/images/homes/bear.gif);
+}
+div.inventory-item div.s_bear_pre {
+    background-image: url(/images/homes/bear.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_swimming_fish {
+    width: 30px; height: 28px;
+    background-image: url(/images/homes/swimming_fish.gif);
+}
+div.inventory-item div.s_swimming_fish_pre {
+    background-image: url(/images/homes/swimming_fish.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_fish {
+    width: 53px; height: 49px;
+    background-image: url(/images/homes/fish.gif);
+}
+div.inventory-item div.s_fish_pre {
+    background-image: url(/images/homes/fish.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_parrot {
+    width: 28px; height: 42px;
+    background-image: url(/images/homes/parrot.gif);
+}
+div.inventory-item div.s_parrot_pre {
+    background-image: url(/images/homes/parrot.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_battle1 {
+    width: 36px; height: 40px;
+    background-image: url(/images/homes/battle1.gif);
+}
+div.inventory-item div.s_battle1_pre {
+    background-image: url(/images/homes/battle1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_battle3 {
+    width: 36px; height: 40px;
+    background-image: url(/images/homes/battle3.gif);
+}
+div.inventory-item div.s_battle3_pre {
+    background-image: url(/images/homes/battle3.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_sleeping_habbo {
+    width: 72px; height: 72px;
+    background-image: url(/images/homes/sticker_sleeping_habbo.gif);
+}
+div.inventory-item div.s_sticker_sleeping_habbo_pre {
+    background-image: url(/images/homes/sticker_sleeping_habbo.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_clown_anim {
+    width: 54px; height: 94px;
+    background-image: url(/images/homes/sticker_clown_anim.gif);
+}
+div.inventory-item div.s_sticker_clown_anim_pre {
+    background-image: url(/images/homes/sticker_clown_anim.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_boxer {
+    width: 60px; height: 90px;
+    background-image: url(/images/homes/sticker_boxer.gif);
+}
+div.inventory-item div.s_sticker_boxer_pre {
+    background-image: url(/images/homes/sticker_boxer.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_scubacapsule_anim {
+    width: 40px; height: 51px;
+    background-image: url(/images/homes/scubacapsule_anim.gif);
+}
+div.inventory-item div.s_scubacapsule_anim_pre {
+    background-image: url(/images/homes/scubacapsule_anim.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_gurubeard_gray {
+    width: 64px; height: 69px;
+    background-image: url(/images/homes/sticker_gurubeard_grey.gif);
+}
+div.inventory-item div.s_sticker_gurubeard_gray_pre {
+    background-image: url(/images/homes/sticker_gurubeard_grey.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_gurubeard_brown {
+    width: 64px; height: 69px;
+    background-image: url(/images/homes/sticker_gurubeard_brown.gif);
+}
+div.inventory-item div.s_sticker_gurubeard_brown_pre {
+    background-image: url(/images/homes/sticker_gurubeard_brown.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_glasses_supernerd {
+    width: 26px; height: 15px;
+    background-image: url(/images/homes/sticker_glasses_supernerd.gif);
+}
+div.inventory-item div.s_sticker_glasses_supernerd_pre {
+    background-image: url(/images/homes/sticker_glasses_supernerd.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_glasses_elton {
+    width: 25px; height: 18px;
+    background-image: url(/images/homes/sticker_glasses_elton.gif);
+}
+div.inventory-item div.s_sticker_glasses_elton_pre {
+    background-image: url(/images/homes/sticker_glasses_elton.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_eyes_blue {
+    width: 16px; height: 18px;
+    background-image: url(/images/homes/sticker_eyes_blue.gif);
+}
+div.inventory-item div.s_sticker_eyes_blue_pre {
+    background-image: url(/images/homes/sticker_eyes_blue.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_eye_anim {
+    width: 13px; height: 19px;
+    background-image: url(/images/homes/sticker_eye_anim.gif);
+}
+div.inventory-item div.s_sticker_eye_anim_pre {
+    background-image: url(/images/homes/sticker_eye_anim.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_eye_evil_anim {
+    width: 15px; height: 19px;
+    background-image: url(/images/homes/sticker_eye_evil_anim.gif);
+}
+div.inventory-item div.s_sticker_eye_evil_anim_pre {
+    background-image: url(/images/homes/sticker_eye_evil_anim.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_burger {
+    width: 63px; height: 56px;
+    background-image: url(/images/homes/burger.gif);
+}
+div.inventory-item div.s_burger_pre {
+    background-image: url(/images/homes/burger.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_juice {
+    width: 66px; height: 92px;
+    background-image: url(/images/homes/juice.gif);
+}
+div.inventory-item div.s_juice_pre {
+    background-image: url(/images/homes/juice.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_i_love_coffee {
+    width: 93px; height: 93px;
+    background-image: url(/images/homes/i_love_coffee.gif);
+}
+div.inventory-item div.s_i_love_coffee_pre {
+    background-image: url(/images/homes/i_love_coffee.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_coffee_steam_blue {
+    width: 45px; height: 147px;
+    background-image: url(/images/homes/sticker_coffee_steam_blue.gif);
+}
+div.inventory-item div.s_sticker_coffee_steam_blue_pre {
+    background-image: url(/images/homes/sticker_coffee_steam_blue.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_coffee_steam_grey {
+    width: 45px; height: 147px;
+    background-image: url(/images/homes/sticker_coffee_steam_grey.gif);
+}
+div.inventory-item div.s_sticker_coffee_steam_grey_pre {
+    background-image: url(/images/homes/sticker_coffee_steam_grey.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_cassette1 {
+    width: 142px; height: 81px;
+    background-image: url(/images/homes/cassette1.gif);
+}
+div.inventory-item div.s_cassette1_pre {
+    background-image: url(/images/homes/cassette1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_cassette2 {
+    width: 142px; height: 81px;
+    background-image: url(/images/homes/cassette2.gif);
+}
+div.inventory-item div.s_cassette2_pre {
+    background-image: url(/images/homes/cassette2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_cassette3 {
+    width: 142px; height: 81px;
+    background-image: url(/images/homes/cassette3.gif);
+}
+div.inventory-item div.s_cassette3_pre {
+    background-image: url(/images/homes/cassette3.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_cassette4 {
+    width: 142px; height: 81px;
+    background-image: url(/images/homes/cassette4.gif);
+}
+div.inventory-item div.s_cassette4_pre {
+    background-image: url(/images/homes/cassette4.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_effect_bam {
+    width: 146px; height: 118px;
+    background-image: url(/images/homes/sticker_effect_bam.gif);
+}
+div.inventory-item div.s_sticker_effect_bam_pre {
+    background-image: url(/images/homes/sticker_effect_bam.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_effect_burp {
+    width: 105px; height: 90px;
+    background-image: url(/images/homes/sticker_effect_burp.gif);
+}
+div.inventory-item div.s_sticker_effect_burp_pre {
+    background-image: url(/images/homes/sticker_effect_burp.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_effect_woosh {
+    width: 144px; height: 24px;
+    background-image: url(/images/homes/sticker_effect_woosh.gif);
+}
+div.inventory-item div.s_sticker_effect_woosh_pre {
+    background-image: url(/images/homes/sticker_effect_woosh.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_effect_zap {
+    width: 85px; height: 140px;
+    background-image: url(/images/homes/sticker_effect_zap.gif);
+}
+div.inventory-item div.s_sticker_effect_zap_pre {
+    background-image: url(/images/homes/sticker_effect_zap.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_effect_whoosh2 {
+    width: 144px; height: 120px;
+    background-image: url(/images/homes/sticker_effect_whoosh2.gif);
+}
+div.inventory-item div.s_sticker_effect_whoosh2_pre {
+    background-image: url(/images/homes/sticker_effect_whoosh2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_flower1 {
+    width: 42px; height: 64px;
+    background-image: url(/images/homes/sticker_flower1.gif);
+}
+div.inventory-item div.s_sticker_flower1_pre {
+    background-image: url(/images/homes/sticker_flower1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_flower_big_yellow {
+    width: 131px; height: 133px;
+    background-image: url(/images/homes/sticker_flower_big_yellow.gif);
+}
+div.inventory-item div.s_sticker_flower_big_yellow_pre {
+    background-image: url(/images/homes/sticker_flower_big_yellow.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_flower_pink {
+    width: 55px; height: 52px;
+    background-image: url(/images/homes/sticker_flower_pink.gif);
+}
+div.inventory-item div.s_sticker_flower_pink_pre {
+    background-image: url(/images/homes/sticker_flower_pink.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_vine {
+    width: 41px; height: 150px;
+    background-image: url(/images/homes/vine1.gif);
+}
+div.inventory-item div.s_vine_pre {
+    background-image: url(/images/homes/vine1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_vine2 {
+    width: 150px; height: 41px;
+    background-image: url(/images/homes/vine2.gif);
+}
+div.inventory-item div.s_vine2_pre {
+    background-image: url(/images/homes/vine2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_leafs1 {
+    width: 80px; height: 146px;
+    background-image: url(/images/homes/leafs1.gif);
+}
+div.inventory-item div.s_leafs1_pre {
+    background-image: url(/images/homes/leafs1.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_leafs2 {
+    width: 146px; height: 80px;
+    background-image: url(/images/homes/leafs2.gif);
+}
+div.inventory-item div.s_leafs2_pre {
+    background-image: url(/images/homes/leafs2.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_wunderfrank {
+    width: 63px; height: 150px;
+    background-image: url(/images/homes/wunderfrank.gif);
+}
+div.inventory-item div.s_wunderfrank_pre {
+    background-image: url(/images/homes/wunderfrank.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_submarine {
+    width: 116px; height: 82px;
+    background-image: url(/images/homes/sticker_submarine.gif);
+}
+div.inventory-item div.s_sticker_submarine_pre {
+    background-image: url(/images/homes/sticker_submarine.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_football {
+    width: 20px; height: 37px;
+    background-image: url(/images/homes/football.gif);
+}
+div.inventory-item div.s_football_pre {
+    background-image: url(/images/homes/football.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_zipper_h_bobba_lock {
+    width: 89px; height: 59px;
+    background-image: url(/images/homes/sticker_zipper_h_bobba_lock.gif);
+}
+div.inventory-item div.s_sticker_zipper_h_bobba_lock_pre {
+    background-image: url(/images/homes/sticker_zipper_h_bobba_lock.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_zipper_h_end {
+    width: 24px; height: 19px;
+    background-image: url(/images/homes/sticker_zipper_h_end.gif);
+}
+div.inventory-item div.s_sticker_zipper_h_end_pre {
+    background-image: url(/images/homes/sticker_zipper_h_end.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_zipper_h_normal_lock {
+    width: 91px; height: 59px;
+    background-image: url(/images/homes/sticker_zipper_h_normal_lock.gif);
+}
+div.inventory-item div.s_sticker_zipper_h_normal_lock_pre {
+    background-image: url(/images/homes/sticker_zipper_h_normal_lock.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_zipper_h_tile {
+    width: 144px; height: 17px;
+    background-image: url(/images/homes/sticker_zipper_h_tile.gif);
+}
+div.inventory-item div.s_sticker_zipper_h_tile_pre {
+    background-image: url(/images/homes/sticker_zipper_h_tile.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_zipper_v_tile {
+    width: 17px; height: 144px;
+    background-image: url(/images/homes/sticker_zipper_v_tile.gif);
+}
+div.inventory-item div.s_sticker_zipper_v_tile_pre {
+    background-image: url(/images/homes/sticker_zipper_v_tile.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_zipper_v_bobba_lock {
+    width: 59px; height: 96px;
+    background-image: url(/images/homes/sticker_zipper_v_bobba_lock.gif);
+}
+div.inventory-item div.s_sticker_zipper_v_bobba_lock_pre {
+    background-image: url(/images/homes/sticker_zipper_v_bobba_lock.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_zipper_v_end {
+    width: 19px; height: 24px;
+    background-image: url(/images/homes/sticker_zipper_v_end.gif);
+}
+div.inventory-item div.s_sticker_zipper_v_end_pre {
+    background-image: url(/images/homes/sticker_zipper_v_end.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_sticker_zipper_v_normal_lock {
+    width: 59px; height: 96px;
+    background-image: url(/images/homes/sticker_zipper_v_normal_lock.gif);
+}
+div.inventory-item div.s_sticker_zipper_v_normal_lock_pre {
+    background-image: url(/images/homes/sticker_zipper_v_normal_lock.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_a {
+    width: 38px; height: 53px;
+    background-image: url(/images/homes/bling_a.gif);
+}
+div.inventory-item div.s_bling_a_pre {
+    background-image: url(/images/homes/bling_a.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_b {
+    width: 34px; height: 53px;
+    background-image: url(/images/homes/bling_b.gif);
+}
+div.inventory-item div.s_bling_b_pre {
+    background-image: url(/images/homes/bling_b.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_c {
+    width: 32px; height: 53px;
+    background-image: url(/images/homes/bling_c.gif);
+}
+div.inventory-item div.s_bling_c_pre {
+    background-image: url(/images/homes/bling_c.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_d {
+    width: 35px; height: 53px;
+    background-image: url(/images/homes/bling_d.gif);
+}
+div.inventory-item div.s_bling_d_pre {
+    background-image: url(/images/homes/bling_d.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_e {
+    width: 35px; height: 52px;
+    background-image: url(/images/homes/bling_e.gif);
+}
+div.inventory-item div.s_bling_e_pre {
+    background-image: url(/images/homes/bling_e.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_f {
+    width: 35px; height: 52px;
+    background-image: url(/images/homes/bling_f.gif);
+}
+div.inventory-item div.s_bling_f_pre {
+    background-image: url(/images/homes/bling_f.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_g {
+    width: 32px; height: 52px;
+    background-image: url(/images/homes/bling_g.gif);
+}
+div.inventory-item div.s_bling_g_pre {
+    background-image: url(/images/homes/bling_g.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_h {
+    width: 38px; height: 52px;
+    background-image: url(/images/homes/bling_h.gif);
+}
+div.inventory-item div.s_bling_h_pre {
+    background-image: url(/images/homes/bling_h.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_i {
+    width: 22px; height: 52px;
+    background-image: url(/images/homes/bling_i.gif);
+}
+div.inventory-item div.s_bling_i_pre {
+    background-image: url(/images/homes/bling_i.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_j {
+    width: 34px; height: 53px;
+    background-image: url(/images/homes/bling_j.gif);
+}
+div.inventory-item div.s_bling_j_pre {
+    background-image: url(/images/homes/bling_j.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_k {
+    width: 37px; height: 53px;
+    background-image: url(/images/homes/bling_k.gif);
+}
+div.inventory-item div.s_bling_k_pre {
+    background-image: url(/images/homes/bling_k.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_l {
+    width: 34px; height: 53px;
+    background-image: url(/images/homes/bling_l.gif);
+}
+div.inventory-item div.s_bling_l_pre {
+    background-image: url(/images/homes/bling_l.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_m {
+    width: 51px; height: 53px;
+    background-image: url(/images/homes/bling_m.gif);
+}
+div.inventory-item div.s_bling_m_pre {
+    background-image: url(/images/homes/bling_m.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_n {
+    width: 40px; height: 53px;
+    background-image: url(/images/homes/bling_n.gif);
+}
+div.inventory-item div.s_bling_n_pre {
+    background-image: url(/images/homes/bling_n.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_o {
+    width: 32px; height: 53px;
+    background-image: url(/images/homes/bling_o.gif);
+}
+div.inventory-item div.s_bling_o_pre {
+    background-image: url(/images/homes/bling_o.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_p {
+    width: 34px; height: 53px;
+    background-image: url(/images/homes/bling_p.gif);
+}
+div.inventory-item div.s_bling_p_pre {
+    background-image: url(/images/homes/bling_p.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_q {
+    width: 32px; height: 60px;
+    background-image: url(/images/homes/bling_q.gif);
+}
+div.inventory-item div.s_bling_q_pre {
+    background-image: url(/images/homes/bling_q.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_r {
+    width: 35px; height: 53px;
+    background-image: url(/images/homes/bling_r.gif);
+}
+div.inventory-item div.s_bling_r_pre {
+    background-image: url(/images/homes/bling_r.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_s {
+    width: 31px; height: 53px;
+    background-image: url(/images/homes/bling_s.gif);
+}
+div.inventory-item div.s_bling_s_pre {
+    background-image: url(/images/homes/bling_s.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_t {
+    width: 35px; height: 53px;
+    background-image: url(/images/homes/bling_t.gif);
+}
+div.inventory-item div.s_bling_t_pre {
+    background-image: url(/images/homes/bling_t.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_u {
+    width: 37px; height: 53px;
+    background-image: url(/images/homes/bling_u.gif);
+}
+div.inventory-item div.s_bling_u_pre {
+    background-image: url(/images/homes/bling_u.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_v {
+    width: 38px; height: 53px;
+    background-image: url(/images/homes/bling_v.gif);
+}
+div.inventory-item div.s_bling_v_pre {
+    background-image: url(/images/homes/bling_v.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_w {
+    width: 55px; height: 53px;
+    background-image: url(/images/homes/bling_w.gif);
+}
+div.inventory-item div.s_bling_w_pre {
+    background-image: url(/images/homes/bling_w.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_x {
+    width: 38px; height: 53px;
+    background-image: url(/images/homes/bling_x.gif);
+}
+div.inventory-item div.s_bling_x_pre {
+    background-image: url(/images/homes/bling_x.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_y {
+    width: 37px; height: 53px;
+    background-image: url(/images/homes/bling_y.gif);
+}
+div.inventory-item div.s_bling_y_pre {
+    background-image: url(/images/homes/bling_y.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_z {
+    width: 32px; height: 53px;
+    background-image: url(/images/homes/bling_z.gif);
+}
+div.inventory-item div.s_bling_z_pre {
+    background-image: url(/images/homes/bling_z.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_underscore {
+    width: 32px; height: 16px;
+    background-image: url(/images/homes/bling_underscore.gif);
+}
+div.inventory-item div.s_bling_underscore_pre {
+    background-image: url(/images/homes/bling_underscore.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_line {
+    width: 17px; height: 63px;
+    background-image: url(/images/homes/bling_line.gif);
+}
+div.inventory-item div.s_bling_line_pre {
+    background-image: url(/images/homes/bling_line.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_exclamation {
+    width: 16px; height: 53px;
+    background-image: url(/images/homes/bling_exclamation.gif);
+}
+div.inventory-item div.s_bling_exclamation_pre {
+    background-image: url(/images/homes/bling_exclamation.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_question {
+    width: 32px; height: 53px;
+    background-image: url(/images/homes/bling_question.gif);
+}
+div.inventory-item div.s_bling_question_pre {
+    background-image: url(/images/homes/bling_question.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_star {
+    width: 46px; height: 44px;
+    background-image: url(/images/homes/bling_star.gif);
+}
+div.inventory-item div.s_bling_star_pre {
+    background-image: url(/images/homes/bling_star.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_dot {
+    width: 17px; height: 16px;
+    background-image: url(/images/homes/bling_dot.gif);
+}
+div.inventory-item div.s_bling_dot_pre {
+    background-image: url(/images/homes/bling_dot.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+div.s_bling_comma {
+    width: 17px; height: 25px;
+    background-image: url(/images/homes/bling_comma.gif);
+}
+div.inventory-item div.s_bling_comma_pre {
+    background-image: url(/images/homes/bling_comma.gif);
+    background-repeat: no-repeat; background-position: 50% 50%;
+}
+
+div.b_bg_pattern_abstract2 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_abstract2.gif);
+}
+div.inventory-item div.b_bg_pattern_abstract2_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_abstract2.gif);
+}
+div.b_bg_colour_01 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_01.gif);
+}
+div.inventory-item div.b_bg_colour_01_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_01.gif);
+}
+div.b_bg_colour_08 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_08.gif);
+}
+div.inventory-item div.b_bg_colour_08_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_08.gif);
+}
+div.b_bg_colour_12 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_12.gif);
+}
+div.inventory-item div.b_bg_colour_12_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_12.gif);
+}
+div.b_bg_colour_16 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_16.gif);
+}
+div.inventory-item div.b_bg_colour_16_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_16.gif);
+}
+div.b_bg_denim {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/denim.gif);
+}
+div.inventory-item div.b_bg_denim_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/denim.gif);
+}
+div.b_bg_lace {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/lace.gif);
+}
+div.inventory-item div.b_bg_lace_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/lace.gif);
+}
+div.b_bg_stitched {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/stitched.gif);
+}
+div.inventory-item div.b_bg_stitched_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/stitched.gif);
+}
+div.b_bg_wood {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_wood.gif);
+}
+div.inventory-item div.b_bg_wood_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_wood.gif);
+}
+div.b_bg_cork {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/cork.gif);
+}
+div.inventory-item div.b_bg_cork_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/cork.gif);
+}
+div.b_bg_stone {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/stone.gif);
+}
+div.inventory-item div.b_bg_stone_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/stone.gif);
+}
+div.b_bg_pattern_bricks {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_bricks.gif);
+}
+div.inventory-item div.b_bg_pattern_bricks_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_bricks.gif);
+}
+div.b_bg_ruled_paper {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/ruled_paper.gif);
+}
+div.inventory-item div.b_bg_ruled_paper_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/ruled_paper.gif);
+}
+div.b_bg_grass {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/grass.gif);
+}
+div.inventory-item div.b_bg_grass_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/grass.gif);
+}
+div.b_bg_hotel {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/hotel.gif);
+}
+div.inventory-item div.b_bg_hotel_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/hotel.gif);
+}
+div.b_bg_bubble {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bubble.gif);
+}
+div.inventory-item div.b_bg_bubble_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bubble.gif);
+}
+div.b_bg_pattern_bobbaskulls1 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_bobbaskulls1.gif);
+}
+div.inventory-item div.b_bg_pattern_bobbaskulls1_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_bobbaskulls1.gif);
+}
+div.b_bg_pattern_space {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_space.gif);
+}
+div.inventory-item div.b_bg_pattern_space_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_space.gif);
+}
+div.b_bg_image_submarine {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_image_submarine.gif);
+}
+div.inventory-item div.b_bg_image_submarine_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_image_submarine.gif);
+}
+div.b_bg_metal2 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/metal2.gif);
+}
+div.inventory-item div.b_bg_metal2_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/metal2.gif);
+}
+div.b_bg_broken_glass {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_broken_glass.gif);
+}
+div.inventory-item div.b_bg_broken_glass_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_broken_glass.gif);
+}
+div.b_bg_pattern_clouds {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_clouds.gif);
+}
+div.inventory-item div.b_bg_pattern_clouds_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_clouds.gif);
+}
+div.b_bg_comic2 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/comic2.gif);
+}
+div.inventory-item div.b_bg_comic2_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/comic2.gif);
+}
+div.b_bg_pattern_floral_01 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_floral_01.gif);
+}
+div.inventory-item div.b_bg_pattern_floral_01_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_floral_01.gif);
+}
+div.b_bg_pattern_floral_02 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_floral_02.gif);
+}
+div.inventory-item div.b_bg_pattern_floral_02_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_floral_02.gif);
+}
+div.b_bg_pattern_floral_03 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_floral_03.gif);
+}
+div.inventory-item div.b_bg_pattern_floral_03_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_floral_03.gif);
+}
+div.b_bg_pattern_bulb {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_bulb.gif);
+}
+div.inventory-item div.b_bg_pattern_bulb_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_bulb.gif);
+}
+div.b_bg_pattern_cars {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_cars.gif);
+}
+div.inventory-item div.b_bg_pattern_cars_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_cars.gif);
+}
+div.b_bg_pattern_carpants {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_carpants.gif);
+}
+div.inventory-item div.b_bg_pattern_carpants_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_carpants.gif);
+}
+div.b_bg_pattern_plasto {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_plasto.gif);
+}
+div.inventory-item div.b_bg_pattern_plasto_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_plasto.gif);
+}
+div.b_bg_pattern_tinyroom {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_tinyroom.gif);
+}
+div.inventory-item div.b_bg_pattern_tinyroom_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_tinyroom.gif);
+}
+div.b_bg_pattern_hearts {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_hearts.gif);
+}
+div.inventory-item div.b_bg_pattern_hearts_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_hearts.gif);
+}
+div.b_bg_pattern_abstract1 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_abstract1.gif);
+}
+div.inventory-item div.b_bg_pattern_abstract1_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_abstract1.gif);
+}
+div.b_bg_bathroom_tile {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_bathroom_tile.gif);
+}
+div.inventory-item div.b_bg_bathroom_tile_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_bathroom_tile.gif);
+}
+div.b_bg_pattern_fish {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_fish.gif);
+}
+div.inventory-item div.b_bg_pattern_fish_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_fish.gif);
+}
+div.b_bg_pattern_deepred {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_deepred.gif);
+}
+div.inventory-item div.b_bg_pattern_deepred_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_pattern_deepred.gif);
+}
+div.b_bg_colour_02 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_02.gif);
+}
+div.inventory-item div.b_bg_colour_02_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_02.gif);
+}
+div.b_bg_colour_03 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_03.gif);
+}
+div.inventory-item div.b_bg_colour_03_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_03.gif);
+}
+div.b_bg_colour_04 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_04.gif);
+}
+div.inventory-item div.b_bg_colour_04_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_04.gif);
+}
+div.b_bg_colour_05 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_05.gif);
+}
+div.inventory-item div.b_bg_colour_05_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_05.gif);
+}
+div.b_bg_colour_06 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_06.gif);
+}
+div.inventory-item div.b_bg_colour_06_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_06.gif);
+}
+div.b_bg_colour_07 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_07.gif);
+}
+div.inventory-item div.b_bg_colour_07_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_07.gif);
+}
+div.b_bg_colour_09 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_09.gif);
+}
+div.inventory-item div.b_bg_colour_09_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_09.gif);
+}
+div.b_bg_colour_10 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_10.gif);
+}
+div.inventory-item div.b_bg_colour_10_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_10.gif);
+}
+div.b_bg_colour_11 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_11.gif);
+}
+div.inventory-item div.b_bg_colour_11_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_11.gif);
+}
+div.b_bg_colour_13 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_13.gif);
+}
+div.inventory-item div.b_bg_colour_13_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_13.gif);
+}
+div.b_bg_colour_14 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_14.gif);
+}
+div.inventory-item div.b_bg_colour_14_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_14.gif);
+}
+div.b_bg_colour_15 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_15.gif);
+}
+div.inventory-item div.b_bg_colour_15_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_15.gif);
+}
+div.b_bg_colour_17 {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_17.gif);
+}
+div.inventory-item div.b_bg_colour_17_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/bg_colour_17.gif);
+}
+div.b_bg_tonga {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/tonga.gif);
+}
+div.inventory-item div.b_bg_tonga_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/c_images//backgrounds/tonga.gif);
+}
+
+div.inventory-item div.w_highscoreswidget_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/widgets/hiscores_preview.gif);
+}
+div.inventory-item div.w_profilewidget_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/widgets/profilewidget.gif);
+}
+div.inventory-item div.w_friendswidget_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/widgets/friends_preview.gif);
+}
+div.inventory-item div.w_roomswidget_pre {
+    background-image: url(https://web.archive.org/web/20061125084312im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/widgets/rooms_preview.gif);
+}

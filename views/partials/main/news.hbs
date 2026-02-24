@@ -1,0 +1,16 @@
+<div id="newsbox">
+    <div id="newsbox-header">
+        <h2>{{text.index.news}}</h2>
+    </div>
+    <div id="newsbox-text">
+        {{#each news}}
+            <div class="newsitem">
+                <span style="font-weight: bold;"></span>
+                <span style="font-weight: bold;" class="articledate">[{{this.date}}]</span>&nbsp;<a href="/news/{{this.id}}">{{this.title}}</a>
+                <br>{{this.description}}<br>
+            </div>
+        {{/each}}
+    </div>
+    <div id="newsbox-footer">
+    </div>
+</div>

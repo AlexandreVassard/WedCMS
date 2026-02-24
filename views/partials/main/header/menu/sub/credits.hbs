@@ -1,0 +1,15 @@
+<div class='subnav'>
+  {{#ifCond subPage '==' 'credits'}}
+    {{text.global.menu.credits.sub.credits}}
+  {{else}}
+    <a href='/credits'>{{text.global.menu.credits.sub.credits}}</a>
+  {{/ifCond}}
+  |
+  {{#ifCond subPage '==' 'use_my_credits'}}
+    {{text.global.menu.credits.sub.useMyCredits}}
+  {{else}}
+    <a
+      href='/credits/use_my_credits'
+    >{{text.global.menu.credits.sub.useMyCredits}}</a>
+  {{/ifCond}}
+</div>

@@ -1,0 +1,74 @@
+.box-header {
+    font-size: 1px;
+    line-height: 1px;
+}
+
+.box-body {
+
+}
+
+.box-content {
+
+}
+
+/*** DARK BLUE ***/
+
+.box.dark-blue .box-header {
+    background: url(/images/box-scale/dblue-tl.gif) no-repeat top left;
+    padding-left: 3px;
+}
+
+.box.dark-blue .box-header div {
+    background: url(/images/box-scale/dblue-tr.gif) no-repeat top right;
+    height: 3px;
+}
+
+.box.dark-blue .box-body {
+    background: url(/images/box-scale/dblue-bl.gif) no-repeat bottom left;
+    padding-left: 3px;
+}
+
+.box.dark-blue .box-content {
+    background: url(/images/box-scale/dblue-br.gif) no-repeat bottom right;
+    padding-bottom: 3px;
+    padding-right: 3px;
+}
+
+/*** BLUE ***/
+
+.box.blue .box-header {
+    background: url(/images/box-scale/blue-tl.gif) no-repeat top left;
+    padding-left: 3px;
+}
+
+.box.blue .box-header div {
+    background: url(/images/box-scale/blue-tr.gif) no-repeat top right;
+    height: 3px;
+}
+
+.box.blue .box-body {
+    background: url(/images/box-scale/blue-bl.gif) no-repeat bottom left;
+    padding-left: 3px;
+}
+
+.box.blue .box-content {
+    background: url(/images/box-scale/blue-br.gif) no-repeat bottom right;
+    padding-bottom: 3px;
+    padding-right: 3px;
+}
+
+#edit-button-wrapper .box-content {
+    height: 18px;
+}
+
+#save-button-wrapper .box-content {
+    height: 18px;
+}
+
+#save-button-wrapper {
+    margin-top: 3px;
+}
+
+#cancel-button-wrapper .box-content {
+    height: 18px;
+}

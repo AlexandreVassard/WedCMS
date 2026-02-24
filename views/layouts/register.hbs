@@ -1,0 +1,29 @@
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta http-equiv='content-type' content='text/html;charset=utf-8' />
+    <title>{{app.title}} ~ {{text.register.tabTitle}}</title>
+    <link href='styles/style.css' type='text/css' rel='stylesheet' />
+    <link href='styles/boxes.css' type='text/css' rel='stylesheet' />
+    <link href='styles/process.css' type='text/css' rel='stylesheet' />
+
+    <!--[if IE]><link href="/styles/ie-all.css" type="text/css" rel="stylesheet"/><![endif]-->
+    <!--[if lt IE 7]><link href="/styles/ie6.css" type="text/css" rel="stylesheet"/><![endif]-->
+  </head>
+
+  <body id='registration'>
+    {{{body}}}
+  </body>
+  <script type='text/javascript' src='/js/prototype.js'></script>
+  <script type='text/javascript' src='/js/habbo.js'></script>
+  <script type='text/javascript' src='/js/hobojax.js'></script>
+  <script type='text/javascript' src='/js/validation.js'></script>
+  <script type='text/javascript' src='/js/registration.js'></script>
+  <script type='text/javascript' language='JavaScript'>
+    Event.observe($("stepform"), "submit", function(e) { if
+    ($("bean_day").selectedIndex == 0 || $("bean_month").selectedIndex == 0 ||
+    $("bean_year").selectedIndex == 0) { validatorBeforeSubmit();
+    validatorAddError(false, false, "{{text.register.errorDate}}");
+    $("required-birthday").className = "validation-failed"; Event.stop(e); } },
+    false);
+  </script>
+</html>

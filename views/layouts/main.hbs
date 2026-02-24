@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>{{app.title}} ~
+        {{#ifCond page '==' 'index'}}
+            {{text.global.menu.home.title}}
+        {{/ifCond}}
+        {{#ifCond page 'startsWith' 'hotel'}}
+            {{text.global.menu.hotel.title}}
+        {{/ifCond}}
+        {{#ifCond page 'startsWith' 'news'}}
+            {{text.global.menu.news.title}}
+        {{/ifCond}}
+        {{#ifCond page 'startsWith' 'home'}}
+            {{text.global.menu.homepages.title}}
+        {{/ifCond}}
+        {{#ifCond page 'startsWith' 'credits'}}
+            {{text.global.menu.credits.title}}
+        {{/ifCond}}
+        {{#ifCond page 'startsWith' 'club'}}
+            {{text.global.menu.club.title}}
+        {{/ifCond}}
+    </title>
+    <link href="/styles/custom.css" type="text/css" rel="stylesheet"/>
+    <link href="/styles/style.css" type="text/css" rel="stylesheet"/>
+    <link href="/styles/ads.css" type="text/css" rel="stylesheet"/>
+    <link href="/styles/boxes.css" type="text/css" rel="stylesheet"/>
+    <!--[if IE]>
+    <link href="/styles/ie-all.css" type="text/css" rel="stylesheet"/><![endif]-->
+    <!--[if lt IE 7]>
+    <link href="/styles/ie6.css" type="text/css" rel="stylesheet"/><![endif]-->
+    <script type="text/javascript" src="/js/swfobject.js"></script>
+    <style type="text/css">
+        #enter-hotel a {
+            background-image: url("/images/wedcms/enterHH/{{app.enter}}.gif");
+        }
+
+        #top {
+            background-image: url("/images/wedcms/view/{{app.view}}.gif");
+        }
+    </style>
+</head>
+<body id="home">
+<div id="overlay"></div>
+<h1 id="main-header"></h1>
+<div id="wrapper">
+
+    <div align="center">
+        <div class="persoscale perso-leader">
+            <table>
+                <tbody>
+                <tr>
+                    <td class="perso-header-tl"></td>
+                    <td class="perso-header-t"></td>
+                    <td class="perso-header-tr"></td>
+                </tr>
+                <tr>
+                    <td class="perso-header-ml"></td>
+                    <td class="perso-header-m"><h5>{{text.global.ad}}</h5></td>
+                    <td class="perso-header-mr"></td>
+                </tr>
+                <tr>
+                    <td class="perso-content-ml"></td>
+                    <td class="perso-content-m" align="center" valign="top">
+                        <a href="http://google.fr/" target="_blank">
+                            <img src="/images/a_img/01.png" width="728" height="90">
+                        </a>
+                        <br>
+                    </td>
+                    <td class="perso-content-mr"></td>
+                </tr>
+                <tr>
+                    <td class="perso-content-bl"></td>
+                    <td class="perso-content-b"></td>
+                    <td class="perso-content-br"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="top_wrap">
+        <div id="top">
+            <div id="topdim"></div>
+            <div id="top-elements">
+                {{#if user}}
+                    {{>main/header/userTabs}}
+                {{else}}
+                    {{>main/header/tabs}}
+                {{/if}}
+                {{>main/header/menu/main}}
+                {{>main/header/menu/sub}}
+            </div>
+        </div>
+        {{{body}}}
+        {{>main/footer}}
+        <div id="outer-bottom">
+            <div id="outer-bottom-content"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var habboReqPath = "";
+        var habboStaticFilePath = "";
+        document.habboLoggedIn = true;
+        window.name = "habboMain";
+    </script>
+    <script type="text/javascript" src="/js/builder.js"></script>
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/habbo.js"></script>
+    <script type="text/javascript" src="/js/hobojax.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+{{#if fromClient}}
+    <script>
+        window.resizeTo(740, 727);
+    </script>
+{{/if}}
+<div id="process-wrapper">
+    <div id="process-header">
+        <div id="process-header-body">
+            <div id="process-header-content">
+                <div id="habbologo" style="margin-top:-40px;">
+                    <a href="/">
+                        <img src="./images/logos/appLogo.png"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="outer-content">
+            <div class="processbox left">
+                <div class="headline" style="height:auto !important;">
+                    <div class="headline-content">
+                        <div class="headline-wrapper">
+                            <h2>{{text.login.registerTitle}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-top">
+                    <div class="content">
+                        <div class="processbox-inner">
+                            <h4>{{text.login.registerFirstSectionTitle}}</h4>
+                            <p>
+                                <img vspace="10" hspace="10" border="0" align="right"
+                                     src="./images/frank_with_key.gif"
+                                     alt="Frank">{{text.login.registerFirstSectionContent}}<br/><br/><br/><br/>
+                            </p>
+                        </div>
+                        <div id="registration-errors">
+                            <div class="content-red">
+                                <div class="content-red-body" id="registration-errors-content">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="content-red-bottom">
+                                <div class="content-red-bottom-body"></div>
+                            </div>
+                        </div>
+                        <div class="content-white-outer" id="registration-start">
+                            <div class="content-white">
+                                <div class="content-white-body">
+                                    <div class="content-white-content">
+                                        <form method="post"
+                                              action="/register"
+                                              id="registration-form">
+                                            <p>
+                                                <label for="day" class="registration-text">{{text.login.registerDateOfBirthTitle}}</label>
+                                            </p>
+                                            <div id="required-birthday">
+                                                {{>login/daySelector}}
+                                                {{>login/monthSelector}}
+                                                {{>login/yearSelector}}
+                                            </div>
+
+                                            <script type="text/javascript">
+                                                function MergeData() {
+                                                    var dd = document.getElementById('day').value;
+                                                    var mm = document.getElementById('month').value;
+                                                    var yy = document.getElementById('year').value;
+                                                    document.getElementById('required-birth').value = parseInt((new Date(dd + '/' + mm + '/' + yy).getTime() / 1000).toFixed(0));
+                                                }
+                                            </script>
+                                            <p class="last">
+                                                <input type="hidden" name="required-birth" id="required-birth"/>
+                                                <input type="submit" value="{{text.login.registerSubmit}}"
+                                                       onmousedown="MergeData()"
+                                                       class="process-button" id="registration-submit"/>
+                                            </p>
+                                        </form>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="content-white-bottom">
+                                <div class="content-white-bottom-body"></div>
+                            </div>
+                        </div>
+                        <div class="processbox-inner">
+                            <img vspace="10" hspace="10" border="0" align="right"
+                                 src="./images/reindeer_1_small.gif"
+                                 alt="Frank">
+                            <p><br/>
+                                <span style="font-weight: bold;">{{text.login.registerSecondSectionTitle}}</span><br/>
+                            <ul>
+                                <li>{{text.login.registerListFirstElement}}</li>
+                                <li>{{text.login.registerListSecondElement}}</li>
+                                <li>{{text.login.registerListThirdElement}}</li>
+                                <li>{{text.login.registerListFourthElement}}</li>
+                                <li><b>{{text.login.registerListFifthElement}}</b><br/></li>
+                            </ul>
+                            <br/><br/><br/></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="content-bottom">
+                    <div class="content-bottom-content"></div>
+                </div>
+            </div>
+            <div class="processbox right blue">
+                <div class="headline" style="height:auto !important;">
+                    <div class="headline-content">
+                        <div class="headline-wrapper">
+                            <h2>{{text.login.loginTitle}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-top">
+                    <div class="content">
+                        <div class="processbox-inner">
+                            <p>
+                                {{text.login.loginTips}}<br/><br/>
+                            </p>
+                        </div>
+
+                        <div id="login-errors">
+                            <div class="content-red">
+                                <div class="content-red-body" id="login-errors-content">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="content-red-bottom">
+                                <div class="content-red-bottom-body"></div>
+                            </div>
+                        </div>
+                        <div class="content-white-outer" id="login">
+                            <div class="content-white">
+                                <div class="content-white-body">
+                                    <div class="content-white-content">
+                                        <input type="hidden" value="{{loginErrorId}}" id="loginErrorId" />
+                                        <form action="{{loginAction}}" method="post" id="login-form">
+                                            <p>
+                                                <label for="login-username" class="registration-text">
+                                                    {{text.login.loginUsername}}
+                                                </label>
+                                                <input type="text" class="required-username" name="username"
+                                                       id="login-username" value=""/>
+                                            </p>
+                                            <script type="text/javascript">
+                                                $("login-username").focus();
+                                            </script>
+                                            <p>
+                                                <label for="login-password" class="registration-text">
+                                                    {{text.login.loginPassword}}
+                                                </label>
+                                                <input type="password" class="required-password" name="password"
+                                                       id="login-password" value=""/>
+                                            </p>
+                                            <p class="last">
+                                                <input type="submit" value="{{text.login.loginSubmit}}" class="process-button"
+                                                       id="login-submit"/>
+                                            </p>
+                                        </form>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="content-white-bottom">
+                                <div class="content-white-bottom-body"></div>
+                            </div>
+                        </div>
+                        <div class="processbox-inner">
+                            <p>
+                                <br style="font-weight: bold;"/><span
+                                    style="font-weight: bold;">{{text.login.loginFirstSectionTitle}}</span><br/><br/>
+                                {{text.login.loginFirstSectionContent}} <a href="" target="_blank">{{text.login.loginFirstSectionLink}}</a>
+                                <br/><br/>
+                            </p><img vspace="10" hspace="10" border="0" align="right"
+                                     src="./images/encryption_pc_ie.gif"
+                                     alt="">
+                            <h4>{{text.login.loginSecondSectionTitle}}</h4>
+                            <p>
+                                {{text.login.loginSecondSectionContent}}<br/><br/><br/>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="content-bottom">
+                    <div class="content-bottom-content"></div>
+                </div>
+            </div>
+            <div id="footer">
+                <div id="footer-top">
+                    <div id="footer-content">
+                        © Copyright {{app.name}}, powered by WedCMS. All rights reserved. Based on RetroCMS template by M.Tiago.
+                    </div>
+                </div>
+                <div id="footer-bottom">
+                    <div id="footer-bottom-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="outer-bottom">
+        <div id="outer-bottom-content"></div>
+    </div>
+</div>

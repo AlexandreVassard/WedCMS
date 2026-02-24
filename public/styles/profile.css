@@ -1,0 +1,171 @@
+/* --- profile --- */
+
+div.profilebox p {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+div.profilebox-header {
+    background: url(/web/20061130214241im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/profile-tl.gif) no-repeat;
+    padding-left: 7px;
+}
+
+div.profilebox-header h3 {
+    margin: 0;
+    padding: 7px 13px 4px 6px;
+    font-size: 11px;
+    font-weight: bold;
+    background: url(/web/20061130214241im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/profile-tr.gif) no-repeat top right;
+    text-transform: uppercase;
+    color: white;
+}
+
+div.profilebox-header-bottom {
+    background: url(/web/20061130214241im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/profile-bl.gif) no-repeat;
+    height: 7px;
+    font-size: 1%;
+}
+
+div.profilebox-header-bottom div {
+    background: url(/web/20061130214241im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/profile-br.gif) no-repeat top right;
+    height: 7px;
+    margin-left: 7px;
+}
+
+div.profilebox-body {
+    background: url(/web/20061130214241im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/profile-l.gif) no-repeat bottom left;
+    padding-left: 7px;
+}
+
+div.profilebox-content {
+    background: url(/web/20061130214241im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/profile-r.gif) no-repeat bottom right;
+    padding: 3px 7px 7px 0;
+}
+
+div.profilebox-content .profile-info {
+    width: 85px;
+    float: left;
+}
+
+div.profilebox-content .profile-info .name {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.profilebox-content .profile-info img {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+div.profilebox-content .figure {
+    float: left;
+    margin-left: 5px;
+}
+
+a.tab {
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: #C60;
+    padding: 2px 0.5em 2px 0.5em;
+    margin-top: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+a.tab-active {
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: #FC0;
+    padding: 2px 0.5em 2px 0.5em;
+    margin-top: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.panel { padding: 0;}
+
+div.tabs {
+    margin: 6px;
+    text-align: center;
+}
+
+.validation-failed {
+    border: 2px solid red;
+    float: left;
+}
+
+#process-errors {
+    display: none;
+}
+
+div.field-status-ok, div.field-status-error {
+    padding-left: 14px;
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+}
+
+div.field-status-ok {
+    background-image: url(/web/20061130214241im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/register/icon_ok.gif);
+}
+
+div.field-status-ok b {
+    color: #030;
+}
+
+div.field-status-error {
+    background-image: url(/web/20061130214241im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/register/icon_error.gif);
+}
+
+div.field-status-error b {
+    color: #600;
+}
+
+#pwTotal {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+div.processbox div.headline {
+    position: relative;
+}
+
+div.processbox div.headline a.exit {
+    position: absolute;
+    right: 15px;
+    text-transform: none;
+    color: white;
+}
+
+#required-birthday {
+    margin-bottom: 1em;
+}
+
+#register-buttons {
+    margin-top: 1em;
+}
+
+#register-buttons-back {
+    float: left;
+}
+
+#register-buttons-continue {
+    float: right;
+}
+
+span.label, p.label {
+    font-weight: bold;
+}
+
+label.label {
+    font-weight: bold;
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+.left {
+    float: left;
+}

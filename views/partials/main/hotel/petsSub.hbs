@@ -1,0 +1,31 @@
+<div id='top-3rd-level'></div>
+<div id='content-3rd-level'>
+
+  <ul id='third-level-navi'>
+
+    {{#ifCond subPage '==' 'pets'}}
+      <li class='active'>
+        {{text.hotel.pets.menu.pets}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a href='/hotel/pets'>{{text.hotel.pets.menu.pets}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'taking_care_of_your_pet'}}
+      <li class='active'>
+        {{text.hotel.pets.menu.takingCareOfYourPet}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/pets/taking_care_of_your_pet'
+        >{{text.hotel.pets.menu.takingCareOfYourPet}}</a>
+      </li>
+    {{/ifCond}}
+
+  </ul>
+  <div class='clear'></div>
+</div>
+<div id='bottom-3rd-level'></div>

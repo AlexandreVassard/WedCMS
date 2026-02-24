@@ -1,0 +1,53 @@
+<script>
+    window.resizeTo(736, 607);
+</script>
+<div id="client-topbar">
+    <div class="logo">
+        <img src="/images/logos/appLogoMini.png"/>
+    </div>
+    {{>client/counter}}
+    <div class="logout">
+        <a href="#" onClick="javascript:window.close()">{{text.client.exit}}</a>
+    </div>
+</div>
+<div id="client-hotel">
+    <object classid='clsid:166B1BCA-3F9C-11CF-8075-444553540000'
+            codebase='http://download.macromedia.com/pub/shockwave/cabs/director/sw.cab#version=10,8,5,1,0'
+            id='habbo'
+            width='720' height='540'>
+        <param name='src' value='/v14/habbo.dcr'>
+        <param name='swRemote'
+               value="swSaveEnabled='true' swVolume='true' swRestart='false' swPausePlay='false' swFastForward='false' swTitle='Habbo Hotel' swContextMenu='true'">
+        <param name='swStretchStyle' value='none'>
+        <param name='swText' value=''>
+        <param name='bgColor' value='#000000'>
+        {{#if sso}}
+            <param name='sw6' value='use.sso.ticket=1;sso.ticket={{sso}}'>
+        {{/if}}
+        {{#if forward}}
+            <param name='sw7' value='forward.type={{forward.type}};forward.id={{forward.id}}'>
+        {{/if}}
+        <param name='sw2' value='connection.info.host={{env.kepler_hostname}};connection.info.port={{env.kepler_server_port}}'>
+        <param name='sw4' value='connection.mus.host={{env.kepler_hostname}};connection.mus.port={{env.kepler_mus_port}}'>
+        <param name='sw3' value='client.reload.url=/client'>
+        <param name='sw1' value='site.url=/;url.prefix=/'>
+        <param name='sw5'
+               value='external.variables.txt=/v14/external/vars.txt;external.texts.txt=/v14/external/texts/en.txt'>
+        <embed src='/v14/habbo.dcr' bgColor='#000000' width='720' height='540'
+               swRemote="swSaveEnabled='true' swVolume='true' swRestart='false' swPausePlay='false' swFastForward='false' swTitle='Habbo Hotel' swContextMenu='true'"
+               swStretchStyle='none' swText='' type='application/x-director'
+               pluginspage='http://www.macromedia.com/shockwave/download/'
+            {{#if sso}}
+               sw6='use.sso.ticket=1;sso.ticket={{sso}}'
+            {{/if}}
+               sw2='connection.info.host={{env.kepler_hostname}};connection.info.port={{env.kepler_server_port}}'
+               sw4='connection.mus.host={{env.kepler_hostname}};connection.mus.port={{env.kepler_mus_port}}'
+               sw3='client.reload.url=/client'
+               sw1='site.url=/;url.prefix=/'
+               sw5='external.variables.txt=/v14/external/vars.txt;external.texts.txt=/v14/external/texts/en.txt'
+        {{#if forward}}
+            sw7='forward.type={{forward.type}};forward.id={{forward.id}}'
+        {{/if}}
+        />
+    </object>
+</div>

@@ -1,0 +1,71 @@
+<div id="main-content">
+    <div id="page-headline">
+        <div id="page-headline-breadcrums">
+            <a href="/">{{text.global.menu.home.title}}</a>
+            »
+            <a href="/news">{{text.global.menu.news.title}}</a>
+            »
+            {{news.title}}
+        </div>
+        <div id="page-headline-text">{{news.title}}</div>
+    </div>
+
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+            <td style="width: 8px;"></td>
+            <td style="width: 202px; padding-top: 3px;" class="habboPage-col" valign="top">
+                <div class="portlet-scale gold">
+                    <div class="portlet-scale-header"><h3>{{text.news.oneNews.box1.title}}</h3></div>
+                    <div class="portlet-scale-body">
+                        <div class="portlet-scale-content">
+                            <div class="archive-sidebar">
+                                <ul>
+                                    {{#each latestNews}}
+                                        <li>
+                                            <span class="articledate">{{this.date}}</span>
+                                            <a href="/news/{{this.id}}">{{this.title}}</a>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                                <div class="promo-button">
+                                    <a href="/news">{{text.news.oneNews.box1.button1}}</a></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="portlet-scale-bottom">
+                        <div class="portlet-scale-bottom-body"></div>
+                    </div>
+                </div>
+
+
+            </td>
+            <td style="width: 539px; padding-top: 3px;" class="habboPage-col rightmost" valign="top">
+                <div class="portlet-scale gold">
+                    <div class="portlet-scale-header"><h3>{{news.title}} [{{news.date}}]</h3></div>
+                    <div class="portlet-scale-body">
+                        <div class="portlet-scale-content">
+                            <div class="article-full">
+                                <p class="article-author">{{news.author_username}}, {{news.author_rank}}</p>
+                                <p class="teaser">{{news.description}}</p>
+                                <div>
+                                    {{news.content}}
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="portlet-scale-bottom">
+                        <div class="portlet-scale-bottom-body"></div>
+                    </div>
+                </div>
+            </td>
+            <td style="width: 4px;"></td>
+            {{>main/ad}}
+        </tr>
+        </tbody>
+    </table>
+
+    <br style="clear: both;">
+</div>

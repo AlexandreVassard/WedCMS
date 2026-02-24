@@ -1,0 +1,67 @@
+<div id="main-content">
+    <div id="page-headline">
+        <div id="page-headline-breadcrums">
+            <a href="/">{{text.global.menu.home.title}}</a>
+            »
+            {{text.preferences.title}}
+        </div>
+        <div id="page-headline-text">{{text.preferences.title}}</div>
+    </div>
+    <table class="content-2col" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+            <td style="width: 8px;"></td>
+            <td style="width: 202px;" class="habboPage-col" valign="top">
+                {{>main/preferences/sub}}
+            </td>
+            <td style="width: 539px;" class="habboPage-col rightmost" valign="top">
+                <div class="v2box blue light">
+                    <div class="headline"><h3>{{text.preferences.look.title}}</h3></div>
+                    <div class="border">
+                        <div></div>
+                    </div>
+                    <div class="body">
+                        {{#if successFigure}}
+                            <div style="display:block;margin-bottom:10px;">
+                                <div class="content-ok">
+                                    <div class="content-ok-body">
+                                        {{text.preferences.look.success}}
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="content-ok-bottom">
+                                    <div class="content-ok-bottom-body"></div>
+                                </div>
+                            </div>
+                        {{/if}}
+                        <div id="flashcontent" align="center">
+                        <script>
+                        var swfobj = new SWFObject("/swf/HabboRegistration.swf", "habboreg", "406", "327", "7");
+                        swfobj.addParam("base", "");
+                        swfobj.addParam("bgcolor", "#FFFFFF");
+                        swfobj.addParam("color", "#ffffff");
+                        swfobj.addVariable("post_url", "/preferences/look/update?");
+                        swfobj.addVariable("__app_key", "a5q0jBzgmZN5ZC036s");
+                        swfobj.addVariable("figuredata_url", "/xml/figuredata.xml");
+                        swfobj.addVariable("localization_url", "/xml/words.xml");
+                        swfobj.addVariable("post_figure", "figure");
+                        swfobj.addVariable("post_gender", "gender");
+                        swfobj.addVariable("figure", "{{figure}}");
+                        swfobj.addVariable("gender", "{{gender}}");
+                        swfobj.write("flashcontent");
+                        </script>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="bottom">
+                        <div></div>
+                    </div>
+                </div>
+            </td>
+            <td style="width: 4px;"></td>
+            {{>main/ad}}
+        </tr>
+        </tbody>
+    </table>
+    <br style="clear: both;">
+</div>

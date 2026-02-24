@@ -1,0 +1,39 @@
+/* Habbsite CMS -- UK Style */
+/* --- page background image --- */
+
+body {
+	background-image: url(../images/background.gif);
+}
+
+
+/* --- Hotel view image on the top bar (image size - width: 928px, height: 154px) --- */
+#top {
+	background-image: url(../images/view_fr.gif);
+}
+
+
+/* --- Habbo Hotel logo on the left on the top bar (image size - width: 160px, height: 66px) --- */
+a#logo-link { 
+	background-image: url(../images/logo.gif);
+}  
+
+ 
+/* --- Enter hotel button on the right of the top bar (image size - width: 105px, height: 106px) --- */
+#top-elements #enter-hotel a#enter-hotel-link { 
+	background-image: url(../images/enterHH_fr.gif);
+} 
+
+
+/* --- background image for the leaderboard ad that is shown on the top of the page (image size - width: 755px, height: 98px). --- */ 
+#top-perso-container {
+	background-image: url(../images/ad_728_fr.gif);
+}
+
+/* --- Workaround for news page rendering bug on IE7 --- */
+div.portlet-scale-content {
+zoom: 1;
+}
+
+ #moreWidgets { display:none; }
+
+.brown .purse-buymore { display: none; }

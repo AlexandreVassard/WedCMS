@@ -1,0 +1,392 @@
+
+.dialog .dialog-header h3 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    overflow: hidden;
+    max-height: 15px;
+}
+
+.dialog .dialog-header {
+    background: url(/web/20061130214348im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/dialogs/skin_edit_dropdown_topL.gif) no-repeat;
+    padding-left: 8px;
+}
+
+.dialog .dialog-header h3 {
+    background: url(/web/20061130214348im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/dialogs/skin_edit_dropdown_topR.gif) no-repeat top right;
+    padding: 5px 8px 5px 0;
+}
+
+.dialog .dialog-body {
+    background: url(/web/20061130214348im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/dialogs/skin_edit_dropdown_btmL.gif) no-repeat bottom left;
+    padding-left: 8px;
+}
+
+.dialog .dialog-content {
+    background: url(/web/20061130214348im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/dialogs/skin_edit_dropdown_btmR.gif) no-repeat bottom right;
+    padding: 8px 8px 8px 0;
+}
+
+.report-dialog {
+    position: absolute;
+    z-index: 9000;
+    width: 133px;
+}
+
+.report-dialog .dialog-header h3 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 0 3px 18px;
+    border-bottom: 1px dashed black;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.report-dialog .dialog-header {
+    padding: 6px 6px 3px 6px;
+    background-repeat: no-repeat;
+}
+
+.report-dialog .dialog-body {
+    padding: 6px 6px 0 6px;
+    background-repeat: repeat-y;
+}
+
+.report-dialog .dialog-content {
+    height: 1%;
+
+}
+
+.report-dialog .dialog-bottom {
+    font-size: 1%;
+    height: 7px;
+    background-repeat: no-repeat;
+}
+
+.report-dialog .dialog-header {
+    background-image: url(/web/20061130214348im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/edit_menu/top_with_report_icon.png);
+}
+
+.report-dialog .dialog-body {
+    background-image: url(/web/20061130214348im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/edit_menu/body.png);
+}
+
+.report-dialog .dialog-bottom {
+    background-image: url(/web/20061130214348im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/edit_menu/bottom.png);
+}
+
+
+div.inventory-item {
+    background-color: white;
+    border: 1px solid #6F6F6F;
+    padding: 2px;
+    margin: 0 2px 2px 0;
+    float: left;
+}
+
+div.inventory-item-preview {
+    cursor: pointer;
+}
+
+div.inventory-item div {
+    width: 80px;
+    float: left;
+}
+
+div.inventory-item div a {
+    margin: 60px 0 0 0;
+    float: left;
+}
+
+div.widget-inventory-item {
+    clear: both;
+    background-color: white;
+    border: 1px solid #6F6F6F;
+    margin-bottom: 5px;
+    padding: 3px;
+}
+
+div.widget-inventory-item div.inventory-item {
+    margin: 0 8px 0 0;
+    border: none;
+}
+
+div.widget-inventory-item div.inventory-item, div.widget-inventory-item div.inventory-item div,
+#dialog-purchase-confirm div.inventory-item, #dialog-purchase-confirm div.inventory-item div,
+#dialog-stickies-purchase div.inventory-item, #dialog-stickies-purchase div.inventory-item div {
+    width: 76px;
+    height: 76px;
+}
+
+#dialog-purchase-confirm div.inventory-item, #dialog-stickies-purchase div.inventory-item {
+    margin-right: 7px;
+}
+
+div.purchase-dialog div.inventory-item div a {
+    margin-top: 45px;
+}
+
+div.stickie-purchase-preview {
+    background-image: url(/web/20061130214348im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/stickies/note_thumbnail.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+div.dialog-button-area {
+    margin-top: 7px;
+    clear: both;
+}
+
+#dialog-background-inventory, #dialog-sticker-inventory, #dialog-widget-inventory,
+#dialog-purchase-confirm, #dialog-background-purchase,
+#dialog-sticker-purchase, #dialog-skin-purchase, #dialog-stickie-add, #dialog-stickie-limit-exceeded,
+#dialog-stickies-purchase {
+    position: absolute;
+    left: -1500px;
+    top: 0;
+}
+
+/* Style for StickieNote dialog */
+#dialog-stickie-add {
+    width: 300px;
+}
+
+#dialog-stickie-add form {
+    margin: 0;
+}
+
+#dialog-stickie-add textarea {
+    width: 95%;
+}
+
+#dialog-stickie-add #stickie-preview-window {
+    padding: 5px;
+}
+
+#stickie-preview-buttons {
+    margin: 5px 3px 3px 5px;
+    padding: 5px;
+}
+
+#dialog-purchase-successful, #dialog-not-enough-credits {
+    position: absolute;
+    left: 250px;
+    top: 150px;
+    width: 150px;
+}
+
+#dialog-stickie-edit {
+    position: absolute;
+    left: 200px;
+    top: 100px;
+}
+
+#dialog-stickie-add #notes-left {
+    margin-top: 2px;
+    padding-bottom: 24px;
+}
+
+#dialog-stickie-add #notes-left .notes-left-text{
+    font-weight: bold;
+    float: left;
+    position: relative;
+}
+
+#dialog-stickie-add #notes-left  #stickie-add-get-more {
+    font-weight: normal;
+    float: right;
+    position: relative;
+}
+
+#dialog-stickie-add #stickie-char-counter {
+    background-color: #FC0;
+}
+
+#dialog-stickie-add #stickie-preview-button, #dialog-stickie-add #stickie-preview-add {
+    float: left;
+}
+
+#dialog-stickie-add #stickie-edit-cancel-button, #dialog-stickie-add #stickie-preview-continue {
+    float: right;
+}
+
+#dialog-stickie-add h4 {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+#dialog-stickie-add .dotted-bottom-line {
+    border-bottom: dashed 1px black;
+    padding-bottom: 10px;
+    margin-bottom: 7px;
+}
+
+#dialog-stickie-add .text-area-header {
+    margin: 4px 4px 4px 4px;
+    vertical-align: middle;
+}
+
+#dialog-stickie-add .enter_text {
+    float: left;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+#dialog-stickie-add .characters_left {
+    float: right;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+#dialog-stickie-add div.stickie {
+    position: relative;
+}
+
+/* Style for background dialog */
+
+#background-items, #purchase-background-items,
+#sticker-items, #purchase-sticker-items, #widget-items {
+    overflow: auto;
+    height: 260px;
+}
+
+#widget-items {
+    height: 280px;
+}
+
+/* Style for sticker dialog */
+#dialog-stickers-inventory {
+    position: absolute;
+    left: -1500px;
+    top: 0;
+}
+
+/* Style for skin purchase */
+
+#dialog-skin-purchase form {
+    margin: 0;
+}
+
+#purchase-skin-items {
+    height: 250px;
+    overflow: auto;
+}
+
+
+/* Style for edit sticker dialog */
+#dialog-edit-sticker {
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    height: 160px;
+    left: -1500px;
+    top: 0;
+}
+
+#dialog-edit-sticker form {
+    margin: 0;
+}
+
+#dialog-purchase-confirmation {
+    position: absolute;
+    width: 200px;
+    height: 160px;
+}
+
+div.pricetag, div.pricetag-free {
+    background: url(/images/myhabbo/pricetag.gif) no-repeat;
+    width: 32px;
+    height: 15px;
+    padding-top: 1px;
+    font-size: 10px;
+}
+
+div.pricetag-free {
+    background-image: url(/images/myhabbo/pricetag_free.gif);
+}
+
+div.pricetag span, div.pricetag-free span {
+    margin: 0 6px 0 15px;
+    text-align: center;
+}
+
+div.menu {
+    position: absolute;
+    top: 0;
+    left: -1500px;
+    z-index: 9000;
+    width: 193px;
+}
+
+div.menu-header {
+    padding: 6px 6px 3px 6px;
+    background-repeat: no-repeat;
+    background-image: url(/images/dialogs/menu-top.gif);
+}
+
+div.menu-header h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0 0 3px 18px;
+    border-bottom: 1px dashed black;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+div.menu-exit {
+    float: right;
+}
+
+div.menu-body {
+    padding: 6px 6px 0 6px;
+    background-repeat: repeat-y;
+    background-image: url(/images/dialogs/menu-body.gif);
+}
+
+div.menu-content form {
+    margin: 0;
+}
+
+div.menu-content input, div.menu-content select {
+    width: 99%;
+}
+
+div.menu-bottom {
+    font-size: 1%;
+    height: 7px;
+    background-repeat: no-repeat;
+    background-image: url(/images/dialogs/menu-bottom.gif);
+}
+
+#edit-menu div.menu-header {
+    background-image: url(/images/dialogs/menu-top_with_edit.gif);
+}
+
+#edit-menu-skins {
+    display: none;
+    padding-bottom: 3px;
+}
+
+#edit-menu-stickie {
+    display: none;
+}
+
+#dialog-name-report div.menu-header,
+#dialog-motto-report div.menu-header,
+#dialog-stickie-report div.menu-header,
+#dialog-report-success div.menu-header,
+#dialog-report-error div.menu-header,
+#dialog-report-spam div.menu-header {
+    background-image: url(/images/dialogs/menu-top_with_report.gif);
+}
+
+img.edit-button {
+    float: right;
+    cursor: pointer;
+    border: none;
+}
+
+body.dragging img.edit-button {
+    display: none;
+}

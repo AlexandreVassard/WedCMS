@@ -1,0 +1,98 @@
+<div id='top-3rd-level'></div>
+<div id='content-3rd-level'>
+  <ul id='third-level-navi'>
+    {{#ifCond subPage '==' 'furniture'}}
+      <li class='active'>
+        {{text.global.menu.hotel.sub.furni}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a href='/hotel/furniture'>{{text.global.menu.hotel.sub.furni}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'catalogue'}}
+      <li class='active'>
+        {{text.hotel.furni.menu.catalogue}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/furniture/catalogue'
+        >{{text.hotel.furni.menu.catalogue}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'catalogue1'}}
+      <li class='active'>
+        {{text.hotel.furni.menu.catalogue1}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/furniture/catalogue1'
+        >{{text.hotel.furni.menu.catalogue1}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'catalogue2'}}
+      <li class='active'>
+        {{text.hotel.furni.menu.catalogue2}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/furniture/catalogue2'
+        >{{text.hotel.furni.menu.catalogue2}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'catalogue4'}}
+      <li class='active'>
+        {{text.hotel.furni.menu.catalogue4}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/furniture/catalogue4'
+        >{{text.hotel.furni.menu.catalogue4}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'decoration_examples'}}
+      <li class='active'>
+        {{text.hotel.furni.menu.decorationExamples}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/furniture/decoration_examples'
+        >{{text.hotel.furni.menu.decorationExamples}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'staff_favourite'}}
+      <li class='active'>
+        {{text.hotel.furni.menu.staffFavourite}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/furniture/staff_favourite'
+        >{{text.hotel.furni.menu.staffFavourite}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'trading'}}
+      <li class='active'>
+        {{text.hotel.furni.menu.trading}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a href='/hotel/furniture/trading'>{{text.hotel.furni.menu.trading}}</a>
+      </li>
+    {{/ifCond}}
+  </ul>
+  <div class='clear'></div>
+</div>
+<div id='bottom-3rd-level'></div>

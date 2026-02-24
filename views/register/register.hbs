@@ -1,0 +1,231 @@
+<h1 id='main-header'>Habbo</h1>
+<div id='process-wrapper'>
+  <div id='process-header'>
+    <div id='process-header-body'>
+      <div id='process-header-content'>
+        <div id='habbologo'>
+          <a href='/'>
+            <img
+              style='margin-top:15px'
+              src='/images/logos/appLogo.png'
+              alt='LogoGenerator du site'
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='outer'>
+    <div id='outer-content'>
+      <div class='processbox'>
+        <div class='headline' style='height:auto !important;'>
+          <div class='headline-content'>
+            <div class='headline-wrapper'>
+              <h2>{{text.register.tabTitle}}
+                <a href='/' class='exit'>{{text.register.cancel}}</a></h2>
+            </div>
+          </div>
+        </div>
+        <div class='content-top'>
+          <div class='content'>
+            <div class='content-column1'>
+              <div class='bubble'>
+                <div class='bubble-body'>
+                  {{text.register.frankText}}
+                  <div class='clear'></div>
+                </div>
+              </div>
+              <div class='bubble-bottom'>
+                <div class='bubble-bottom-body'>
+                  <img
+                    src='images/register/bubble_tail_left.gif'
+                    alt=''
+                    width='22'
+                    height='31'
+                  />
+                </div>
+              </div>
+              <div class='frank'>
+                <img
+                  src='images/register/register6.gif'
+                  alt=''
+                  width='245'
+                  height='197'
+                />
+              </div>
+            </div>
+
+            <div class='content-column2'>
+              <div id='process-errors'>
+                <div class='content-red'>
+                  <div class='content-red-body' id='process-errors-content'>
+                    <div class='clear'></div>
+                  </div>
+                </div>
+                <div class='content-red-bottom'>
+                  <div class='content-red-bottom-body'></div>
+                </div>
+              </div>
+              <div class='content-white-outer'>
+                <div class='content-white'>
+                  <div class='content-white-body'>
+                    <div class='content-white-content'>
+                      {{#if errorRegister}}
+                        <div
+                          id='login-errors'
+                          style='display:block;margin-bottom:10px;'
+                        >
+                          <div class='content-red'>
+                            <div
+                              class='content-red-body'
+                              id='login-errors-content'
+                            >
+                              {{#ifCond errorRegister '==' 1}}
+                                {{text.register.notSamePasswords}}
+                              {{/ifCond}}
+                              {{#ifCond errorRegister '==' 2}}
+                                {{text.register.mailError}}
+                              {{/ifCond}}
+                              {{#ifCond errorRegister '==' 3}}
+                                {{text.register.alreadyExists}}
+                              {{/ifCond}}
+                              {{#ifCond errorRegister '==' 4}}
+                                {{text.register.passwordTooShort}}
+                              {{/ifCond}}
+                              <div class='clear'></div>
+                            </div>
+                          </div>
+                          <div class='content-red-bottom'>
+                            <div class='content-red-bottom-body'></div>
+                          </div>
+                        </div>
+                      {{/if}}
+                      <form
+                        method='post'
+                        action='/registerSubmit'
+                        id='stepform'
+                      >
+                        <input
+                          type='hidden'
+                          name='birthday'
+                          value='{{birthday}}'
+                        />
+                        <div style='text-align: right;'>
+                          <p>
+                            <label for='username' class='registration-text'>
+                              {{text.register.username}}
+                            </label>
+                            <input
+                              type='text'
+                              class='required-username'
+                              name='username'
+                              id='username'
+                              style='width:250px;'
+                              value='{{post.username}}'
+                            />
+                          </p>
+                          <p>
+                            <label for='mail' class='registration-text'>
+                              {{text.register.mail}}
+                            </label>
+                            <input
+                              type='text'
+                              class='required-username'
+                              name='email'
+                              id='mail'
+                              style='width:250px;'
+                              value='{{post.email}}'
+                            />
+                          </p>
+                          <p>
+                            <label for='password' class='registration-text'>
+                              {{text.register.password}}
+                            </label>
+                            <input
+                              type='password'
+                              class='required-username'
+                              name='password'
+                              id='password'
+                              style='width:250px;'
+                              value=''
+                            />
+                          </p>
+                          <p>
+                            <label
+                              for='passwordRepeat'
+                              class='registration-text'
+                            >
+                              {{text.register.passwordRepeat}}
+                            </label>
+                            <input
+                              type='password'
+                              class='required-username'
+                              name='passwordRepeat'
+                              id='passwordRepeat'
+                              style='width:250px;'
+                              value=''
+                            />
+                          </p>
+                          <p>
+                            <label for='sex' class='registration-text'>
+                              {{text.register.sex}}
+                            </label>
+                            <select
+                              name='sex'
+                              id='sex'
+                              style='width:255px;'
+                              class='dateselector'
+                            >
+                              <option value='M'>{{text.register.man}}</option>
+                              <option value='F'>{{text.register.woman}}</option>
+                            </select>
+                          </p>
+                        </div>
+
+                        <div id='register-buttons'>
+                          <div id='register-buttons-continue'>
+                            <input
+                              type='submit'
+                              value='{{text.register.register}}'
+                              id='continuebtn'
+                              class='process-button'
+                            />
+                          </div>
+                          <div id='register-buttons-back'></div>
+                          <div class='clear'></div>
+                        </div>
+
+                      </form>
+                    </div>
+                    <div class='clear'></div>
+                  </div>
+                </div>
+                <div class='content-white-bottom'>
+                  <div class='content-white-bottom-body'></div>
+                </div>
+              </div>
+            </div>
+            <div class='clear'></div>
+          </div>
+        </div>
+        <div class='content-bottom'>
+          <div class='content-bottom-content'></div>
+        </div>
+      </div>
+
+      <div id='footer'>
+        <div id='footer-top'>
+          <div id='footer-content'>© Copyright
+            {{app.title}}, powered by WedCMS.
+          </div>
+        </div>
+        <div id='footer-bottom'>
+          <div id='footer-bottom-content'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='outer-bottom'>
+    <div id='outer-bottom-content'></div>
+  </div>
+</div>

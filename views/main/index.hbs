@@ -1,0 +1,203 @@
+<script>
+    var buyContent = '<p>{{text.global.buyRare.confirm}}';
+    buyContent += '<a href="/user/buyRare" class="colorlink orange"><span>{{text.global.buyRare.buy}}</span></a><a href="javascript:closeDialog(\'purchase_dialog\')" class="wed-btn"><span>{{text.global.buyRare.close}}</span></a></p>';
+    buyContent += '<div style="clear: both;"></div>';
+</script>
+<div id="main-content">
+    <table class="content-home" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+            <td colspan="6" style="height: 4px;"></td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="width: 8px;">&nbsp;</td>
+            <td style="width: 740px;" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td colspan="3" style="padding-bottom: 3px;">
+                            {{>main/announcements}}
+                            {{>main/news}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 215px; height: 400px;" class="habboPage-col" valign="top">
+
+                            <div class="v2box red light">
+                                <div class="headline">
+                                    <div class="headline-inner">
+                                        <div class="headline-inner-inner">
+                                            <h3>{{text.index.box1.title}}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border">
+                                    <div></div>
+                                </div>
+                                <div class="body wed-linksb">
+                                    <img src="/images/frank_welcome1.gif" align="left">
+                                    {{text.index.box1.content1}}
+                                    <br><br>
+                                    <a href="javascript:enterHotel()">{{text.index.box1.joinHotel}}</a>
+                                    <br><br>
+                                    {{text.index.box1.content2}}
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="bottom">
+                                    <div></div>
+                                </div>
+                            </div>
+
+
+                            <div class="v2box red light">
+                                <div class="headline">
+                                    <h3>{{text.index.box2.title}}</h3>
+                                </div>
+                                <div class="border">
+                                    <div></div>
+                                </div>
+                                <div class="body wed-linksb">
+                                    <img alt="Credits Pile of Coins (110)" id="galleryImage"
+                                         src="/images/coins_big_110.gif" width="110" height="103" border="0"
+                                         align="right">
+                                    {{{text.index.box2.content}}}
+                                </div>
+                                <div class="bottom">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td style="width: 215px; height: 400px;" class="habboPage-col" valign="top">
+
+                            <div class="v2box green light">
+                                <div class="headline">
+                                    <h3>{{text.index.box3.title}}</h3>
+                                </div>
+                                <div class="border">
+                                    <div></div>
+                                </div>
+                                <div class="body">
+
+                                    <p align="center">
+                                        <img alt="sticker monolithe" id="galleryImage"
+                                             src="/images/furni/{{rare.imageName}}.gif"></p>
+                                    <p align="center"><b>{{rare.name}}</b></p>
+                                    <p align="center">{{rare.description}}</p>
+                                    <p align="center">{{text.index.box3.price}}
+                                        : {{rare.price}} {{text.index.box3.credits}}</p>
+                                    <div id="purchase_2">
+                                        <br>
+                                        {{#if user}}
+                                            {{#ifCond user.credits '>=' rare.price}}
+                                                <span id="purchase_2_purchase">
+                                                    <a href="javascript:buyRare('{{text.index.box3.confirmTitle}}', buyContent)"
+                                                       class="colorlink orange">
+                                                        <span>{{text.index.box3.button1}}</span>
+                                                    </a></span>
+                                            {{else}}
+                                                <p>{{text.index.box3.notEnoughCredits}}</p>
+                                            {{/ifCond}}
+                                        {{else}}
+                                            {{{text.index.box3.notConnected}}}
+                                        {{/if}}
+                                    </div>
+                                    <p></p>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="bottom">
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <div class="v2box green light">
+                                <div class="headline">
+                                    <h3>{{text.index.box4.title}}</h3>
+                                </div>
+                                <div class="border">
+                                    <div></div>
+                                </div>
+                                <div class="body wed-spansb">
+                                    <p align="center"><img src="/images/home_small.png" align="middle"></p>
+                                    {{{text.index.box4.content}}}
+                                    <ul>
+                                        {{#each homepages}}
+                                            <li><a href="/home/{{this.username}}">{{this.username}}</a></li>
+                                        {{/each}}
+                                    </ul>
+                                    <a href="/home"><span>{{text.index.box4.link1}}</span></a><br>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="bottom">
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </td>
+
+
+                        <td style="width: 310px; height: 400px;" class="habboPage-col rightmost" valign="top">
+
+                            <div class="v2box blue light">
+                                <div class="headline">
+                                    <h3>{{text.index.box5.title}}</h3>
+                                </div>
+                                <div class="border">
+                                    <div></div>
+                                </div>
+                                <div class="body">
+                                    {{text.index.box5.content}}
+                                    <div style="display: flex;justify-content: space-around;text-align: center;">
+                                        <div style="width:50%">
+                                            <h4>{{text.index.box5.snowstorm}}</h4>
+                                            <ol style="text-align: left;">
+                                                {{#each snowstormPlayers}}
+                                                    <li>{{this.username}} ({{this.points}})</li>
+                                                {{/each}}
+                                            </ol>
+                                        </div>
+                                        <div style="width:50%">
+                                            <h4>{{text.index.box5.battleball}}</h4>
+                                            <ol style="text-align: left;">
+                                                {{#each battleballPlayers}}
+                                                    <li>{{this.username}} ({{this.points}})</li>
+                                                {{/each}}
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <div class="v2box blue light">
+                                <div class="headline">
+                                    <h3>{{text.global.ad}}</h3>
+                                </div>
+                                <div class="border">
+                                    <div></div>
+                                </div>
+                                <div class="body">
+                                    <a href="#" target="_blank">
+                                        <img src="images/a_img/03.png" width="300" height="250">
+                                    </a>
+                                </div>
+                                <div class="bottom">
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td rowspan="2" style="width: 4px;"></td>
+            {{>main/ad}}
+        </tr>
+        </tbody>
+    </table>
+    <br style="clear: both;"/>
+</div>

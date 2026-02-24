@@ -1,0 +1,50 @@
+{{>main/subscribeHabboClub}}
+<div class="portlet-scale gold">
+    <div class="portlet-scale-header"><h3>{{text.club.subscribe.title}}</h3></div>
+    <div class="portlet-scale-body">
+        <div class="portlet-scale-content">
+            <div class="v2box brown darkest">
+                <div class="headline"><h3>{{text.club.subscribe.headline}}</h3></div>
+                <div class="border">
+                    <div></div>
+                </div>
+                <div class="body">
+                    <p>
+                        {{{text.club.subscribe.comment}}}
+                    </p>
+                    <div id="subscription-divider">
+                        <div>
+                            {{#if user}}
+                                <br>
+                                {{#if clubDaysLeft}}
+                                    <a href="javascript:hcSubscribe('{{text.club.subscribe.extend}}', extendContent)" class="colorlink orange"><span>{{text.club.subscribe.extend}}</span></a>
+                                {{else}}
+                                    <a href="javascript:hcSubscribe('{{text.club.subscribe.subscribe}}', subscribeContent)" class="colorlink orange"><span>{{text.club.subscribe.subscribe}}</span></a>
+                                {{/if}}
+                            {{else}}
+                                <div class="content-beige">
+                                    <div class="content-beige-body">
+                                        {{{text.club.subscribe.notLogged}}}
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="content-beige-bottom">
+                                    <div class="content-beige-bottom-body"></div>
+                                </div>
+                            {{/if}}
+
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="bottom">
+                    <div></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="portlet-scale-bottom">
+        <div class="portlet-scale-bottom-body"></div>
+    </div>
+</div>

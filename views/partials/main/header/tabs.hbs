@@ -1,0 +1,66 @@
+<table id="topbar">
+    <tbody>
+    <tr>
+        {{>main/header/counter}}
+        {{>main/header/tabTitles}}
+        <td id="topbar-status" class="notloggedin">{{text.global.headerTabs.notLogged}}</td>
+    </tr>
+    </tbody>
+</table>
+{{>main/header/logo}}
+{{>main/header/enterHotel}}
+<div id="tabmenu" onmouseover="lockCurrentTab();" onmouseout="fadeTab('myhabbo')">
+    <div id="tabmenu-content">
+        <div id="myhabbo-content" class="tabmenu-inner selected">
+            <h3>{{text.global.headerTabs.myHabbo.text1}}</h3>
+            <div class="tabmenu-inner-content">
+                <img class="tabmenu-image" id="tabPartialHeaderImage" src="/images/frank_03.gif">
+                <p>
+                    <a href="/login" class="colorlink orange">
+                        <span>{{text.global.headerTabs.myHabbo.button1}}</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="/login" class="colorlink orange">
+                        <span>{{text.global.headerTabs.myHabbo.button2}}</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div id="mycredits-content" class="tabmenu-inner">
+            <h3>{{{text.global.headerTabs.myCredits.text1}}}</h3>
+            <div class="tabmenu-inner-content innerContentPaddingTab">
+                <img class="tabmenu-image" src="/images/mycredits_coins.gif">
+                <p>
+                    <a class="arrow" href="/credits">
+                        <span>{{text.global.headerTabs.myCredits.link1}}</span>
+                    </a>
+                </p>
+                <p>
+                    <a class="arrow" href="/credits">
+                        <span>{{text.global.headerTabs.myCredits.link2}}</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div id="habboclub-content" class="tabmenu-inner">
+            <h3>{{{text.global.headerTabs.myClub.text1}}}</h3>
+            <div class="tabmenu-inner-content innerContentPaddingTab">
+                <p>
+                    <span>{{text.global.headerTabs.myClub.text2}}</span>
+                </p>
+                <p><a class="arrow" href="/club"><span>{{text.global.headerTabs.myClub.link1}}</span></a>
+                </p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="tabmenu-bottom"></div>
+</div>
+</div>
+<script type="text/javascript">
+    var myhabbo = document.querySelector('#myhabbo');
+    var top = document.querySelector('#top');
+    var tabmenu = document.querySelector('#tabmenu');
+    tabmenu.style.left = (Position.cumulativeOffset(myhabbo)[0] - Position.cumulativeOffset(top)[0]) + "px";
+</script>

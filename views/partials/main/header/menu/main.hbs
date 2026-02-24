@@ -1,0 +1,32 @@
+<div id="mainmenu">
+    <ul>
+        <li id="leftspacer">&nbsp;</li>
+        <li{{#ifCond page '==' 'index'}} id="active"{{/ifCond}}><span class="left"></span>
+            <a href="/"><img src="/images/navi/1.gif">{{text.global.menu.home.title}}</a>
+            <span class="right"></span></li>
+        <li{{#ifCond page 'startsWith' 'hotel'}} id="active"{{/ifCond}}><span class="left"></span> <a href="/hotel"><img
+                src="/images/navi/2.gif">{{text.global.menu.hotel.title}}</a> <span
+                class="right"></span>
+        </li>
+        <li{{#ifCond page 'startsWith' 'news'}} id="active"{{/ifCond}}><span class="left"></span> <a href="/news"><img
+                src="/images/navi/3.gif">{{text.global.menu.news.title}}</a>
+            <span class="right"></span></li>
+        <li{{#ifCond page 'startsWith' 'home'}} id="active"{{/ifCond}}><span class="left"></span> <a href="/home"><img
+                src="/images/navi/5.gif">{{text.global.menu.homepages.title}}</a>
+            <span class="right"></span></li>
+        <li{{#ifCond page 'startsWith' 'credits'}} id="active"{{/ifCond}}><span class="left"></span> <a href="/credits"><img
+                src="/images/navi/10.gif">{{text.global.menu.credits.title}}</a>
+            <span class="right"></span></li>
+        <li{{#ifCond page 'startsWith' 'club'}} id="active"{{/ifCond}}><span class="left"></span> <a href="/club"><img
+                src="/images/navi/9.gif">{{text.global.menu.club.title}}</a> <span
+                class="right"></span>
+        </li>
+        <!--<li><span class="left"></span> <a href="/habbowood" target="_blank"><img
+                src="/images/navi/11.gif">{{text.global.menu.habbowood.title}}</a> <span
+                class="right"></span>
+        </li>!-->
+        <li class="last"><span class="left"></span>
+            <a href="/iot" target="_blank"><img src="/images/navi/8.gif">{{text.global.menu.help.title}}</a>
+            <span class="right"></span></li>
+    </ul>
+</div>

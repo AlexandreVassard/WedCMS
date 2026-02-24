@@ -1,0 +1,382 @@
+<link href="/styles/myhabbo/myhabbo.css" type="text/css" rel="stylesheet"/>
+<link href="/styles/myhabbo/skins.css" type="text/css" rel="stylesheet"/>
+<link href="/styles/myhabbo/dialogs.css" type="text/css" rel="stylesheet"/>
+<link href="/styles/myhabbo/buttons.css" type="text/css" rel="stylesheet"/>
+<link href="/styles/boxes.css" type="text/css" rel="stylesheet"/>
+<link href="/styles/myhabbo/boxes.css" type="text/css" rel="stylesheet"/>
+<link href="/styles/profile.css" type="text/css" rel="stylesheet"/>
+<link href="/styles/assets.css" type="text/css" rel="stylesheet"/>
+<script defer type="text/javascript" src="/js/effects.js"></script>
+<script defer type="text/javascript" src="/js/dragdrop.js"></script>
+<script defer type="text/javascript" src="/js/slider.js"></script>
+<script defer type="text/javascript" src="/js/myhabbo.js"></script>
+<script defer type="text/javascript" src="/js/myhabbo-dialogs.js"></script>
+<script defer type="text/javascript" src="/js/myhabbo-widgets.js"></script>
+{{#if user}}
+  {{#ifCond user.id "==" homepageUser.id}}
+    <script defer type="text/javascript" src="/js/myhabbo-edit.js"></script>
+    <script defer type="text/javascript" src="/js/myhabbo-edit-init.js"></script>
+  {{/ifCond}}
+{{/if}}
+<div id="main-content">
+    <div id="page-headline">
+        <div id="page-headline-breadcrums">
+            <a href="/">{{text.global.menu.home.title}}</a> » <a href="/home">{{text.global.menu.homepages.title}}</a> » {{homepageUser.username}}
+        </div>
+        <div id="page-headline-text">{{text.homepages.homepage.title}}: {{homepageUser.username}}</div>
+    </div>
+    <div id="mypage-wrapper">
+        {{#if user}}
+          {{#ifCond user.id "==" homepageUser.id}}
+
+            <style>
+              img.edit-button { display: none; }
+              body#editmode img.edit-button { display: block; }
+            </style>
+
+            {{!-- "Edit My Page" button shown in view mode --}}
+            <div id="mypage-top-nav">
+              <div id="edit-button-wrapper">
+                <div class="box-content">
+                  <a id="edit-page-button" class="toolbutton edit" href="#"><span>Modifier ma page</span></a>
+                </div>
+              </div>
+            </div>
+
+            {{!-- Edit toolbar (hidden; slides down on edit entry) --}}
+            <div id="top-toolbar" style="display:none;">
+              <div>
+                <a id="cancel-button" class="toolbutton cancel" href="#"><span>Annuler</span></a>
+                <a id="save-button" class="toolbutton save" href="#"><span>Sauvegarder</span></a>
+                <a id="btn-backgrounds" class="toolbutton backgrounds" href="#"><span>Fonds</span></a>
+                <a id="btn-widgets" class="toolbutton widgets" href="#"><span>Widgets</span></a>
+              </div>
+            </div>
+
+            {{!-- AJAX save target (invisible) --}}
+            <div id="edit-save" style="display:none;"></div>
+
+            {{!-- Widget inventory dialog --}}
+            <div id="dialog-widget-inventory" class="menu" style="display:none;">
+              <div class="menu-header">
+                <h3>Ajouter un widget</h3>
+                <div class="menu-exit"><a id="close-widget-inventory" href="#">&times;</a></div>
+              </div>
+              <div class="menu-body">
+                <div class="menu-content">
+                  <div id="widget-items">
+                    <div class="widget-inventory-item" data-widget="ProfileWidget">
+                      <div class="inventory-item"><div class="b_widget_profile_pre"></div></div>
+                      <span>Profil</span>
+                      <a class="widget-add-btn new-button" href="#" data-type="ProfileWidget"><b>Ajouter</b><i></i></a>
+                    </div>
+                    <div class="widget-inventory-item" data-widget="HighScoresWidget">
+                      <div class="inventory-item"><div class="b_widget_highscores_pre"></div></div>
+                      <span>Scores</span>
+                      <a class="widget-add-btn new-button" href="#" data-type="HighScoresWidget"><b>Ajouter</b><i></i></a>
+                    </div>
+                    <div class="widget-inventory-item" data-widget="FriendsWidget">
+                      <div class="inventory-item"><div class="b_widget_friends_pre"></div></div>
+                      <span>Amis</span>
+                      <a class="widget-add-btn new-button" href="#" data-type="FriendsWidget"><b>Ajouter</b><i></i></a>
+                    </div>
+                    <div class="widget-inventory-item" data-widget="RoomsWidget">
+                      <div class="inventory-item"><div class="b_widget_rooms_pre"></div></div>
+                      <span>Salles</span>
+                      <a class="widget-add-btn new-button" href="#" data-type="RoomsWidget"><b>Ajouter</b><i></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-bottom"></div>
+            </div>
+
+            {{!-- Background inventory dialog --}}
+            <div id="dialog-background-inventory" class="menu" style="display:none;">
+              <div class="menu-header">
+                <h3>Choisir un fond</h3>
+                <div class="menu-exit"><a id="close-bg-inventory" href="#">&times;</a></div>
+              </div>
+              <div class="menu-body">
+                <div class="menu-content">
+                  <div id="background-items">
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_deepred" data-bg-id="bg_pattern_deepred"><div class="b_bg_pattern_deepred_pre"></div><span>Rouge</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_bricks" data-bg-id="bg_pattern_bricks"><div class="b_bg_pattern_bricks_pre"></div><span>Briques</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_clouds" data-bg-id="bg_pattern_clouds"><div class="b_bg_pattern_clouds_pre"></div><span>Nuages</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_space" data-bg-id="bg_pattern_space"><div class="b_bg_pattern_space_pre"></div><span>Espace</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_hearts" data-bg-id="bg_pattern_hearts"><div class="b_bg_pattern_hearts_pre"></div><span>Coeurs</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_floral_01" data-bg-id="bg_pattern_floral_01"><div class="b_bg_pattern_floral_01_pre"></div><span>Floral 1</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_floral_02" data-bg-id="bg_pattern_floral_02"><div class="b_bg_pattern_floral_02_pre"></div><span>Floral 2</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_fish" data-bg-id="bg_pattern_fish"><div class="b_bg_pattern_fish_pre"></div><span>Poissons</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_abstract1" data-bg-id="bg_pattern_abstract1"><div class="b_bg_pattern_abstract1_pre"></div><span>Abstrait 1</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_pattern_abstract2" data-bg-id="bg_pattern_abstract2"><div class="b_bg_pattern_abstract2_pre"></div><span>Abstrait 2</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_wood" data-bg-id="bg_wood"><div class="b_bg_wood_pre"></div><span>Bois</span></div>
+                    <div class="inventory-item bg-item" data-bg="b_bg_stone" data-bg-id="bg_stone"><div class="b_bg_stone_pre"></div><span>Pierre</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-bottom"></div>
+            </div>
+
+            {{!-- Per-widget edit menu (skin change + remove) --}}
+            <div id="edit-menu" class="menu" style="left:-1500px; position:absolute;">
+              <div class="menu-header" id="edit-menu-header">
+                <h3>Modifier</h3>
+                <div class="menu-exit"><a id="close-edit-menu" href="#">&times;</a></div>
+              </div>
+              <div class="menu-body">
+                <div class="menu-content">
+                  <div id="edit-menu-skins" style="display:none; padding-bottom:3px;">
+                    <select id="edit-menu-skins-select">
+                      <option id="edit-menu-skins-select-w_skin_goldenskin" value="w_skin_goldenskin">Golden</option>
+                      <option id="edit-menu-skins-select-w_skin_metalskin" value="w_skin_metalskin">Metal</option>
+                      <option id="edit-menu-skins-select-w_skin_defaultskin" value="w_skin_defaultskin">Default</option>
+                      <option id="edit-menu-skins-select-w_skin_notepadskin" value="w_skin_notepadskin">Notepad</option>
+                      <option id="edit-menu-skins-select-w_skin_noteitskin" value="w_skin_noteitskin">Note-it</option>
+                    </select>
+                    <a id="edit-menu-skins-apply" href="#">Appliquer</a>
+                  </div>
+                  <a id="edit-menu-remove" href="#" style="display:block;">Supprimer</a>
+                  <div id="edit-menu-remove-group-warning" style="display:none;"></div>
+                  <div id="rating-edit-menu" style="display:none;"></div>
+                  <div id="edit-menu-gb-availability" style="display:none;"></div>
+                  <div id="edit-menu-stickie" style="display:none;"></div>
+                  <div id="edit-menu-trax-select" style="display:none;"></div>
+                </div>
+              </div>
+              <div class="menu-bottom"></div>
+            </div>
+
+          {{/ifCond}}
+        {{/if}}
+
+        <div id="mypage-left-panel">
+            <div id="mypage-top-spacer"></div>
+
+            <div id="mypage-bg" class="b_bg_pattern_deepred">
+                <div id="playground">
+
+
+                    <div class="movable widget ProfileWidget" id="widget-24"
+                         style=" left: 600px; top: 20px; z-index: 35;">
+                        <div class="w_skin_goldenskin">
+                            <div class="widget-corner" id="widget-24-handle">
+                                <img class="edit-button" id="widget-24-edit-btn"
+                                     src="/images/myhabbo/icon_edit.gif"
+                                     onclick="openEditMenu(event, 24, 'widget', 'widget-24-edit-btn', null)" />
+                                <div class="widget-headline"><h3><span class="header-left">&nbsp;</span><span
+                                        class="header-middle">{{text.homepages.homepage.profil.title}}</span><span class="header-right">&nbsp;</span>
+                                </h3>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="widget-content">
+                                    <div class="profile-info">
+                                        <div class="name" style="float: left">
+                                            <span class="name-text">{{homepageUser.username}}</span>
+                                        </div>
+
+                                        <br class="clear">
+                                        <div class="birthday text">
+                                            {{text.homepages.homepage.profil.createdAt}}
+                                        </div>
+                                        <div class="birthday date">
+                                            {{createdAt}}
+                                        </div>
+                                        {{#if homepageUser.badge}}
+                                            {{#ifCond homepageUser.badgeActive "==" "1"}}
+                                                <img src="/badge/{{homepageUser.badge}}.png">
+                                            {{/ifCond}}
+                                        {{/if}}
+                                    </div>
+                                    <div class="profile-figure">
+                                        <img style="margin-top:-5px;"
+                                             src="/habbo-imaging/avatarimage?figure={{homepageUser.figure}}&direction=4&head_direction=4">
+                                    </div>
+                                    <div class="profile-motto">
+                                        {{homepageUser.motto}}
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="movable widget HighScoresWidget" id="widget-25"
+                         style=" left: 595px; top: 250px; z-index: 41;">
+                        <div class="w_skin_goldenskin">
+                            <div class="widget-corner" id="widget-25-handle">
+                                <img class="edit-button" id="widget-25-edit-btn"
+                                     src="/images/myhabbo/icon_edit.gif"
+                                     onclick="openEditMenu(event, 25, 'widget', 'widget-25-edit-btn', null)" />
+                                <div class="widget-headline"><h3><span class="header-left">&nbsp;</span><span
+                                        class="header-middle">{{text.homepages.homepage.scores.title}}</span><span
+                                        class="header-right">&nbsp;</span></h3>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="widget-content">
+                                    <table>
+                                        <tbody>
+                                        <tr colspan="2">
+                                            <th>
+                                                {{text.homepages.homepage.scores.battleball}}
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>{{text.homepages.homepage.scores.total}}</td>
+                                            <td>{{homepageUser.battleballPoints}}</td>
+                                        </tr>
+                                        <tr colspan="2">
+                                            <th>
+                                                {{text.homepages.homepage.scores.snowstorm}}
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>{{text.homepages.homepage.scores.total}}</td>
+                                            <td>{{homepageUser.snowstormPoints}}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="movable widget FriendsWidget" id="widget-34273"
+                         style=" left: 140px; top: 50px; z-index: 8;">
+                        <div class="w_skin_goldenskin">
+                            <div class="widget-corner" id="widget-34273-handle">
+                                <img class="edit-button" id="widget-34273-edit-btn"
+                                     src="/images/myhabbo/icon_edit.gif"
+                                     onclick="openEditMenu(event, 34273, 'widget', 'widget-34273-edit-btn', null)" />
+                                <div class="widget-headline"><h3><span class="header-left"></span>
+                                    <span class="header-middle">
+                                        {{text.homepages.homepage.friends.title}}
+                                </span>
+                                    <span class="header-right">&nbsp;</span>
+                                </h3>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="widget-content">
+                                    <div id="avatar-list-search">
+                                    <input type="text" style="float:left;" id="avatarlist-search-string">
+                                    <a class="new-button" style="float:left;" id="avatarlist-search-button"><b>Recherche</b><i></i></a>
+                                    </div>
+                                    <br clear="all">
+
+                                    <div id="avatarlist-content">
+
+                                    <div class="avatar-widget-list-container">
+                                    <ul id="avatar-list-list" class="avatar-widget-list">
+                                         {{#each friends}}
+                                            <li id="avatar-list-1343249-4054802" title="{{this.username}}"><div class="avatar-list-open"><a href="#" id="avatar-list-open-link-1343249-4054802" class="avatar-list-open-link"></a></div>
+                                    <div class="avatar-list-avatar"><img src="/habbo-imaging/avatarimage?figure={{this.figure}}&direction=4&head_direction=4" alt=""></div>
+                                    <h4><a href="/home/{{this.username}}">{{this.username}}</a></h4>
+                                    <p class="avatar-list-birthday">31 août 2007</p>
+                                    <p>
+
+                                    </p></li>
+                                        {{/each}}
+                                    </ul>
+
+                                    <div id="avatar-list-info" class="avatar-list-info">
+                                    <div class="avatar-list-info-close-container"><a href="#" class="avatar-list-info-close"></a></div>
+                                    <div class="avatar-list-info-container"></div>
+                                    </div>
+
+                                    </div>
+
+                                    <div id="avatar-list-paging">
+                                        1 - 20 / 75
+                                        <br>
+                                        Premier |
+                                        &lt;&lt; |
+                                        <a href="#" class="avatar-list-paging-link" id="avatarlist-search-next">&gt;&gt;</a> |
+                                        <a href="#" class="avatar-list-paging-link" id="avatarlist-search-last">Dernier</a>
+                                    <input type="hidden" id="pageNumber" value="1">
+                                    <input type="hidden" id="totalPages" value="4">
+                                    </div>
+
+                                    </div>
+                                            <div class="clear"></div>
+                                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="movable widget RoomsWidget" id="widget-23"
+                         style=" left: 170px; top: 350px; z-index: 15;">
+                        <div class="w_skin_goldenskin">
+                            <div class="widget-corner" id="widget-23-handle">
+                                <img class="edit-button" id="widget-23-edit-btn"
+                                     src="/images/myhabbo/icon_edit.gif"
+                                     onclick="openEditMenu(event, 23, 'widget', 'widget-23-edit-btn', null)" />
+                                <div class="widget-headline"><h3><span class="header-left"></span>
+                                    <span class="header-middle">
+                                        {{text.homepages.homepage.rooms.title}}
+                                    </span>
+                                    <span class="header-right">&nbsp;</span>
+                                </h3>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="widget-content">
+
+                                    <div id="room_wrapper">
+                                        <table cellspacing="0" cellpadding="0" border="0">
+                                            <tbody>
+                                            {{#each rooms}}
+                                                <tr>
+                                                    <td class="dotted-line" valign="top">
+                                                        <div class="room_image">
+                                                            {{#ifCond this.accesstype '==' 0}}
+                                                                <img src="/images/homes/room_icon_open.gif"
+                                                                     alt="" align="middle">
+                                                            {{/ifCond}}
+                                                            {{#ifCond this.accesstype '==' 1}}
+                                                                <img src="/images/homes/room_icon_locked.gif"
+                                                                     alt="" align="middle">
+                                                            {{/ifCond}}
+                                                            {{#ifCond this.accesstype '==' 2}}
+                                                                <img src="/images/homes/room_icon_password.gif"
+                                                                     alt="" align="middle">
+                                                            {{/ifCond}}
+                                                        </div>
+                                                    </td>
+                                                    <td class="dotted-line">
+                                                        <div class="room_info">
+                                                            <div class="room_name">
+                                                                {{this.name}}
+                                                            </div>
+                                                            <div class="clear"></div>
+                                                            <div>
+                                                            </div>
+                                                            <a href="javascript:enterHotelRoom(2, {{this.id}})">
+                                                                {{../text.homepages.homepage.rooms.goIn}}
+                                                            </a>
+                                                        </div>
+                                                        <br class="clear">
+                                                    </td>
+                                                </tr>
+                                            {{/each}}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

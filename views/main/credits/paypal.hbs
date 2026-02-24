@@ -1,0 +1,106 @@
+<div id="main-content">
+    <div id="page-headline">
+        <div id="page-headline-breadcrums">
+            <a href="/">{{text.global.menu.home.title}}</a>
+            »
+            <a href="/credits">{{text.global.menu.credits.title}}</a>
+            »
+            Paypal
+        </div>
+        <div id="page-headline-text">Paypal</div>
+    </div>
+    <table class="content-2col" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+            <td style="width: 8px;"></td>
+            <td style="width: 202px;" class="habboPage-col" valign="top">
+                <div class="portlet-scale gold">
+                    <div class="portlet-scale-header"><h3>{{text.credits.paypal.box1.title}}</h3></div>
+                    <div class="portlet-scale-body">
+                        <div class="portlet-scale-content">
+                            {{#each paypalItems}}
+                                {{this.price}}{{this.currency}} = {{this.credits}} {{../text.credits.paypal.credits}}<br>
+                            {{/each}}
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="portlet-scale-bottom">
+                        <div class="portlet-scale-bottom-body"></div>
+                    </div>
+                </div>
+                <div class="portlet-scale gold">
+                    <div class="portlet-scale-header"><h3>{{text.credits.paypal.box2.title}}</h3></div>
+                    <div class="portlet-scale-body">
+                        <div class="portlet-scale-content">
+                            {{{text.credits.paypal.box2.content}}}
+                            <br>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="portlet-scale-bottom">
+                        <div class="portlet-scale-bottom-body"></div>
+                    </div>
+                </div>
+            </td>
+            <td style="width: 539px;" class="habboPage-col rightmost" valign="top">
+                <div class="portlet-scale gold">
+                    <div class="portlet-scale-header"><h3>{{text.credits.paypal.box3.title}}</h3></div>
+                    <div class="portlet-scale-body">
+                        <div class="portlet-scale-content">
+                            {{#if successPaypal}}
+                                <div style="display:block;margin-bottom:10px;">
+                                    <div class="content-ok">
+                                        <div class="content-ok-body">
+                                            {{{text.credits.paypal.box3.successMessage}}}
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content-ok-bottom">
+                                        <div class="content-ok-bottom-body"></div>
+                                    </div>
+                                </div>
+                            {{/if}}
+                            {{#if user}}
+                                <ul>
+                                    {{#each paypalItems}}
+                                        <li>
+                                            <a href="/user/buyCredits/{{this.id}}">
+                                                {{../text.credits.paypal.box3.buy}} {{this.credits}} {{../text.credits.paypal.credits}} ({{this.price}}{{this.currency}})
+                                            </a>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{else}}
+                                {{{text.credits.paypal.box3.notLogged}}}
+                            {{/if}}
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="portlet-scale-bottom">
+                        <div class="portlet-scale-bottom-body"></div>
+                    </div>
+                </div>
+                <div class="portlet-scale gold">
+                    <div class="portlet-scale-header"><h3>{{text.credits.paypal.box4.title}}</h3></div>
+                    <div class="portlet-scale-body">
+                        <div class="portlet-scale-content">
+                            <p>
+                                <img src="/images/credits/attention.jpg"
+                                     alt="" hspace="10" border="0" align="right"><b>
+                                {{{text.credits.paypal.box4.content}}}
+                            </b></p>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="portlet-scale-bottom">
+                        <div class="portlet-scale-bottom-body"></div>
+                    </div>
+                </div>
+            </td>
+            <td style="width: 4px;"></td>
+            {{>main/ad}}
+        </tr>
+        </tbody>
+    </table>
+    <br style="clear: both;">
+</div>

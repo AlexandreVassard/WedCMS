@@ -1,0 +1,27 @@
+<script>
+    var nextContent = [];
+    var nextContentStart = '<p><img src="/images/club/figure.png" style="float:left;margin: 0 8px 0 5px;" /><p><b>{{text.global.subscribe.next.text1}}</b></p>';
+    nextContent[0] = '<p>{{text.global.subscribe.next.text2}}</p>';
+    nextContent[0] += '<p><a href="/user/subscribeClub?months=1" class="colorlink orange"><span>{{text.global.subscribe.buy}}</span></a><a href="javascript:closeDialog(\'hc_dialog_next\')" class="wed-btn"><span>{{text.global.subscribe.close}}</span></a></p></p>'
+    nextContent[1] = '<p>{{text.global.subscribe.next.text3}}</p>';
+    nextContent[1] += '<p><a href="/user/subscribeClub?months=3" class="colorlink orange"><span>{{text.global.subscribe.buy}}</span></a><a href="javascript:closeDialog(\'hc_dialog_next\')" class="wed-btn"><span>{{text.global.subscribe.close}}</span></a></p></p>'
+    nextContent[2] = '<p>{{text.global.subscribe.next.text4}}</p>';
+    nextContent[2] += '<p><a href="/user/subscribeClub?months=6" class="colorlink orange"><span>{{text.global.subscribe.buy}}</span></a><a href="javascript:closeDialog(\'hc_dialog_next\')" class="wed-btn"><span>{{text.global.subscribe.close}}</span></a></p></p>'
+    var nextContentEnd = '<div style="clear: both;"></div>';
+    var extendContent = '<p><img src="/images/club/figure.png" style="float:left;margin: 0 8px 0 5px;" /><p><b>{{text.global.subscribe.extend.text1}}</b></p>';
+    extendContent += '<p>{{text.global.subscribe.extend.text2}}</p></p>';
+        {{#ifCond user.credits '>=' 25}}extendContent += '<p><a class="colorlinkleft orange" style="text-align:left;" href="javascript:hcSubscribeNext(\'{{text.global.subscribe.extend.button}}\', nextContentStart + nextContent[0] + nextContentEnd)"><span>{{text.global.subscribe.1month}}</span></a></p>';{{/ifCond}}
+{{#ifCond user.credits '>=' 60}}extendContent += '<p><a class="colorlinkleft orange" href="javascript:hcSubscribeNext(\'{{text.global.subscribe.extend.button}}\', nextContentStart + nextContent[1] + nextContentEnd)"><span>{{text.global.subscribe.3months}}</span></a></p>';{{/ifCond}}
+        {{#ifCond user.credits '>=' 105}}extendContent += '<p><a class="colorlinkleft orange" href="javascript:hcSubscribeNext(\'{{text.global.subscribe.extend.button}}\', nextContentStart + nextContent[2] + nextContentEnd)"><span>{{text.global.subscribe.6months}}</span></a></p>';{{/ifCond}}
+    {{#ifCond user.credits '<' 25}}extendContent += '<p>{{text.global.subscribe.extend.text3}}</p>';{{/ifCond}}
+    extendContent += '<p><a href="javascript:closeDialog(\'hc_dialog\')" class="wed-btn"><span>{{text.global.subscribe.close}}</span></a></p>';
+    extendContent += '<div style="clear:both;"></div>';
+    var subscribeContent = '<p><img src="/images/club/figure.png" style="float:left;margin: 0 8px 0 5px;" /><p><b>{{text.global.subscribe.subscribe.text1}}</b></p>';
+    subscribeContent += '<p>{{text.global.subscribe.subscribe.text2}}</p></p>';
+    {{#ifCond user.credits '>=' 25}}subscribeContent += '<p><a class="colorlinkleft orange" style="text-align:left;" href="javascript:hcSubscribeNext(\'{{text.global.subscribe.subscribe.button}}\', nextContentStart + nextContent[0] + nextContentEnd)"><span>{{text.global.subscribe.1month}}</span></a></p>';{{/ifCond}}
+    {{#ifCond user.credits '>=' 60}}subscribeContent += '<p><a class="colorlinkleft orange" href="javascript:hcSubscribeNext(\'{{text.global.subscribe.subscribe.button}}\', nextContentStart + nextContent[1] + nextContentEnd)"><span>{{text.global.subscribe.3months}}</span></a></p>';{{/ifCond}}
+        {{#ifCond user.credits '>=' 105}}subscribeContent += '<p><a class="colorlinkleft orange" href="javascript:hcSubscribeNext(\'{{text.global.subscribe.subscribe.button}}\', nextContentStart + nextContent[2] + nextContentEnd)"><span>{{text.global.subscribe.6months}}</span></a></p>';{{/ifCond}}
+            {{#ifCond user.credits '<' 25}}subscribeContent += '<p>{{text.global.subscribe.subscribe.text3}}</p>';{{/ifCond}}
+    subscribeContent += '<p><a href="javascript:closeDialog(\'hc_dialog\')" class="wed-btn"><span>{{text.global.subscribe.close}}</span></a></p>';
+    subscribeContent += '<div style="clear:both;"></div>';
+</script>

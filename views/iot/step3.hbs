@@ -1,0 +1,37 @@
+<form method='post' action='/iot/step/4' name='form' id='form'>
+  <table border='0' cellspacing='0' cellpadding='0' class='ihead'>
+    <tr>
+      <td class='icon'><img
+          src='/images/iot/3.gif'
+          alt=' '
+          width='47'
+          height='37'
+        /></td>
+      <td class='text'>
+        <h2>{{text.iot.iot3.text1}}</h2>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table border='0' cellspacing='0' cellpadding='0' class='content-table'>
+    <tr>
+      <td valign='middle' align='left' style='width: 300px;'>
+        <div class='iinfodiv'>
+          <input name='username' type='hidden' value='{{username}}' />
+          <input name='mail' type='hidden' value='{{mail}}' />
+          <label>
+            <strong>{{text.iot.iot3.text2}}:</strong><br />
+            <textarea
+              name='message'
+              placeholder='{{text.iot.iot3.text3}}'
+              cols='50'
+              rows='5'
+            ></textarea>
+          </label>
+          <br /><br />
+          <input type='submit' value='{{text.iot.iot3.button1}}' />
+        </div>
+      </td>
+    </tr>
+  </table>
+</form>

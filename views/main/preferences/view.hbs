@@ -1,0 +1,92 @@
+<div id="main-content">
+    <div id="page-headline">
+        <div id="page-headline-breadcrums">
+            <a href="/">{{text.global.menu.home.title}}</a>
+            »
+            {{text.preferences.title}}
+        </div>
+        <div id="page-headline-text">{{text.preferences.title}}</div>
+    </div>
+
+    <table class="content-2col" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+            <td style="width: 8px;"></td>
+            <td style="width: 202px;" class="habboPage-col" valign="top">
+                {{>main/preferences/sub}}
+            </td>
+            <td style="width: 539px;" class="habboPage-col rightmost" valign="top">
+
+                <div class="v2box blue light">
+                    <div class="headline"><h3>{{text.preferences.menu.view}}</h3></div>
+                    <div class="border">
+                        <div></div>
+                    </div>
+                    <div class="body">
+                        {{#if successView}}
+                            <div style="display:block;margin-bottom:10px;">
+                                <div class="content-ok">
+                                    <div class="content-ok-body">
+                                        {{text.preferences.view.success}}
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="content-ok-bottom">
+                                    <div class="content-ok-bottom-body"></div>
+                                </div>
+                            </div>
+                        {{/if}}
+                        <form id="viewForm" action="/preferences/changeView" method="post">
+                            <select name="view" style="width:250px;">
+                                <option value="at"{{#ifCond user.view '==' 'at'}} selected{{/ifCond}}>{{text.preferences.view.at}}</option>
+                                <option value="au"{{#ifCond user.view '==' 'au'}} selected{{/ifCond}}>{{text.preferences.view.au}}</option>
+                                <option value="br"{{#ifCond user.view '==' 'br'}} selected{{/ifCond}}>{{text.preferences.view.br}}</option>
+                                <option value="ca"{{#ifCond user.view '==' 'ca'}} selected{{/ifCond}}>{{text.preferences.view.ca}}</option>
+                                <option value="ch"{{#ifCond user.view '==' 'ch'}} selected{{/ifCond}}>{{text.preferences.view.ch}}</option>
+                                <option value="cn"{{#ifCond user.view '==' 'cn'}} selected{{/ifCond}}>{{text.preferences.view.cn}}</option>
+                                <option value="de"{{#ifCond user.view '==' 'de'}} selected{{/ifCond}}>{{text.preferences.view.de}}</option>
+                                <option value="dk"{{#ifCond user.view '==' 'dk'}} selected{{/ifCond}}>{{text.preferences.view.dk}}</option>
+                                <option value="es"{{#ifCond user.view '==' 'es'}} selected{{/ifCond}}>{{text.preferences.view.es}}</option>
+                                <option value="fi"{{#ifCond user.view '==' 'fi'}} selected{{/ifCond}}>{{text.preferences.view.fi}}</option>
+                                <option value="fr"{{#ifCond user.view '==' 'fr'}} selected{{/ifCond}}>{{text.preferences.view.fr}}</option>
+                                <option value="it"{{#ifCond user.view '==' 'it'}} selected{{/ifCond}}>{{text.preferences.view.it}}</option>
+                                <option value="jp"{{#ifCond user.view '==' 'jp'}} selected{{/ifCond}}>{{text.preferences.view.jp}}</option>
+                                <option value="nl"{{#ifCond user.view '==' 'nl'}} selected{{/ifCond}}>{{text.preferences.view.nl}}</option>
+                                <option value="no"{{#ifCond user.view '==' 'no'}} selected{{/ifCond}}>{{text.preferences.view.no}}</option>
+                                <option value="pl"{{#ifCond user.view '==' 'pl'}} selected{{/ifCond}}>{{text.preferences.view.pl}}</option>
+                                <option value="ru"{{#ifCond user.view '==' 'ru'}} selected{{/ifCond}}>{{text.preferences.view.ru}}</option>
+                                <option value="se"{{#ifCond user.view '==' 'se'}} selected{{/ifCond}}>{{text.preferences.view.se}}</option>
+                                <option value="sg"{{#ifCond user.view '==' 'sg'}} selected{{/ifCond}}>{{text.preferences.view.sg}}</option>
+                                <option value="uk"{{#ifCond user.view '==' 'uk'}} selected{{/ifCond}}>{{text.preferences.view.uk}}</option>
+                                <option value="us"{{#ifCond user.view '==' 'us'}} selected{{/ifCond}}>{{text.preferences.view.us}}</option>
+                                <option value="beta"{{#ifCond user.view '==' 'beta'}} selected{{/ifCond}}>{{text.preferences.view.beta}}</option>
+                                <option value="aa"{{#ifCond user.view '==' 'aa'}} selected{{/ifCond}}>{{text.preferences.view.aa}}</option>
+                                <option value="cyberpunk"{{#ifCond user.view '==' 'cyberpunk'}} selected{{/ifCond}}>{{text.preferences.view.cyberpunk}}</option>
+                                <option value="greek"{{#ifCond user.view '==' 'greek'}} selected{{/ifCond}}>{{text.preferences.view.greek}}</option>
+                                <option value="medieval"{{#ifCond user.view '==' 'medieval'}} selected{{/ifCond}}>{{text.preferences.view.medieval}}</option>
+                                <option value="new_year"{{#ifCond user.view '==' 'new_year'}} selected{{/ifCond}}>{{text.preferences.view.new_year}}</option>
+                                <option value="summer"{{#ifCond user.view '==' 'summer'}} selected{{/ifCond}}>{{text.preferences.view.summer}}</option>
+                                <option value="ak"{{#ifCond user.view '==' 'ak'}} selected{{/ifCond}}>{{text.preferences.view.ak}}</option>
+                                <option value="xmas1"{{#ifCond user.view '==' 'xmas1'}} selected{{/ifCond}}>{{text.preferences.view.xmas1}}</option>
+                                <option value="xmas2"{{#ifCond user.view '==' 'xmas2'}} selected{{/ifCond}}>{{text.preferences.view.xmas2}}</option>
+                                <option value="wed1"{{#ifCond user.view '==' 'wed1'}} selected{{/ifCond}}>{{text.preferences.view.wed1}}</option>
+                            </select>
+                            <a href="javascript:document.querySelector('#viewForm').submit()" class="colorlink orange"><span>{{text.preferences.preferences.change}}</span></a>
+                            <input type="submit" style="display:none"/>
+                        </form>
+                        <br>
+                        <a href="/preferences/views">{{{text.preferences.view.viewAll}}}</a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="bottom">
+                        <div></div>
+                    </div>
+                </div>
+            </td>
+            <td style="width: 4px;"></td>
+            {{>main/ad}}
+        </tr>
+        </tbody>
+    </table>
+    <br style="clear: both;">
+</div>

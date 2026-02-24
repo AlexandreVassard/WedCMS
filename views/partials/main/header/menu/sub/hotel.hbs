@@ -1,0 +1,28 @@
+<div class='subnav'>
+  {{#ifCond subPage '==' 'hotel'}}
+    {{text.global.menu.hotel.sub.hotel}}
+  {{else}}
+    <a href='/hotel'>{{text.global.menu.hotel.sub.hotel}}</a>
+  {{/ifCond}}
+  |
+  {{#ifCond page 'includes' 'welcome_to_habbo_hotel'}}
+    {{text.global.menu.hotel.sub.welcome}}
+  {{else}}
+    <a
+      href='/hotel/welcome_to_habbo_hotel'
+    >{{text.global.menu.hotel.sub.welcome}}</a>
+  {{/ifCond}}
+  |
+  {{#ifCond page 'includes' 'furniture'}}
+    {{text.global.menu.hotel.sub.furni}}
+  {{else}}
+    <a href='/hotel/furniture'>{{text.global.menu.hotel.sub.furni}}</a>
+  {{/ifCond}}
+  |
+  {{#ifCond page 'includes' 'pets'}}
+    {{text.global.menu.hotel.sub.pets}}
+  {{else}}
+    <a href='/hotel/pets'>{{text.global.menu.hotel.sub.pets}}</a>
+  {{/ifCond}}
+
+</div>

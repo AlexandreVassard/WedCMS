@@ -1,0 +1,20 @@
+<td id="topbar-menu" align="center">
+    <ul>
+        <li id="myhabbo" class="selected" onmouseover="switchTab('myhabbo')">
+            <div><a class="topbar-menu-link"
+                    onclick="return false;">{{text.global.headerTabs.myHabbo.title}}</a></div>
+        </li>
+        <li id="mycredits"
+            onmouseover="if (switchTab('mycredits') && document.habboLoggedIn) updateCredits()"
+            onmouseout="fadeTab('myhabbo')">
+            <div><a class="topbar-menu-link"
+                    onclick="return false;">{{text.global.headerTabs.myCredits.title}}</a></div>
+        </li>
+        <li id="habboclub"
+            onmouseover="if (switchTab('habboclub') && document.habboLoggedIn) updateHabboClub()"
+            onmouseout="fadeTab('myhabbo')">
+            <div><a class="topbar-menu-link"
+                    onclick="return false;">{{text.global.headerTabs.myClub.title}}</a></div>
+        </li>
+    </ul>
+</td>

@@ -1,0 +1,34 @@
+<div id="top-3rd-level"></div>
+<div id="content-3rd-level">
+    <ul id="third-level-navi">
+        {{#ifCond subpage '==' 'preferences'}}
+            <li class="active">
+                {{text.preferences.menu.preferences}}
+            </li>
+        {{else}}
+            <li class="inactive">
+                <a href="/preferences">{{text.preferences.menu.preferences}}</a>
+            </li>
+        {{/ifCond}}
+        {{#ifCond subpage '==' 'look'}}
+            <li class="active">
+                {{text.preferences.menu.look}}
+            </li>
+        {{else}}
+            <li class="inactive">
+                <a href="/preferences/look">{{text.preferences.menu.look}}</a>
+            </li>
+        {{/ifCond}}
+        {{#ifCond subpage '==' 'view'}}
+            <li class="active">
+                {{text.preferences.menu.view}}
+            </li>
+        {{else}}
+            <li class="inactive">
+                <a href="/preferences/view">{{text.preferences.menu.view}}</a>
+            </li>
+        {{/ifCond}}
+    </ul>
+    <div class="clear"></div>
+</div>
+<div id="bottom-3rd-level"></div>

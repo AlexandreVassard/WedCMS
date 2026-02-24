@@ -1,0 +1,58 @@
+<html lang='fr'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='viewport'
+      content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
+    />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <title>{{app.title}} ~ {{text.login.tabTitle}}</title>
+    <link href='/styles/process.css' type='text/css' rel='stylesheet' />
+    <link href='/styles/style.css' type='text/css' rel='stylesheet' />
+    <link href='/styles/boxes.css' type='text/css' rel='stylesheet' />
+    <link href='/styles/ads.css' type='text/css' rel='stylesheet' />
+  </head>
+  <body>
+    {{{body}}}
+    <script
+      type='text/javascript'
+      src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+    ></script>
+    <script type='text/javascript' src='./js/prototype.js'></script>
+    <script type='text/javascript' src='./js/habbo.js'></script>
+    <script type='text/javascript' src='./js/builder.js'></script>
+    <script type='text/javascript' src='./js/hobojax.js'></script>
+    <script type='text/javascript' src='./js/validation.js'></script>
+    <script type='text/javascript'>
+      Event.observe(document.querySelector('#registration-form'), "submit",
+      function (e) { const day = document.querySelector('#day'); const month =
+      document.querySelector('#month'); const year =
+      document.querySelector('#year'); const requiredBirthday =
+      document.querySelector('#required-birthday'); const registrationSubmit =
+      document.querySelector('#registration-submit'); if (day.selectedIndex ===
+      0 || month.selectedIndex === 0 || year.selectedIndex === 0) {
+      validatorBeforeSubmit("registration-errors"); validatorAddError(false,
+      false, "{{{text.login.errorDate}}}", "registration-errors");
+      requiredBirthday.className = "validation-failed"; Event.stop(e); } else {
+      registrationSubmit.disabled = 'true'; } }, false);
+      Event.observe(document.querySelector('#login-form'), "submit", function
+      (e) { const loginUsername = document.querySelector('#login-username');
+      const loginPassword = document.querySelector('#login-password'); const
+      loginSubmit = document.querySelector('#login-submit'); if
+      (loginUsername.value === '' || loginPassword.value === '') {
+      validatorBeforeSubmit("login-errors"); validatorAddError(false, false, "{{{text.login.errorUsernamePassword}}}",
+      "login-errors"); if (loginPassword.value === '') { loginPassword.className
+      = "validation-failed"; loginPassword.focus(); } else {
+      Element.removeClassName(loginPassword, "validation-failed"); } if
+      (loginUsername.value === '') { loginUsername.className =
+      "validation-failed"; loginUsername.focus(); } else {
+      Element.removeClassName(loginUsername, "validation-failed"); }
+      Event.stop(e); } else { loginSubmit.disabled = 'true'; } }, false); const
+      errorId = document.querySelector('#loginErrorId').value; switch (errorId)
+      { case "1": validatorAddError(false, false, "{{text.login.doesntExists}}",
+      "login-errors"); break; case "2": validatorAddError(false, false, "{{text.login.incorrectPassword}}",
+      "login-errors"); break; case "3": validatorAddError(false, false, "{{text.login.banned}}",
+      "login-errors"); break; }
+    </script>
+  </body>
+</html>

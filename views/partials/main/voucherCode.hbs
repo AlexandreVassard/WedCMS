@@ -1,0 +1,27 @@
+{{#if user}}
+    {{#if voucherError}}
+        <p style="color:red;font-weight: bold;">
+            {{#ifCond voucherError '==' 1}}
+                {{text.global.voucher.badVoucher}}
+            {{/ifCond}}
+            {{#ifCond voucherError '==' 2}}
+                {{text.global.voucher.pastVoucher}}
+            {{/ifCond}}
+        </p>
+    {{/if}}
+    <form style="margin-top: 5px;" id="voucher" method="post" action="/credits/voucher">
+        <input type="text" name="code" placeholder="{{text.global.voucher.input}}"/>
+        <a href="javascript:document.querySelector('#voucher').submit()"
+           class="colorlink orange"><span>{{text.global.voucher.button}}</span></a>
+    </form>
+{{else}}
+    <div class="content-beige">
+        <div class="content-beige-body">
+            {{text.global.voucher.notLogged}}
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="content-beige-bottom">
+        <div class="content-beige-bottom-body"></div>
+    </div>
+{{/if}}

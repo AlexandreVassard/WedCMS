@@ -1,0 +1,85 @@
+{{>main/subscribeHabboClub}}
+<table id="topbar">
+    <tbody>
+    <tr>
+        {{>main/header/counter}}
+        {{>main/header/tabTitles}}
+        <td id="topbar-status" class="loggedin">{{text.global.loggedHeaderTabs.loggedAs}} <b>{{user.username}}</b></td>
+    </tr>
+    </tbody>
+</table>
+{{>main/header/logo}}
+{{>main/header/enterHotel}}
+<div id="tabmenu" onmouseover="lockCurrentTab();" onmouseout="fadeTab('myhabbo')">
+    <div id="tabmenu-content">
+        <div id="myhabbo-content" class="tabmenu-inner selected">
+            <h3>{{text.global.loggedHeaderTabs.myHabbo.text1}} {{user.username}}</h3>
+            <div class="tabmenu-inner-content">
+                <div id="myHabboTab">
+                    <img class="tabmenu-image" src="/habbo-imaging/avatarimage?figure={{user.figure}}" width="64" height="110">
+                    <div id="myHabboMenu">
+                        <p>
+                            <a class="arrow" href="javascript:enterHotel()">{{text.global.loggedHeaderTabs.myHabbo.link1}}</a>
+                        </p>
+                        <p>
+                            <a class="arrow" href="/home/{{user.username}}">{{text.global.loggedHeaderTabs.myHabbo.link2}}</a>
+                        </p>
+                        <p style="max-width:120px;">
+                            <a class="arrow" href="/preferences">{{text.global.loggedHeaderTabs.myHabbo.link3}}</a>
+                        </p>
+                        <p id="button" style="float:right;">
+                            <a href="/logout" class="colorlink orange">
+                                <span>
+                                    {{text.global.loggedHeaderTabs.myHabbo.button1}}
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mycredits-content" class="tabmenu-inner">
+            <h3>{{text.global.loggedHeaderTabs.myCredits.text1_start}} {{user.credits}} {{text.global.loggedHeaderTabs.myCredits.text1_end}}</h3>
+            <div class="tabmenu-inner-content innerContentPaddingTab">
+                <img class="tabmenu-image" src="/images/mycredits_coins.gif">
+                <p>
+                    <a class="arrow" href="/credits">
+                        <span>{{text.global.loggedHeaderTabs.myCredits.link1}}</span>
+                    </a>
+                </p>
+                <p>
+                    <a class="arrow" href="/credits">
+                        <span>{{text.global.loggedHeaderTabs.myCredits.link2}}</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div id="habboclub-content" class="tabmenu-inner">
+            {{#if clubDaysLeft}}
+                <h3>{{text.global.loggedHeaderTabs.myClub.text1_start}} {{clubDaysLeft}} {{text.global.loggedHeaderTabs.myClub.text1_end}}</h3>
+            {{else}}
+                <h3>{{text.global.loggedHeaderTabs.myClub.text2}}</h3>
+            {{/if}}
+            <div class="tabmenu-inner-content innerContentPaddingTab">
+                {{#if clubDaysLeft}}
+                    <p>
+                        <a class="arrow" href="javascript:hcSubscribe('{{text.global.loggedHeaderTabs.myClub.button1}}', extendContent)"><span>{{text.global.loggedHeaderTabs.myClub.button1}}</span></a>
+                    </p>
+                {{else}}
+                    <p>
+                        <a class="arrow" href="javascript:hcSubscribe('{{text.global.loggedHeaderTabs.myClub.button2}}', subscribeContent)"><span>{{text.global.loggedHeaderTabs.myClub.button2}}</span></a>
+                    </p>
+                {{/if}}
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="tabmenu-bottom"></div>
+</div>
+</div>
+<script type="text/javascript">
+    var myhabbo = document.querySelector('#myhabbo');
+    var top = document.querySelector('#top');
+    var tabmenu = document.querySelector('#tabmenu');
+    tabmenu.style.left = (Position.cumulativeOffset(myhabbo)[0] - Position.cumulativeOffset(top)[0]) + "px";
+</script>

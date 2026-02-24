@@ -1,0 +1,931 @@
+{
+  "backend": {
+    "rank1": "Habbo",
+    "rank2": "Habbo",
+    "rank3": "Habbo",
+    "rank4": "Habbo",
+    "rank5": "Habbo",
+    "rank6": "Moderator",
+    "rank7": "Administrator"
+  },
+  "iot": {
+    "global": {},
+    "pages": {
+      "iot": {
+        "title": "Help Center",
+        "backToSite": "Go back to website",
+        "alreadyPosted": "You have already sent a message less than 5 minutes ago. <br /> Please wait.",
+        "text1": "enter your habbo name",
+        "text2": "Habbo Name",
+        "button1": "Next",
+        "iot2": {
+          "text1": "enter your e-mail adress",
+          "text2": "E-mail adress",
+          "button1": "Next"
+        },
+        "iot3": {
+          "text1": "write your message",
+          "text2": "Message",
+          "text3": "Your message here...",
+          "button1": "Send"
+        },
+        "iot4": {
+          "text": "Your message has been sent !"
+        }
+      }
+    }
+  },
+  "client": {
+    "global": {
+      "logged": {
+        "habbo": "Habbo connected",
+        "habbos": "Habbos connected"
+      }
+    },
+    "pages": {
+      "client": {
+        "title": "Client",
+        "exit": "Exit hotel"
+      }
+    }
+  },
+  "login": {
+    "global": {
+      "months": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+      }
+    },
+    "pages": {
+      "login": {
+        "tabTitle": "Log in",
+        "registerTitle": "New to Habbo? Register here!",
+        "registerFirstSectionTitle": "Join now - it's easy and free!",
+        "registerFirstSectionContent": "Habbo is a virtual community where you can hang with all your friends or make new ones. The hotel already counts thousands of members. So... Why not you ?",
+        "registerDateOfBirthTitle": "Please enter your date of birth",
+        "registerSubmit": "Continue Registration",
+        "registerSecondSectionTitle": "HOW TO REGISTER?",
+        "registerListFirstElement": "Type your birthday",
+        "registerListSecondElement": "Create your Habbo",
+        "registerListThirdElement": "Enter Habbo Hotel",
+        "registerListFourthElement": "Make your Habbo Home",
+        "registerListFifthElement": "Have fun!",
+        "loginTitle": "Already have an Habbo? Please log in here!",
+        "loginTips": "If you already have a Habbo account then log in here using your Habbo user name and your password. Your user name and password are the same for here as they are in the Hotel.",
+        "loginUsername": "My Habbo name",
+        "loginPassword": "Password",
+        "loginSubmit": "Log in",
+        "loginFirstSectionTitle": "FORGOT YOUR PASSWORD?",
+        "loginFirstSectionContent": "If you have forgotten your password please use the ",
+        "loginFirstSectionLink": "Password Retrieval System.",
+        "loginSecondSectionTitle": "SECURITY TIP",
+        "loginSecondSectionContent": "The real Habbo website is encrypted for protect your datas and your privacy. You can be sure if a website is encrypted by checking if a little padlock is there in the bottom right corner of your browser.",
+        "errorUsernamePassword": "Please enter a Habbo name and a password",
+        "errorDate": "Please select a valid date of birth",
+        "doesntExists": "This Habbo does not exists.",
+        "incorrectPassword": "Incorrect password.",
+        "banned": "This Habbo has been banned."
+      }
+    }
+  },
+  "register": {
+    "global": {
+      "months": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+      }
+    },
+    "pages": {
+      "register": {
+        "tabTitle": "Register",
+        "cancel": "Cancel",
+        "frankText": "After filling all the fields, you will be able to play!",
+        "username": "My Habbo Name",
+        "mail": "My Email",
+        "password": "Password",
+        "passwordRepeat": "Repeat it",
+        "sex": "Sex",
+        "man": "Boy",
+        "woman": "Girl",
+        "register": "Register",
+        "passwordTooShort": "Password must contain at least 8 characters.",
+        "alreadyExists": "This Habbo name already exists.",
+        "mailError": "Email address must be valid.",
+        "notSamePasswords": "Passwords must be identical.",
+        "errorDate": "Please enter a valid date of birth"
+      }
+    }
+  },
+  "main": {
+    "global": {
+      "buyRare": {
+        "confirm": "Are you sure you want to buy the current rare?",
+        "buy": "Buy",
+        "close": "Close"
+      },
+      "logged": {
+        "habbo": "Habbo connected",
+        "habbos": "Habbos connected"
+      },
+      "voucher": {
+        "badVoucher": "The code entered is incorrect",
+        "pastVoucher": "The code is no longer active",
+        "button": "Activate",
+        "notLogged": "You are not connected.",
+        "input": "Enter voucher here"
+      },
+      "subscribe": {
+        "buy": "Buy",
+        "close": "Close",
+        "1month": "Buy 1 month",
+        "3months": "Buy 6 months",
+        "6months": "Buy 9 months",
+        "next": {
+          "text1": "You will subscribe to the Habbo Club. Excellent choice!",
+          "text2": "1 HC month (31 days) costs 25 Habbo Coins.",
+          "text3": "Savings: 3 Months (93 days) of Habbo Club only cost 60 Habbo Coins.",
+          "text4": "Savings: 6 Months (186 days) of Habbo Club only cost 105 Habbo Coins."
+        },
+        "extend": {
+          "button": "Extend my subscription",
+          "text1": "Your Habbo Club subscription can easily be extended",
+          "text2": "By subscribing to the Habbo Club again, you will not lose any of the benefits. An HC subscription can be extended in advance.",
+          "text3": "You must have at least 25 Habbo Coins to extend your Habbo Club subscription."
+        },
+        "subscribe": {
+          "button": "Join the Habbo Club",
+          "text1": "Bienvenue au Habbo Club, le club très privé des Habbos VIP!",
+          "text2": "Welcome to the Habbo Club, the very private VIP Habbos club!",
+          "text3": "You must have at least 25 Habbo Coins to join the Habbo Club."
+        }
+      },
+      "ad": "Advertisement",
+      "loggedHeaderTabs": {
+        "loggedAs": "Connected as",
+        "myHabbo": {
+          "text1": "Welcome",
+          "link1": "Enter Habbo Hotel",
+          "link2": "View your Habbo Home Page",
+          "link3": "Edit your settings",
+          "button1": "Sign out"
+        },
+        "myCredits": {
+          "text1_start": "You have",
+          "text1_end": "Coins.",
+          "link1": "Buy more Habbo Coins",
+          "link2": "Activate a voucher code"
+        },
+        "myClub": {
+          "text1_start": "",
+          "text1_end": "HC days left.",
+          "text2": "You don't have HC subscription.",
+          "button1": "Extend my subscription",
+          "button2": "Join the Habbo Club"
+        }
+      },
+      "headerTabs": {
+        "notLogged": "Not logged in",
+        "myHabbo": {
+          "title": "My Habbo",
+          "text1": "Welcome! Please sign in or register",
+          "button1": "Register Now, it's free!",
+          "button2": "Sign In"
+        },
+        "myCredits": {
+          "title": "My Coins",
+          "text1": "Please <a href=\"/login\">sign in</a> to see your balance",
+          "link1": "Buy more Habbo Coins",
+          "link2": "Redeem voucher code"
+        },
+        "myClub": {
+          "title": "Habbo Club",
+          "text1": "Please <a href=\"/login\">sign in</a> to see your Club status",
+          "text2": "Habbo Club gives you access to the full benefits on Habbo Hotel. ",
+          "link1": "Latest news on Habbo Club"
+        }
+      },
+      "menu": {
+        "home": {
+          "title": "Home"
+        },
+        "hotel": {
+          "title": "Habbo Hotel",
+          "sub": {
+            "hotel": "Habbo Hotel",
+            "welcome": "Welcome",
+            "furni": "Furniture",
+            "pets": "Pets"
+          }
+        },
+        "news": {
+          "title": "News"
+        },
+        "homepages": {
+          "title": "Homepages"
+        },
+        "credits": {
+          "title": "Coins",
+          "sub": {
+            "credits": "Habbo Coins",
+            "useMyCredits": "How to use my Habbo Coins"
+          }
+        },
+        "club": {
+          "title": "Habbo Club",
+          "sub": {
+            "club": "Habbo Club",
+            "habboClubBenefits": "HC Benefits",
+            "joinHabboClub": "Join Habbo Club",
+            "habboClubFurni": "HC Furni"
+          }
+        },
+        "help": {
+          "title": "Aide"
+        },
+        "habbowood": {
+          "title": "Habbowood"
+        }
+      }
+    },
+    "pages": {
+      "index": {
+        "announcements": "Announcements",
+        "news": "News",
+        "box1": {
+          "title": "Welcome to Habbo",
+          "content1": "Habbo is a virtual community where you can meet your friends - or make new ones - play games and decorate your own room. Ah yes, entry is free. So what are you waiting for?",
+          "joinHotel": "Enter now",
+          "content2": "The hotel is open to everyone but players under 13 must have parental permission to access it."
+        },
+        "box2": {
+          "title": "Habbo Coins",
+          "content": "<a href=\"/credits\">Habbo Coins</a> allow you to decorate your room with <a href=\"/hotel/furniture\">Habbo furni</a>, to offer gifts to your friends, join the <a href=\"/club\">Habbo Club</a>, adopt a <a href=\"/hotel/pets\">pet</a> and play Battle Ball.<p>There are many ways to get them, check them out <a href=\"/credits\">here</a>.</p>"
+        },
+        "box3": {
+          "title": "Currently on sale",
+          "price": "Price",
+          "credits": "Coins",
+          "confirmTitle": "",
+          "button1": "Buy",
+          "notConnected": "You must <a href=\"/login\">login</a> to purchase a rare.",
+          "notEnoughCredits": "You don't have enough Habbo Coins to buy the rare."
+        },
+        "box4": {
+          "title": "Habbo Homes",
+          "content": "<br>Discover Habbo and build your personal page on Habbo!<br><br>Here are some examples:<br>",
+          "link1": "Learn more about my Habbo Home Page"
+        },
+        "box5": {
+          "title": "Snowstorm and Battleball Ranking",
+          "content": "Who will be the best snowball thrower or the best bouncer?",
+          "battleball": "Battleball",
+          "snowstorm": "Snowstorm"
+        }
+      },
+      "preferences": {
+        "title": "My preferences",
+        "menu": {
+          "preferences": "Motto and password",
+          "look": "My look and sex",
+          "view": "Hotel view"
+        },
+        "preferences": {
+          "changeMotto": "Edit my motto",
+          "successMotto": "Your motto has been saved !",
+          "change": "Save",
+          "changePassword": "Edit your password",
+          "successPassword": "You password has been saved !",
+          "passwordLength": "The new password must be at least 8 characters long.",
+          "passwordNotSame": "New passwords must be identical.",
+          "passwordIncorrect": "The current password is incorrect.",
+          "actualPassword": "Current password",
+          "newPassword": "New password",
+          "repeat": "Repeat new password"
+        },
+        "look": {
+          "title": "My look",
+          "save": "Save",
+          "success": "Your look has been saved !",
+          "girl": "Girl",
+          "boy": "Boy",
+          "successSex": "Your sex has been saved !",
+          "mySex": "My sex"
+        },
+        "view": {
+          "success": "Your hotel view has been changed !",
+          "at": "Austrian hotel",
+          "au": "Australian hotel",
+          "br": "Brazilian hotel",
+          "ca": "Canadian hotel",
+          "ch": "Swiss hotel",
+          "cn": "Chinese hotel",
+          "de": "German hotel",
+          "dk": "Danish hotel",
+          "es": "Spanish hotel",
+          "fi": "Finnish hotel",
+          "fr": "French hotel",
+          "it": "Italian hotel",
+          "jp": "Japanese hotel",
+          "nl": "Dutch hotel",
+          "no": "Norwegian hotel",
+          "pl": "Polish hotel",
+          "ru": "Russian hotel",
+          "se": "Swedish hotel",
+          "sg": "Singaporean hotel",
+          "uk": "English hotel",
+          "us": "American hotel",
+          "beta": "Beta view",
+          "aa": "Old beta view",
+          "cyberpunk": "Cyberpunk view",
+          "greek": "Greek view",
+          "medieval": "Medieval view",
+          "new_year": "New year view",
+          "summer": "Summer view",
+          "ak": "Snowy view",
+          "xmas1": "Christmas view 1",
+          "xmas2": "Christmas view 2",
+          "wed1": "WedCMS view",
+          "viewAll": "See all views &raquo;"
+        },
+        "views": {
+          "title": "All views"
+        }
+      },
+      "news": {
+        "news": {
+          "box1": {
+            "title": "Search",
+            "content": "From this page you can search for old articles",
+            "text1": "Keywords",
+            "button1": "Search"
+          },
+          "box2": {
+            "title": "Navigate",
+            "noResults": "No results found!",
+            "backToNewsList": "Back to news list"
+          }
+        },
+        "oneNews": {
+          "box1": {
+            "title": "What's up ?",
+            "button1": "More infos"
+          }
+        }
+      },
+      "homepages": {
+        "homepages": {
+          "title": "Habbo Homes",
+          "box1": {
+            "title": "How to decorate your page?",
+            "content1": "<a href=\"/login\">Login or register</a> by clicking on the link",
+            "content2": "Once connected, click on the link 'Go to my Habbo Home' in the site toolbar.",
+            "content3": "An empty Home ... It's so sad! - Click on the edit button to start decorating it!"
+          },
+          "box2": {
+            "title": "Customize your Habbo Home",
+            "content": "To add your friends to your Habbo Home, simply enter their name in the following URL:"
+          },
+          "box3": {
+            "title": "Habbo Home : examples",
+            "content": "Take a look at Random Habbos Home<br><br>Here are some other cool examples ;) :"
+          },
+          "box4": {
+            "title": "Habbo Coins",
+            "content": "Thanks to Habbo Coins, you can buy as many stickers as you want to decorate your page!",
+            "link1": "Find out more about Habbo Coins"
+          },
+          "box5": {
+            "title": "How it works?",
+            "content1": "Habbo Home is your personal page on Habbo - You can decorate it as you want.",
+            "content2": "It is very easy to personalize it thanks to the many tools (reminders, stickers, gadgets ...) at your disposal.",
+            "content3": "Connect your rooms to your Home but also those of your friends!",
+            "content4": "It is very easy to modify it. You can add as many elements to it as you want and move them around as you wish."
+          },
+          "box6": {
+            "title": "Habbo Home: Manual",
+            "content1": "<b>Introduction</b><p>To access your Habbo Home page you just have to click on 'view my Habbo Home' in the Habbo toolbar.</p><p>Once you are there es, click the Edit button to get started! Oh yes, the 'Alert' button is to tell us if this page contains unwanted content. But you, that doesn't concern you, does it? ;p</p><p>Each element of your Habbo page is removable, to move one, just click on it and \"drag\" with the mouse!</p>",
+            "content2": "<b>Your inventory list </b><p>Once you've switched to Mod mode, you can change everything on your Habbo page. By clicking on the sticky notes, stickers, gadgets or wallpapers buttons you open your inventory list.</p><p>Your inventory is the place where you can also find all the Habbo Homes of which you are already the owner. To start, you have at your disposal some free elements but the following ones will be paying.</p>",
+            "content3": "<b>Use reminders</b><br><p>To add a reminder to your page, click on the reminder button and a window will appear to indicate how many reminders you have. stay before you give one. Choose from the list the type of sticky note you want to use, and write on it. Once you have finished writing, click on preview and if you like it, click on add. Otherwise make changes. To buy more reminders, click on the button provided for this purpose, in the same way to cancel. Once you add a sticky note to a page you cannot edit it and if you delete it it will disappear forever!</p>",
+            "content4": "<b>Stickers</b><p>To add a sticker to your Habbo Home, open your inventory list. Click on the sticker you want to appear on the page.</p><p>Then click on the spot on the page where you want it to appear. To buy more stickers: open your inventory list then click on 'have more stickers'. Then select the sticker you want to use before pressing 'Order'.</p><p>To modify a sticker, click on the small icon associated with it. You can then remove it from your page - in which case it returns to your inventory list - or leave it there ... as you wish.</p>",
+            "content5": "<b>Gadgets</b><p>Gadgets are small windows that allow visitors to your page to find out more about you.</p><p>There are four: Amigo gadgets (Which displays portraits of your Habbo friends), Rooms (which offers direct access to your home), best scores (which shows that you are a real beta at the Battle Ball) and Habbo Club (which indicates whether you are a member or not).</p><p>Click on the gadgets button to place them on your Home. Once in place, click on the icon associated with it to change its texture or remove it - it will then return to your inventory list.</p>",
+            "content6": "<b>Wallpapers</b><p>To add a wallpaper, click on the wallpapers button to open your inventory list. Click on the wallpaper you want to appear on the page.</p><p>If you want a new one, click on the 'Have more wallpapers' button to open the Habbo Home shop and find there what you are looking for, After clicking on the Buy button, the wallpaper will appear in your inventory. More info on Habbo Homes in the Habbo Homes FAQ ...</p>",
+            "link1": "Find out more about Habbo Coins"
+          }
+        },
+        "homepage": {
+          "title": "Habbo home",
+          "profil": {
+            "title": "MY PROFILE",
+            "createdAt": "Habbo created at :"
+          },
+          "scores": {
+            "title": "BEST SCORES",
+            "battleball": "Battle Ball",
+            "snowstorm": "Snowstorm",
+            "total": "Total"
+          },
+          "friends": {
+            "title": "MY FRIENDS"
+          },
+          "rooms": {
+            "title": "MY ROOMS",
+            "goIn": "access to room"
+          }
+        }
+      },
+      "credits": {
+        "credits": {
+          "box1": {
+            "title": "Payment methods:",
+            "content": "<b>The best way to pay</b><br>The easiest way to buy Habbo Coins! No personal or banking data is necessary: In just 2 clicks it's delivered :)"
+          },
+          "box2": {
+            "title": "Habbo Coins",
+            "content": "Habbo Coins are used to decorate your room, to offer gifts to your friends, to join the <a href=\"/club\">Habbo Club</a> or to play at Wobble Squabble.<b>A Habbo coin costs around 16 euro cents.</b><br><br>Buying Habbo Coins is easy and safe. To buy Habbo Coins or find out more, click on one of the sections on the left."
+          },
+          "box3": {
+            "title": "Voucher codes",
+            "content": "The voucher codes allow you to get furni or Habbo Coins simply by entering a code below."
+          },
+          "box4": {
+            "title": "Warning!",
+            "content": "<b>Habbo Coins are not free </b>. Before ordering, you should <b>always ask permission from whoever pays the bill</b>. You will be permanently excluded from the site if you do not respect this rule."
+          },
+          "box5": {
+            "title": "What am I entitled to for ...",
+            "content": "Want to splurge?<br>Find out <a href=\"/credits/use_my_credits\">here</a> what you can get for 20, 30, 50 Habbo Coins or more!<br>Also check out our <a href=\"/hotel/furniture/decoration_examples\">Decorative Examples</a> for inspiration."
+          },
+          "box6": {
+            "title": "Habbo furni",
+            "content": "<a href=\"/hotel/furniture\">The Habbo furni</a> is used to decorate your rooms, create mazes and even build giant toilets!<br><p>Check out our <a href=\"/hotel/furniture/catalog\">Catalog</a> to find out more!</p>"
+          }
+        },
+        "useMyCredits": {
+          "box1": {
+            "title": "Habbo club",
+            "content": "Join the <a href=\"/club\">Habbo Club</a>, to have access to new forms of room, exclusive furni, priority access, cool clothes and special orders for only 25 Habbo Coins per month !"
+          },
+          "box2": {
+            "title": "Habbo pets",
+            "content": "Don't you have a <a href=\"/hotel/pets\">pet</a> yet? They are so cute..."
+          },
+          "box3": {
+            "title": "Habbo games",
+            "content": "Habbo offers many games, from Battle Ball to Wobble Squabble and so on!"
+          },
+          "box4": {
+            "title": "Rooms for all budgets:",
+            "content": "Want to splurge? Find out below what you can get for 20, 30, 50 Habbo Coins or more! Also check out our <a href=\"/hotel/furniture/decoration_examples\">Decorative Examples</a> for inspiration.",
+            "text1": "For 20 Habbo Coins...",
+            "text2": "For 30 Habbo Coins..",
+            "text3": "For 50 Habbo Coins...",
+            "text4": "For 100 Habbo Coins...",
+            "text5": "For 200 Habbo Coins..."
+          }
+        },
+        "paypal": {
+          "credits": "Coins",
+          "box1": {
+            "title": "Price"
+          },
+          "box2": {
+            "title": "Help",
+            "content": "In accordance with Habbo Hotel's Terms of Use, Sulake France reserves the right to refund or not. In case of problem, contact our customer service by the <a target=\"_blank\" href=\"/iot\">Habbo Help Tool</a>."
+          },
+          "box3": {
+            "title": "Buy Coins by Paypal",
+            "successMessage": "Your Habbo Coins have been added!",
+            "buy": "Buy",
+            "notLogged": "You must <a href=\"/login\">login</a> to purchase Habbo Coins."
+          },
+          "box4": {
+            "title": "Warning!",
+            "content": "Do not use someone else's Paypal account without their permission. It is prohibited by law and he will inevitably learn it. Any Habbo who does so will be permanently excluded from Habbo Hotel."
+          }
+        }
+      },
+      "club": {
+        "subscribe": {
+          "title": "Join the Habbo Club",
+          "headline": "JOIN THE HABBO CLUB!",
+          "comment": "Hi! My name is Superbalounga and I love the Habbo Club. Furni, clothes and emotion: everything is there for 25 Habbo Coins per month!",
+          "extend": "Extend my subscription",
+          "subscribe": "Join the Habbo Club",
+          "notLogged": "To join the Habbo Club, you must first <a href=\"/login\">register</a>."
+        },
+        "side": {
+          "box1": {
+            "title": "Habbo games",
+            "content": "Habbo offers tons of games to test your skill, from Battle Ball to RodéEau and so on! Check out our Games section for more info!"
+          },
+          "box2": {
+            "title": "Habbo pets",
+            "content": "Don't you have a <a href=\"/hotel/pets\">pet</a> yet? They are so cute ... They will nevertheless give a blue scare to intruders!"
+          },
+          "box3": {
+            "title": "Habbo Coins",
+            "content": "To join the Habbo Club you must use Habbo Coins! Check out the <a href=\"/credits\">Coins Page</a> to find out more!"
+          }
+        },
+        "club": {
+          "box1": {
+            "title": "Habbo Coins",
+            "content": "Membership of the Habbo Club requires payment by Habbo Coins! Check out our <a href=\"/credits\">Coins page</a> to find out how to get it!"
+          },
+          "box2": {
+            "title": "Habbo Club",
+            "content1": "Habbo Club is the very popular club of Habbo Hotel. By becoming a member you will benefit from many advantages. Membership in the Habbo Club costs 25 Habbo Coins per month, but it's well worth them. By subscribing you will have:",
+            "content2": "• Priority access to the hotel.<br>• A cool Habbo Club badge so everyone knows you're a member<br>• Exclusive clothes and hairstyles!<br>• Rooms nothing but to them!<br>• Irresistible dance moves that only they can perform !!!<br>• Their console can contain 500 contacts<br>• Each month a new collector's item as a gift!<br>• Some original rooms shapes<br>• Special orders",
+            "link1": "Find out more about the advantages of the Habbo Club"
+          }
+        },
+        "habboClubBenefits": {
+          "box1": {
+            "title": "Habbo Club benefits",
+            "content1": "Habbo Club is the very popular club of Habbo Hotel. By becoming a member you will benefit from many advantages. Membership in the Habbo Club costs 25 Habbo Coins per month, but it's well worth them. By subscribing you will have:",
+            "content2": "<b>Priority access to the hotel.</b><br>Which means that even if it is full, you will be able to access it directly without having to queue.",
+            "content3": "<b>A cool Habbo Club badge so everyone knows you're a member.</b><br>All Habbo Club members exclusively receive an HC badge next to their name. HC members with more than a year of service have a particularly sparkling badge. If you don't want other Habbos to see this badge, you just have to click on it to make it disappear.",
+            "content4": "<b>Irresistible dance steps that only you can perform !!!</b><br>Each HC member hides a Travolta in the soul! Only they know how to dance the POGO MOGO, the DUCK FUNK, the ROLLIE or the HAB - HOP!",
+            "content5": "<b>Exclusive clothes and hairstyles!</b><br>Girls who join the Habbo Club have access to 16 new outfits and 8 exclusive hairstyles. The boys receive 7 new outfits and 9 hairstyles. Each look is available in several colors. Which makes the choices difficult ;)",
+            "content6": "<b>A console that can contain 500 contacts</b><br>In comparison, the consoles of non-HCs can only contain 100 ...",
+            "content7": "<b>Exclusive access to places reserved for members</b><br>Habbo Club members have access to two places that belong only to them: Le Club Mammouth and les 1001 Nuits. You will find them in the Navigator under the heading Public spaces, you just have to click on Habbo Club.<br><br><b>Each month a new collector's item as a gift!</b><br>Consult our page <a href=\"/club/habbo_club_furni\">HC furni</a> to discover them all!</p><b>New room shapes</b>",
+            "content8": "By joining the Habbo Club, you will have a greater choice of room: two additional forms to which other non-member Habbos do not have access.",
+            "content9": "<b>Special orders</b><br><b>:chooser</b> - tells you the name of all the Habbos in the room<br><b>:furni</b> - diffuse the list of the furni in a room.<br><br>To use these special commands, you just have to type these codes in the Chat fields and to press the 'Enter' key. The list will automatically appear in a small window"
+          }
+        },
+        "joinHabboClub": {
+          "box1": {
+            "title": "Join Habbo Club",
+            "content1": "Joining the Habbo Club is not easy ... No, we're kidding. In reality it is very simple. Really very very simple.",
+            "content2": "To join the Habbo Club you must enter the hotel. As soon as it's done, click on the Habbo Club logo. A window appears and for 25 <a href=\"/credits\">Habbo Coins</a> offers you to join. Click on 'ok' and it's done!<br><br>From now on, you can increase the duration of your membership at a lower price:",
+            "content3": "1 month = 25 Habbo Coins",
+            "content4": "3 months = 60 Habbo Coins (<b> - 15 Habbo Coins </b>)",
+            "content5": "6 months = 105 Habbo Coins (<b> - 45 Habbo Coins </b>)",
+            "content6": "NEW: From now on, you can join the Habbo Club directly without entering the hotel!"
+          }
+        },
+        "habboClubFurni": {
+          "box1": {
+            "title": "What is the HC furni?",
+            "content": "At the start of each HC month, you will receive a gift which will only be issued to members of the Habbo Club."
+          },
+          "box2": {
+            "title": "HC Gifts",
+            "text1": "1st month - Sofa HC",
+            "text2": "2nd month - Plasto HC",
+            "text3": "3rd month - Coffee machine",
+            "text4": "4th month - Dice",
+            "text5": "5th month - Jacuzzi",
+            "text6": "6th month - Imperial Teleporters",
+            "text7": "7th month - Divan HC",
+            "text8": "8th month - Oil lamp",
+            "text9": "9th month - Banquet table",
+            "text10": "10th month - HC chair",
+            "text11": "11th month - Office HC"
+          }
+        }
+      },
+      "hotel": {
+        "box1": {
+          "title": "Newcomer ? Take a look at this!",
+          "content1": "Go to the hotel",
+          "content2": "Make your Habbo",
+          "content3": "Enter a room",
+          "content4": "Make your Habbo Home!"
+        },
+        "box2": {
+          "title": "Kezako ?",
+          "content1": "Don't you know what the little browser icons are for? Everything is revealed to you below ...",
+          "content2": "Habbo Console",
+          "content3": "To stay in touch with your friends in the hotel",
+          "content4": "Habbo Account",
+          "content5": "To keep your Habbo Coins warm ;).",
+          "content6": "Navigator",
+          "content7": "To escape from a room at any time!",
+          "content8": "Are you bothering?",
+          "content9": "Call for help!",
+          "content10": "Habbo Catalogue",
+          "content11": "Find out how to buy furni!"
+        },
+        "box3": {
+          "title": "Habbo Club",
+          "content": "Join the <a href=\"/club\">Habbo Club</a>, the club for privileged Habbos for only 25 Habbo Coins!"
+        },
+        "box4": {
+          "title": "Need help ?",
+          "content": "Write an email to our <b>Habbo Help Center</b> <a href=\"/iot\">HERE</a>."
+        },
+        "box5": {
+          "title": "Not sure where to go?",
+          "content1": "<b>The Reception</b><br>If you've just arrived, this is where you need to go. Full of Habbos X are waiting for you to welcome you and introduce you to the hotel",
+          "content2": "<b>The Habbo Lido</b><br>Fancy some freshness? Our outdoor swimming pool is heated 24 hours a day. Come take a dip!",
+          "content3": "<b>Battle Ball</b><br>Come defend your colors and challenge your opponents! The Battle Ball: a game that does not lack rebound ..."
+        },
+        "box6": {
+          "title": "Habbo Homepages",
+          "content": "Everyone needs a home! Express yourself as you see fit on your own personal page!<br><br><a href=\"/home\">How to have a Habbo Homepage</a>"
+        },
+        "welcome": {
+          "menu": {
+            "howToGetStarted": "First stay",
+            "navigator": "Getting around Habbo Hotel",
+            "meeting": "Habbo Console",
+            "room": "Your own room",
+            "helpSafety": "Help & Safety",
+            "chatting": "Chat at Habbo Hotel"
+          },
+          "side": {
+            "box1": {
+              "title": "Habbo furni",
+              "content": "<a href=\"/hotel/furniture\">The Habbo furni</a> is used to decorate rooms, create mazes, lost cities and even public toilets!<br><br>Consult our <a href=\"/hotel/furniture \">Catalog</a> to see more!"
+            },
+            "box2": {
+              "title": "Newcomer?",
+              "text1": "Download Shockwave",
+              "text2": "(it's free)",
+              "text3": "Enter the hotel",
+              "text4": "Create your Habbo and play!"
+            },
+            "box3": {
+              "title": "Habbo Club",
+              "content": "Join the <a href=\"/club\">Habbo Club</a>, and discover its many advantages for only 25 Habbo Coins!"
+            },
+            "box4": {
+              "title": "Habbo Coins",
+              "content": "<a href=\"/credits\">Coins</a> allow you to decorate your room with <a href=\"/hotel/furniture\">furni</a>, give gifts to your friends, join the <a href=\"/club\">Habbo Club</a> to play Battle Ball and so on!"
+            }
+          },
+          "box1": {
+            "title": "Welcome to Habbo Hotel!",
+            "text1": "Before you start, you need to download Shockwave. No stress: it's free and guaranteed virus-free.",
+            "text2": "Habbo Hotel is the virtual space where all Habbos meet. You can own your own room there and participate in lots of games organized by other users ...",
+            "text3": "Habbo Homes is where your Habbo Home page is. You can decorate it with all kinds of stickers and wallpapers.",
+            "text4": "Habbo Hotel also offers a whole battery of solo or team games, from Battle Ball to Snow Storm, including wobble squabble aquatics!",
+            "text5": "To learn more about the site, the Habbo Coins and the characters ... Don't move, you're in the right place!",
+            "text6": "Find out more!"
+          },
+          "howToGetStarted": {
+            "box1": {
+              "title": "To begin",
+              "text1": "Before exploring the hotel, you have to 'enter' it. If this is the first time, you have to register and create a Habbo.<br><br>It only takes a few minutes. Follow the instructions below:",
+              "text2": "<b>Installing Shockwave</b><br>Before entering the hotel, you must first install Shockwave. <a target=\"blank\" href=\"/shockwave\">Click here</a> to begin the safe download. The installation should take no more than ten minutes. If during this operation a warning message appears on the screen, simply click on 'Yes'.",
+              "text3": "<b>First visit</b><br>Click on 'ENTER' and a new window will automatically open. Once the loading bar has reached 100%, you have access to an aerial view of the hotel.",
+              "text4": "<b>Creating your Habbo<br></b>Now is the fun! Click on the top insert (the one where 'Are you new?' Is written) to open the recording window. You have to choose a name for your Habbo, decide if it's a girl or a boy and tell us what its mission is. Oh yes, don't forget to choose clothes for her! You can change it later, so make up your mind quickly!",
+              "text5": "Once you have given us your details, click on 'Next'. You will then be asked to confirm this information to us. Click on 'next' if that suits you or 'Previous' if you want to change something.",
+              "text6": "Congratulations, you are now a Habbo!<br><br><b>Warning:</b> To register, you must give us your email address. We undertake not to communicate them to any third party"
+            }
+          },
+          "navigator": {
+            "box1": {
+              "title": "Using the browser",
+              "content1": "<p>At the bottom of the screen you will see a small hotel - this is the Navigation Tool. Click on it to open it.</p><p>The first tab shows you the public spaces where you can go - discos, cafes, swimming pools, etc.</p><p>The second lists all the private rooms - those that other Habbos have built themselves.</p>To go to a room, click on the location of your choice in the browser then on 'GO'. Please note, the place may already be full ;)",
+              "content2": "Public spaces are open to everyone in the hotel.<br><br>They can accommodate between 25 and 100 Habbos at the same time. These are the places where you are sure to meet other Habbos.<br><br><p>The Battle Ball, the Habbo Lido and its famous Rodéeau are part of the public spaces.</p>",
+              "content3": "Private rooms are rooms built by Habbos. They can accommodate from 5 to 50 Habbos at the same time depending on the owner's choice.<br><p>A Habbo room represents the extension of its owner ... You can make a nightclub, a restaurant, a lounge. beauty or whatever comes to your mind!</p>",
+              "link1": "Enter Habbo Hotel"
+            }
+          },
+          "meeting": {
+            "box1": {
+              "title": "To make friends",
+              "content1": "The Habbo Console allows Habbos to keep in touch.<br><br>No need to leave your personal details, your email address or your mobile number!<br><br><br>You can use it to send messages to your friends and also ... to receive messages from your friends! Impressive? Yes, we know it.",
+              "content2": "So you met another Habbo and it seems to you that he is not completely crazy ;).<br>And now?<p>To add a potential friend, click on 'Search', type his Habbo name in the console and click on \"Make a friend\".</p><p>A request is then sent to your future (or not if he does not accept it) friend.<br></p>",
+              "content3": "If your buddy has accepted your request, his name will appear in your friends list in your console.<br><br>To send a message, choose a friend from the list and write your message.<br><br><p>Once you have written your little sweet note, click on \"Send\" and your friend (if he is logged in) will receive the message instantly and feel great joy ... lol!</p>"
+            }
+          },
+          "room": {
+            "box1": {
+              "title": "Your own room",
+              "content1": "<p>All private rooms are free.</p><p>You can get one by going to a Point Room-O-Matic.</p><p>The Room-O-Matic Points are located in the Navigator Tool or in lobbies and cafes (they look like big green letterboxes).</p><p>Here you can choose the name, look and shape of your future room and decide to either lock it or leave it wide open.</p>",
+              "content2": "You will find everything you need to decorate your room in the Habbo Catalog (right next to the Habbo Console).<br><br>It offers a wide choice of products, from the essential doormat to the luxurious Home video through plants, bathtubs, refrigerators, teleporters ...<br><br>But to buy all this, you will need Habbo Coins.<br><br><a href=\"/hotel/furniture\">All about the Habbo furni</a>",
+              "content3": "To buy something, click on the button that corresponds to the furni you have chosen.<br><br>Once the furni has been purchased, it automatically goes into your hand.<br><br><br><br><p><a href=\"/credits\">All about Habbo Coins</a></p>",
+              "content4": "See that giant hand? This is where your furni is stored when it is not in your room.<br><br><p>To move an object from your hand to your room, click on it then click on a place in your room where you want to put it down.</p><br><p>Look at this girl! She looks happy: if you want to be like her, create your room!<br></p>",
+              "link1": "Enter Habbo Hotel"
+            }
+          },
+          "helpSafety": {
+            "box1": {
+              "title": "Calls for help",
+              "content": "If something is bothering you or you've seen someone break the Habbo Way - you can make a 'cry for help', by clicking on the little one blue question mark, located on the right of your screen.<p>A Moderator will answer you or come to see you.<br><br><b>The call for help service is only to be contacted. in case of emergency !</b></p>"
+            },
+            "box2": {
+              "title": "Habbo X",
+              "content": "<b>Habbos X</b> (X for eXperts) <b>are volunteer but experienced Habbos trained to answer all your questions.</b><br>You will find them most of the time at Reception. They are easily recognized by the X badge they display next to their portrait.<br><br>If they have this badge, you can trust them."
+            },
+            "box3": {
+              "title": "Safety",
+              "content": "We do our utmost to ensure that Habbo Hotel remains a safe and pleasant place to explore, the fact remains that some Habbos may try to rip you off.<br><br>Be vigilant, they will try to rip you off. steal your account, your password, your furni, Habbo Coins ... etc<br><br>"
+            }
+          },
+          "chatting": {
+            "box1": {
+              "title": "Move and chat",
+              "content1": "To move, just click on a box and your Habbo goes directly on it.<br><br>And yes ;)<br><br><br>And to sit on a chair for example, nothing easier: click on the chair!",
+              "content2": "To speak, click on the dialog box at the bottom of the window, type your sentence and press the 'Enter' key on your keyboard.<br><br>To whisper, click on your buddy and select 'Whisper' in the menu, type your sentence and press the 'Enter' key on your keyboard.<br><br>To shout and everyone can hear you in the room you are in, select 'Shout', type your sentence and press the 'Enter' key on your keyboard.",
+              "content3": "To dance, and show how 'IN' you are, click on your Habbo then on the 'Dance' button.<br><br>If you are a member of the Habbo Club, you can choose between several dances using the drop-down menu.<br><br>To wave your hand to another Habbo, click on your Habbo then on the 'Greet' button.",
+              "link1": "Find out more",
+              "link2": "Enter Habbo Hotel"
+            }
+          }
+        },
+        "furni": {
+          "menu": {
+            "catalogue": "Furni",
+            "catalogue1": "Furni types",
+            "catalogue2": "Must-have furni",
+            "catalogue4": "Ephemeral collections",
+            "decorationExamples": "Decoration examples",
+            "staffFavourite": "Staff favourites",
+            "trading": "Trading"
+          },
+          "side": {
+            "box1": {
+              "title": "Habbo Coins",
+              "content": "Habbo Coins allow you to decorate your room with <a href=\"/hotel/furniture\">furni</a>, offer gifts to your friends, join the <a href=\"/club\">Habbo Club</a> play Battle Ball and more!"
+            },
+            "box2": {
+              "title": "Adopt a pet",
+              "content": "Don't you have a <a href=\"/hotel/pets\">pet</a> yet? They are so cute..."
+            },
+            "box3": {
+              "title": "Habbo Club",
+              "content": "Join the <a href=\"/club\">Habbo Club</a> and take advantage of its many advantages for only 25 Habbo Coins!"
+            }
+          },
+          "box1": {
+            "title": "What is furni?",
+            "content1": "There are a thousand and one ways to use furni.<br><br>Here are some questions we are regularly asked about it.<br><br><b>How to buy Habbo furni?</B><br>The Habbo furni is bought with Habbo Coins. Click on the Buy Habbo Coins section to learn more. Once you have your Habbo Coins, connect to Habbo Hotel. Then click on the catalog icon and have fun!<br><br><b>What if I bought an item that I don't like?<br></b>Unfortunately, you can't return and get a refund but you can always exchange it with that of another habbo!<br><br>",
+            "content2": "<b>I have a great idea for the creation of a new furni. What should I do?<br></b>Send us an email via the Habbo Help Tool: Select 'idea' in the drop-down menu and let us know!<br><br><b>I want have my own line of furni. How much would it cost?</b><br>Sorry, but it's impossible. It is very expensive to make furni.<br><br><b>Where is ___? I can't find it anywhere in the Catalog!<br></b>It sometimes happens that while walking around a Habbo you discover a furni that is not in the catalog. This is because this furni has only been on sale for a limited time. This is particularly the case for rares"
+          },
+          "catalogue": {
+            "box1": {
+              "title": "The catalog",
+              "content1": "You can find everything in the Catalog, for all tastes and all sizes, from wallpaper to toilets, from Plasto chairs to Rollerblades. <br> Here's a quick overview of how you can use them!",
+              "content2": "<b>Rares</b><br>From time to time very rare items will be released in the catalog. This is usually very short - a week or less - and they rarely reappear much later.",
+              "content3": "<b>Gifts</b><br>Show your friends how much you care by giving them a gift! Each Catalog item can be offered as a gift, all it takes is one recipient!<br>Giving a gift is so easy, even Einstein could do it! Purchase an item from the catalog and check the 'give as a gift' box. Tell us the recipient's name and we'll send it straight to their hand!",
+              "content4": "<b>Floor and wallpaper</b><br>Color your room to suit your mood. There are so many that it's really hard to make a choice! Be careful, once your floor or wallpaper is installed, you will not be able to recover them. Make sure you make the right choice :)",
+              "content5": "<b>Essentials</b><br>In the Essentials section of the Catalog you will find all the accessories to personalize your room! From pizza boxes to post-it notes, everything is there!",
+              "content6": "<b>Posters and Flags</b><br>In the decoration section, you can buy real works of art for a very reasonable price ... :)",
+              "content7": "<b>Rugs</b><br>They are all, of course, non-slip and machine washable. Obtain an emergency, to hide the dust underneath!"
+            }
+          },
+          "catalogue1": {
+            "box1": {
+              "title": "The catalog",
+              "content1": "In the Catalog, there is really something for all tastes and all sizes! Here's an overview of what you'll find there ...",
+              "content2": "<b>Pura</b><br>A sober and soothing range, Zen and refreshing. In addition, the Pura refrigerator offers delicious carrots!",
+              "content3": "<b>Mode</b><br>Steel: stylish and trendy: ideal for trendy clubs ...",
+              "content4": "<b>Rustico</b><br>All in wood, country atmosphere, High mountain chalet. Perfect after a long day of skiing!",
+              "content5": "<b>Plasto</b><br>Pop and 70's furni in color and curves!",
+              "content6": "<b>Area </b><br>Stylish and functional. For Habbos who don't have time to waste. Ideal for offices and meeting rooms.",
+              "content7": "<b>Iced</b><br>Stackable blocks of ice to build your Igloo or to refresh your ideas!",
+              "content8": "<b>Candy</b><br>A variation of Mode furni to see life in pink ...",
+              "content9": "<b>Bath room</b><br>Imperative to get rid of all the little bad smells.",
+              "content10": "<b>Plants</b><br>To take refuge in your secret garden!"
+            }
+          },
+          "catalogue2": {
+            "box1": {
+              "title": "The catalog",
+              "content1": "This section invites you to discover how to make your room a must!",
+              "content2": "<b>Trophies</b><br>Reward yourself or your friends with a fabulous Habbo trophy! There are so many ... Take your pick :)",
+              "content3": "<b>Laser Dice</b><br>The Laser Dice are perfect for livening up an room! Thanks to them, you can create many games and keep all your friends in suspense!",
+              "content4": "<b>Doors</b><br>Doors are available in various ranges of furni: Rustico, Mode, Area and Iced. Ideal for choosing to delimit your room in several sections and select your visitors. To open them, just double-click on them.",
+              "content5": "<b>Alarms</b><br>To give the start of the races!",
+              "content6": "<b>Rollers</b><br>Rollers are very useful for \"energizing\" queues or for manufacturing new high performance aerodynamic vehicles.",
+              "content7": "<b>Post-it</b><br> To leave a message or a trace of your passage. There are 20 per block and you can choose the color.",
+              "content8": "<b>Teleporters</b><br>To go from one room to another in the blink of an eye without returning to the Navigator! A very powerful Habbo technology !!!"
+            }
+          },
+          "catalogue4": {
+            "box1": {
+              "title": "Ephemeral furni",
+              "content1": "This furni is only on sale at certain times of the year ...",
+              "content2": "<b>Christmas furni</b><br>Trees, garlands, socks and even Turkey to celebrate the end of the year holidays :)",
+              "content3": "<b>Valentine furni</b><br>Giant hearts, pink ducks, Cupid statues ... Ah Love!",
+              "content4": "<b>Habboween furni</b><br>They say he's cursed ... Brrr, it's chilling just thinking about it!"
+            }
+          },
+          "decorationExamples": {
+            "box1": {
+              "title": "Decoration examples",
+              "content1": "To furnish your room, the possibilities are endless! you can build an amusement park, a monument, a restaurant and more ... <br> <br> Here are some examples!",
+              "content2": "<b>Kick Warz</b><br>A great classic: In this room, everyone can kick everyone! Hide behind the columns, screens, or trees to try to be the only one to stay there!",
+              "content3": "<b>Pacman</b><br>This room is a mini-maze, with alarms placed around every corner. The player must turn on each alarm avoiding the \"ghosts\" who will try to block it!",
+              "content4": "<b>Fridge Race<br></b>Simple but effective. The competitors are waiting in the green globes. At the facilitator's GO, they must get up, open the refrigerators and collect the food (carrot, currant set) that the facilitator has indicated to them. Once that's done, they should quickly get back to their seats!",
+              "content5": "<b>Mazes</b><br>Connect several rooms together using teleporters. Multiply the false leads and voila :)",
+              "content6": "<b>Theaters</b><br>Here is a perfect example ...",
+              "content7": "<b>Debating rooms</b><br>To talk about everything and nothing ...",
+              "content8": "<b>Restaurants</b><br>A good restaurant must offer: a pleasant room and an irreproachable menu. Ah yes, consider adding flowers to the tables. it's more romantic ...",
+              "content9": "<b>Monuments</b><br>Show your building skills to dazzle all habbos ..."
+            }
+          },
+          "staffFavourite": {
+            "box1": {
+              "content": "You may already know, your furni tastes often say a lot about your personality ... Here is a brief overview of what the Staff have in mind;)"
+            },
+            "box2": {
+              "title": "Norman's Top 4, Hotel Manager"
+            },
+            "box3": {
+              "title": "Purd@y's Top 4, Hotel Manager"
+            },
+            "box4": {
+              "title": "Creme's Top 4, Community Manager"
+            },
+            "box5": {
+              "title": "Ikki's Top 4, Community Assistant"
+            },
+            "box6": {
+              "title": "Gaby's Top 4, Habbo Guru"
+            },
+            "box7": {
+              "title": "Tara's Top 4, Campaign Manager"
+            }
+          },
+          "trading": {
+            "box1": {
+              "title": "Habbo Exchange",
+              "content": "Take a look at the Habbo Exchange section of the catalog to convert your Habbo Coins into currency. This way you will be able to buy the furnis of other Habbos or recover your Habbo Coins via the barter system!<br><br>Ah yes! If you are dry, you can recover your Habbo Coins at any time by double-clicking on your Habbos Exchanges in your room!"
+            },
+            "box2": {
+              "title": "Normal and rare furni",
+              "content": "As their name suggests, collectors are very rare. The more they are, the more valuable they are! Open your eyes;)"
+            },
+            "box3": {
+              "title": "Trading",
+              "content1": "You would like to completely redecorate your room but you no longer have Habbo Coins to buy new furni? Never mind: you can swap the one you have!",
+              "content2": "For that, you just have to go to the Troc floor, enter an room and click on the Habbo with which you want to exchange something. Once it's done, all you have to do is press the \"swap\" button just below his portrait (bottom right of the screen). A barter window will appear to place the item to be exchanged. When the other habbo has done the same and you have agreed, all you have to do is check the \"accept\" box :)",
+              "content3": "Ah yes! Don't forget that from now on you can also trade furni against Habbo Exchange!"
+            },
+            "box4": {
+              "title": "A few tips",
+              "content1": "You cannot trade Habbos accounts, HC months or pets.",
+              "content2": "No one can duplicate your furnis. Or your Habbo Coins ;)",
+              "content3": "Always use the trading tool. only accept the exchange when you are sure you are not being ripped off.",
+              "content4": "Check teleporters before any trade. Request a demo;)"
+            }
+          }
+        },
+        "pets": {
+          "menu": {
+            "pets": "Pets",
+            "takingCareOfYourPet": "Take care of your pet"
+          },
+          "box1": {
+            "title": "Pets",
+            "content1": "Each household has its own pet! and Habbo Hotel is no exception :) That's good, for only 20 Habbo Coins you can buy one ... A dog or a cat! Regardless, it will be yours and that's what matters right?",
+            "content2": "Warning: You cannot rename your pet and you can only deposit it in YOUR own rooms. You can have more than one pet, but only two can live in the same room. pets cannot be traded.",
+            "content3": "The life of a domestic pet",
+            "content4": "Your pet's life begins the day you buy it. For your pet, a day corresponds to a year. The older he gets, the more sleep he will get.<br>But it’s only after 100-125 days that he will really take extended naps. Before that, his activity level will vary depending on his age. Thus, a young puppy will always be more playful and rowdy than an old mutt.",
+            "content5": "Your pet will not move if you put it back in your hand or if your room is empty. When an pet is in the company of Habbo (s), it is restless, it is hungry, it is thirsty and demands attention.",
+            "content6": "If left unchecked, he will get sad and get bored (see 'How to take care of your pet' - below). You can tell your favorite pet's mood by looking at their postures, expressions, or the way they hold themselves. Alternatively, you can also double-click on him: his current mood will appear on the screen.",
+            "content7": "Your pet's profile",
+            "content8": "The profile of a pet is determined by its appearance, its breed and its behavior.<br>By clicking on an pet, you will better see what it looks like and you will know its name and breed.<br>Duplicate- clicking on an pet, you will learn more about its behavior, thanks to the following information:<br><br>Age: One day = one year for an pet<br>Appetite: Whether the pet is hungry or not<br>Thirst: Whether the pet is thirsty or not<br>Mood: The pet's mood<br>Nature: Its way of being in general."
+          },
+          "box2": {
+            "title": "Adopt a pet",
+            "content1": "All pets are available in the 'pets' section of the Catalog. To get one, it's easy! Choose one, give it a name and click on 'buy'.",
+            "content2": "<i>Warning</i>: once you give your pet a name you cannot change it.<br>Each time you consult the Catalog, you will discover a new selection of pets. You just have to refresh the page to discover new ones! - Or go to page 2 and go back ... <br> Page 2 gives you the info every pet owner needs to take care of their new friends.",
+            "content3": "Once you buy it, the pet will appear in its basket in the palm of your hand. It will not come out until you place the basket in your room. <br> Please note: you are only allowed to keep an pet in your own room. You can have several pets but an room cannot contain more than two at the same time. You cannot sell or trade your pet."
+          },
+          "takingCareOfYourPet": {
+            "box1": {
+              "title": "Taking care of your pet",
+              "content1": "How to take care of your pet ?",
+              "content2": "You need to take good care of your pet to keep it happy and healthy. The 'pet accessories' pages of the Catalog are made for that. They offer a wide choice of foods, toys and treats for your new friend.",
+              "content3": "Sometimes an pet is hungry several times a day. Its food can therefore be purchased in individual portions (one portion) or economical (6 portions). It will always take a little while for your pet to finish their meals.<br>If they are healthy, they will not need more than one serving per day. To feed him, nothing could be simpler: you just have to place his food next to him. Treats like the chocolate mouse or the marzipan snowman have the dual benefits of feeding and entertaining your four-legged friend.",
+              "content4": "Your pet will also be thirsty. Buy him a bowl and he will have plenty of water. Double-click on the bowl to fill it as soon as it is needed.<br><br>To have fun with your pet, buy him a toy such as a plastic ball. Place it next to him so he can play with it.<br>Remember - To see how your pet is doing, just double-click on it.",
+              "content5": "Understand your pet's behavior",
+              "content6": "You can interact with your pet by talking to him via the text bubbles. Here's how he expresses his moods and needs. - If he wags his tail when you get home, he's glad to see you again. <br> If he's hungry or thirsty, he'll look for his bowl. When he finds it he will eat and drink until he is satisfied. In case you haven't bought him some food, he will beg you to feed him and try to get your attention by all means ...",
+              "content7": "Your pet needs a little rest every now and then. Running endlessly is tiring ... Every time he has a pump, he will look for his basket. If the basket is inaccessible, it will easily find another place to take a nap. A young pet takes about a nap every half hour, but as it gets older it needs more and more sleep.<br>Accessories (food, balls, etc.) are not the only means of possible interaction with your pet. You can also address him directly and he will obey you.<br>You can do this by 'Shout', always including your pet's name in your sentences. For example, '<b>Lay down, Médor</b>'. That way your pet will obey you with your finger and your eye. That said, the youngest can give it a hard time ... Here is what to tell them to make you obey:",
+              "content8": "sitting: to make the pet sit down<br>lying down: to make it lie down<br>jump: to make it jump<br>speaks: to make it bark / meow, etc<br>nice: to reward it <br>",
+              "content9": "These orders will only be followed if it is the owner of the pet who gives them:",
+              "content10": "follow me: so that your pet follows you in the track<br>at the foot: so that it comes to you<br>ask: so that your pet is beautiful<br>clear: so that your pet leaves you alone<br>Naughty: to scold your pet",
+              "content11": "Each pet reacts to its name."
+            }
+          }
+        }
+      }
+    }
+  }
+}

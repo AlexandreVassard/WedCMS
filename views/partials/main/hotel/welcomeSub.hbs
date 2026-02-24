@@ -1,0 +1,80 @@
+<div id='top-3rd-level'></div>
+<div id='content-3rd-level'>
+  <ul id='third-level-navi'>
+
+    {{#ifCond subPage '==' 'how_to_get_started'}}
+      <li class='active'>
+        {{text.hotel.welcome.menu.howToGetStarted}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/welcome_to_habbo_hotel/how_to_get_started'
+        >{{text.hotel.welcome.menu.howToGetStarted}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'navigator'}}
+      <li class='active'>
+        {{text.hotel.welcome.menu.navigator}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/welcome_to_habbo_hotel/navigator'
+        >{{text.hotel.welcome.menu.navigator}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'meeting'}}
+      <li class='active'>
+        {{text.hotel.welcome.menu.meeting}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/welcome_to_habbo_hotel/meeting'
+        >{{text.hotel.welcome.menu.meeting}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'room'}}
+      <li class='active'>
+        {{text.hotel.welcome.menu.room}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/welcome_to_habbo_hotel/room'
+        >{{text.hotel.welcome.menu.room}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'help_safety'}}
+      <li class='active'>
+        {{text.hotel.welcome.menu.helpSafety}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/welcome_to_habbo_hotel/help_safety'
+        >{{text.hotel.welcome.menu.helpSafety}}</a>
+      </li>
+    {{/ifCond}}
+
+    {{#ifCond subPage '==' 'chatting'}}
+      <li class='active'>
+        {{text.hotel.welcome.menu.chatting}}
+      </li>
+    {{else}}
+      <li class='inactive'>
+        <a
+          href='/hotel/welcome_to_habbo_hotel/chatting'
+        >{{text.hotel.welcome.menu.chatting}}</a>
+      </li>
+    {{/ifCond}}
+
+  </ul>
+  <div class='clear'></div>
+</div>
+<div id='bottom-3rd-level'></div>

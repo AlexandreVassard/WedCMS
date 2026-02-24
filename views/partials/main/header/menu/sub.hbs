@@ -1,0 +1,15 @@
+<div id="submenu">
+    {{#ifCond page 'startsWith' 'hotel'}}
+        {{>main/header/menu/sub/hotel}}
+    {{else}}
+        {{#ifCond page 'startsWith' 'credits'}}
+            {{>main/header/menu/sub/credits}}
+        {{else}}
+            {{#ifCond page 'startsWith' 'club'}}
+                {{>main/header/menu/sub/club}}
+            {{else}}
+                <div class="subnav"></div>
+            {{/ifCond}}
+        {{/ifCond}}
+    {{/ifCond}}
+</div>

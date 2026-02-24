@@ -1,0 +1,532 @@
+#mypage-wrapper {
+  padding: 0 5px;
+}
+
+/** PANELS **/
+
+#mypage-top-nav {
+  height: 18px;
+}
+
+#mypage-top-error {
+  margin: 0 130px 15px 130px;
+}
+
+#mypage-top-spacer {
+  height: 4px;
+  font-size: 1%;
+}
+
+#mypage-bg {
+  position: relative;
+  padding: 0 3px;
+}
+
+body#editmode #playground-outer {
+  border: 1px dotted white;
+}
+
+body#editmode #playground {
+  border: 1px dotted black;
+}
+
+#mypage-ad {
+  position: absolute;
+  top: 0;
+  right: 3px;
+}
+
+#header-bar {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0 3px;
+}
+
+#header-bar .box-content {
+  height: 23px;
+}
+
+#header-bar-text {
+  float: left;
+  padding: 3px 10px 0 5px;
+}
+
+#header-bar-warning {
+  float: left;
+  padding: 3px 10px 0 0;
+  font-size: 11px;
+  font-weight: normal;
+  color: yellow;
+}
+
+#editmode #header-bar-outer {
+  padding-bottom: 4px;
+}
+
+#top-toolbar {
+  margin: 0 3px 0 3px;
+}
+
+#top-toolbar div {
+  height: 29px;
+  background-image: url(/images/myhabbo/tools_bg.gif);
+  background-repeat: no-repeat;
+  background-position: 0 1px;
+  padding: 0 4px;
+}
+
+#edit-page-button {
+  font-family: Veranda;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  color: white;
+}
+
+#edit-page-button .button-content {
+  height: 14px;
+}
+
+/*** PROFILE BOX ***/
+
+.profile-info {
+  width: 90px;
+  margin-left: -3px;
+  float: left;
+}
+
+.profile-info .name-text {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.profile-info img {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.profile-figure {
+  float: left;
+  margin-left: 5px;
+}
+
+div.profile-motto {
+  clear: both;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px dashed black;
+}
+
+#loading {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+#editor,
+#bg-editor {
+  border: 2px solid black;
+  width: 250px;
+  position: absolute;
+  z-index: 1001;
+  display: none;
+  padding: 4px;
+  background-color: #eaeaea;
+}
+
+#edit-bg-btn {
+  cursor: pointer;
+  width: 11px;
+  height: 10px;
+  background: url(/images/myhabbo/icon_edit.gif) no-repeat;
+  float: right;
+  margin-right: 20px;
+  margin-top: 7px;
+}
+
+div.myportlet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+div.myportlet p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+div.myportlet-header h3,
+div.stickie-header h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+div.myportlet-content {
+}
+
+div.myportlet-bottom {
+  height: 15px;
+  position: relative;
+}
+
+div.myportlet-resize {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/resize.gif)
+    no-repeat;
+  display: none;
+}
+
+div.myportlet-edit {
+  cursor: pointer;
+  width: 11px;
+  height: 10px;
+  background: url(/images/myhabbo/icon_edit.gif) no-repeat;
+  clear: both;
+}
+
+div.habboimg {
+  float: right;
+  background-position: 0 -20px;
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 100px;
+}
+
+/*** STICKER ***/
+
+div.sticker {
+  background-repeat: no-repeat;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 1%;
+}
+
+#editmode div.sticker {
+  cursor: move;
+}
+
+#sticker-preview {
+  position: absolute;
+  z-index: 10000;
+  padding: 20px;
+  background-color: white;
+  cursor: default;
+}
+
+/*** STICKIE ***/
+
+div.stickie {
+  position: absolute;
+  top: 0;
+  left: -1500px;
+}
+
+#editmode div.stickie {
+  cursor: move;
+}
+
+div.stickie-header {
+  padding-left: 4px;
+}
+
+div.stickie-header h3 {
+  font-size: 1px;
+  height: 20px;
+  padding: 2px 7px 0px 3px;
+}
+
+div.stickie-body {
+  /*margin-top: -3px;*/
+  padding-left: 4px;
+}
+
+div.stickie-content {
+  padding: 3px 7px 4px 3px;
+  word-wrap: break-word;
+}
+
+div.stickie-footer {
+  padding: 0 15px 5px 0;
+}
+
+div.stickie ul {
+  padding-left: 12px;
+}
+
+div.stickie p {
+  overflow: hidden;
+}
+
+/*** GOLD ***/
+
+div.myportlet.gold {
+}
+
+div.myportlet.gold div.myportlet-header {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/gold-top-l.gif)
+    no-repeat;
+  border-bottom: 1px solid black;
+  padding-left: 7px;
+}
+
+div.myportlet.gold div.myportlet-header h3 {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/gold-top.gif)
+    no-repeat top right;
+  padding: 5px 7px 5px 0;
+}
+
+div.myportlet.gold div.myportlet-body {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/gold-bottom-l.gif)
+    no-repeat bottom left;
+  padding-left: 7px;
+}
+
+div.myportlet.gold div.myportlet-content {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/box-scale/gold-bottom.gif)
+    no-repeat bottom right;
+  padding: 7px 7px 7px 0;
+}
+
+/*** GREY ***/
+
+div.myportlet.grey {
+  color: white;
+}
+
+div.myportlet.grey table.scores {
+  color: black;
+}
+
+div.myportlet.grey div.myportlet-header {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/box_02_top_left.gif)
+    no-repeat;
+  padding-left: 4px;
+  height: 25px;
+}
+
+div.myportlet.grey div.myportlet-header h3 {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/box_02_top_right.gif)
+    no-repeat top right;
+  padding: 6px 7px 6px 3px;
+  color: white;
+}
+
+div.myportlet.grey div.myportlet-body {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/box_02_mid_left.gif)
+    no-repeat bottom left;
+  padding-left: 4px;
+}
+
+div.myportlet.grey div.myportlet-content {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/box_02_mid_right.gif)
+    no-repeat bottom right;
+  padding: 7px 7px 4px 3px;
+}
+
+div.myportlet.grey div.myportlet-edit {
+  margin-top: 10px;
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/box_edit_btn_2.gif)
+    no-repeat;
+}
+
+/*** RED ***/
+
+div.myportlet.red {
+}
+
+div.myportlet.red div.myportlet-header {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/box_03_top_left.gif)
+    no-repeat;
+  padding-left: 4px;
+  height: 25px;
+}
+
+div.myportlet.red div.myportlet-header h3 {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/box_03_top_right.gif)
+    no-repeat top right;
+  padding: 6px 7px 6px 3px;
+  color: white;
+}
+
+div.myportlet.red div.myportlet-body {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/box_03_mid_left.gif)
+    no-repeat bottom left;
+  padding-left: 4px;
+}
+
+div.myportlet.red div.myportlet-content {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/box_03_mid_right.gif)
+    no-repeat bottom right;
+  padding: 7px 7px 4px 3px;
+}
+
+div.myportlet.red div.myportlet-edit {
+  margin-top: 10px;
+}
+
+/*** BLUE ***/
+
+div.myportlet.blue {
+}
+
+div.myportlet.blue div.myportlet-header {
+  background-color: #09c;
+  padding: 3px 7px;
+}
+
+div.myportlet.blue div.myportlet-body {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/blue-bg.png);
+  padding: 7px;
+}
+
+/*** PINK ***/
+
+div.myportlet.pink {
+  border: 2px solid white;
+}
+
+div.myportlet.pink div.myportlet-header {
+  border-bottom: 2px solid white;
+  background-color: #ff70a2;
+  padding: 3px 7px;
+}
+
+div.myportlet.pink div.myportlet-body {
+  background: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/pink-bg.png);
+  padding: 7px;
+}
+
+/*** Dialogs ***/
+.dialog {
+  position: absolute;
+}
+
+/* ---- ban page ----------- */
+#user-banned-wrapper,
+#user-404-wrapper {
+  padding: 10px 250px;
+  text-align: center;
+}
+
+.widget {
+  position: absolute;
+}
+
+.widget h3 .widget-title {
+  float: left;
+}
+
+/*** friends widget styles ***/
+
+div#friends {
+  width: 240px;
+}
+div#slider {
+  margin: 10px 0 10px 30px !important;
+  margin: 10px 0 10px 10px;
+  float: left;
+}
+
+div#slider-bar {
+  width: 170px;
+  background-image: url(/web/20061130213949im_/http://images.habbohotel.fr/web/web-2.0.1_b21/images/myhabbo/slider/slider_track_plain.gif);
+  background-repeat: repeat-x;
+  background-position: center left;
+  height: 18px;
+}
+
+div#slider-handle {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+  cursor: hand;
+}
+
+div#number {
+  width: 95%;
+  text-align: center;
+}
+
+.friend {
+  float: left;
+  width: 30px;
+  border: 1px solid #999;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+}
+
+div.friend-selected {
+  border: 1px solid black;
+}
+
+.friend_info {
+  display: none;
+  width: 92%;
+  border: 1px solid black;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+}
+
+ul.friendlist,
+ul.roomlist {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.friendlist li,
+ul.roomlist li {
+  margin: 0 10px;
+  float: left;
+  text-align: center;
+}
+
+ul.friendlist li {
+  width: 100px;
+  padding: 60px 0 0 0;
+  background-position: 35px -60px;
+  background-repeat: no-repeat;
+}
+
+/*** rooms widget styles ***/
+div#room_wrapper {
+  overflow: auto;
+  max-height: 200px;
+}
+
+div.room_image {
+  float: left;
+  width: 50px;
+  padding: 5px 0 5px 0;
+}
+
+div.room_info {
+  float: left;
+  word-wrap: break-word;
+  padding: 5px 0 5px 0;
+}
+
+div.room_name {
+  float: left;
+  font-weight: bold;
+}
+
+td.dotted-line {
+  border-bottom: dotted 1px black;
+}
+
+hr.divider {
+  width: 90%;
+  height: 1px;
+}

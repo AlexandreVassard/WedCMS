@@ -1,0 +1,31 @@
+<div class='subnav'>
+  {{#ifCond subPage '==' 'club'}}
+    {{text.global.menu.club.sub.club}}
+  {{else}}
+    <a href='/club'>{{text.global.menu.club.sub.club}}</a>
+  {{/ifCond}}
+  |
+  {{#ifCond subPage '==' 'habbo_club_benefits'}}
+    {{text.global.menu.club.sub.habboClubBenefits}}
+  {{else}}
+    <a
+      href='/club/habbo_club_benefits'
+    >{{text.global.menu.club.sub.habboClubBenefits}}</a>
+  {{/ifCond}}
+  |
+  {{#ifCond subPage '==' 'join_habbo_club'}}
+    {{text.global.menu.club.sub.joinHabboClub}}
+  {{else}}
+    <a
+      href='/club/join_habbo_club'
+    >{{text.global.menu.club.sub.joinHabboClub}}</a>
+  {{/ifCond}}
+  |
+  {{#ifCond subPage '==' 'habbo_club_furni'}}
+    {{text.global.menu.club.sub.habboClubFurni}}
+  {{else}}
+    <a
+      href='/club/habbo_club_furni'
+    >{{text.global.menu.club.sub.habboClubFurni}}</a>
+  {{/ifCond}}
+</div>

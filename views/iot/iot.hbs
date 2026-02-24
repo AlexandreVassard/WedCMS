@@ -1,0 +1,40 @@
+{{#if alreadyPosted}}
+    {{{text.iot.alreadyPosted}}}<br />
+{{else}}
+    <form method="post" action="/iot/step/2">
+        <table border="0" cellspacing="0" cellpadding="0" class="ihead">
+            <tr>
+                <td class="icon"><img src="/images/iot/1.gif" alt=" " width="47" height="37"/></td>
+                <td class="text">
+                    <h2>{{text.iot.text1}}</h2>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table border="0" cellspacing="0" cellpadding="0" class="content-table">
+
+            <tr>
+                <td valign="middle" align="left" style="width: 300px;">
+                    <div class="iinfodiv">
+                        {{#if errorUsername}}
+                            <font color="red"><b>{{errorUsername}}</b></font><br>
+                        {{/if}}
+                        <label><strong>{{text.iot.text2}}:</strong><br>
+                            <input type="text"
+                                   name="username"
+                                {{#if user}}
+                                   value="{{user.username}}"
+                                   readonly="readonly"
+                                {{/if}}
+                            ></label>
+                        <br/>
+                        <br/>
+                        <label>
+                            <input type="submit" name="button" value="{{text.iot.button1}}"/>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+{{/if}}

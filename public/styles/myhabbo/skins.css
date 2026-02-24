@@ -1,0 +1,556 @@
+/*** WIDGETS ***/
+
+/** widget sizes */
+.widget {
+    width: 250px;
+}
+
+.FriendsWidget {
+    width: 290px;
+}
+
+.ProfileWidget {
+    width: 240px;
+}
+
+.FriendsWidget .w_skin_goldenskin {
+    width: 315px;
+}
+
+* html .FriendsWidget .w_skin_notepadskin {
+    width: 305px;
+}
+
+.FriendsWidget .w_skin_noteitskin {
+    width: 310px;
+}
+
+.FriendsWidget .w_skin_speechbubbleskin {
+    width: 265px;
+}
+
+* html .FriendsWidget .w_skin_metalskin {
+    width: 305px;
+}
+
+.FriendsWidget .w_skin_defaultskin {
+    width: 280px;
+}
+
+.stickie .edit-button, .stickie .report-button {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    float: right;
+}
+
+/** common widget stuff */
+.widget div.widget-headline h3 {
+    margin-top: 0;
+}
+
+#editmode div.widget-headline {
+    cursor: move;
+}
+
+.widget .edit-button {
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+
+.widget.ProfileWidget .report-button {
+    float: none;
+    position: absolute;
+    padding-left: 5px;
+}
+
+.widget.RoomsWidget .report-button {
+    float: right;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: 0px;
+    position: static;
+}
+
+
+
+/*** GOLDENSKIN ***/
+.widget .w_skin_goldenskin {
+
+}
+
+.w_skin_goldenskin div.widget-content {
+    background: url(/images/skins/Skin_Goldenframe_btmlR.png) no-repeat bottom right;
+    padding: 4px 35px 35px 9px;
+}
+
+.w_skin_goldenskin div.widget-body {
+    background: url(/images/skins/Skin_Goldenframe_btmlL.png) no-repeat bottom left;
+    padding-left: 31px;
+}
+
+.w_skin_goldenskin div.widget-headline {
+    background: url(/images/skins/Skin_Goldenframe_topR.png) no-repeat top right;
+    height: 31px;
+}
+
+.w_skin_goldenskin div.widget-corner {
+    background: url(/images/skins/Skin_Goldenframe_topL.png) no-repeat top left;
+    padding-left: 31px;
+    height: 31px;
+}
+
+.w_skin_goldenskin div.widget-headline h3 {
+    text-align: center;
+    font-size: x-small;
+    height: 21px;
+    top: 7px;
+    text-align: center;
+    color: #733A00;
+    padding-top: 2px;
+    margin: 2px 20px 0 0;
+    position: relative;
+}
+
+.w_skin_goldenskin div.widget-headline .header-middle {
+    text-align: center;
+    background: url(/images/skins/Skin_Goldenframe_Header_M.png);
+    height: 21px;
+    margin: 0px;
+    padding: 3px 5px 3px 5px;
+}
+
+.w_skin_goldenskin div.widget-headline .header-left {
+    background: url(/images/skins/Skin_Goldenframe_Header_L.png) no-repeat;
+    height: 21px;
+    padding: 3px 0px 3px 8px;
+}
+
+.w_skin_goldenskin div.widget-headline .header-right {
+    background: url(/images/skins/Skin_Goldenframe_Header_R.png) no-repeat;
+    height: 21px;
+    padding: 3px 18px 3px 0;
+}
+
+/*** metalskin ***/
+.w_skin_metalskin {
+
+}
+
+.w_skin_metalskin div.widget-content {
+    background: url(/images/skins/Skin_Metal_btmR.png) no-repeat bottom right;
+    padding: 2px 27px 24px 5px;
+}
+
+.w_skin_metalskin div.widget-body {
+    background: url(/images/skins/Skin_Metal_btmL.png) no-repeat bottom left;
+    padding-left: 24px;
+}
+
+.w_skin_metalskin div.widget-headline {
+    background: url(/images/skins/Skin_Metal_topRh.png) no-repeat top right;
+    height: 33px;
+}
+
+.w_skin_metalskin div.widget-corner {
+    background: url(/images/skins/Skin_Metal_topLh.png) no-repeat top left;
+    padding-left: 35px;
+    height: 33px;
+}
+
+.w_skin_metalskin div.widget-headline h3 {
+    text-align: center;
+    font-size: x-small;
+    position: relative;
+    top: 3px;
+    height : 33px;
+    text-align: center;
+    color: #565663;
+    padding-top: 2px;
+    margin: 2px 40px 0 0;
+    position: relative;
+}
+
+* html .w_skin_metalskin div.widget-headline h3 {
+    margin: 0px 40px -5px 0px;
+}
+
+/*** golden pipes and marmor ***/
+.w_skin_defaultskin {
+
+}
+
+.w_skin_defaultskin div.widget-content {
+    background: url(/images/skins/Skin_HabboHomes_btmR.png) no-repeat bottom right;
+    padding: 2px 14px 20px 10px;
+}
+
+.w_skin_defaultskin div.widget-body {
+    background: url(/images/skins/Skin_HabboHomes_btmL.png) no-repeat bottom left;
+    padding-left: 14px;
+}
+
+.w_skin_defaultskin div.widget-headline {
+    background: url(/images/skins/Skin_HabboHomes_topRh.png) no-repeat top right;
+    height: 41px;
+}
+
+.w_skin_defaultskin div.widget-corner {
+    background: url(/images/skins/Skin_HabboHomes_topLh.png) no-repeat top left;
+    padding-left: 41px;
+    height: 41px;
+}
+
+.w_skin_defaultskin div.widget-headline h3 {
+    text-align: left;
+    font-size: x-small;
+    font-weight: normal;
+    color: white;
+    vertical-align: bottom;
+    position: relative;
+    padding-top: 10px;
+    left: -33px;
+}
+
+* html .w_skin_defaultskin div.widget-headline h3 {
+    margin: 0px 0px -3px 0px;
+}
+
+/*** Notepadskin ***/
+.w_skin_notepadskin{
+
+}
+
+.w_skin_notepadskin div.widget-content {
+    background: url(/images/skins/Skin_Notepad_btmR.png) no-repeat bottom right;
+    padding: 4px 29px 27px 7px;
+}
+
+.w_skin_notepadskin div.widget-body {
+    background: url(/images/skins/Skin_Notepad_btmL.png) no-repeat bottom left;
+    padding-left: 27px;
+}
+
+.w_skin_notepadskin div.widget-headline {
+    background: url(/images/skins/Skin_Notepad_topRh.png) no-repeat top right;
+    height: 29px;
+    width: 100%;
+}
+
+.w_skin_notepadskin div.widget-corner {
+    background: url(/images/skins/Skin_Notepad_topLh.png) no-repeat top left;
+    padding-left: 27px;
+    height: 29px;
+}
+
+.w_skin_notepadskin div.widget-headline h3 {
+    text-align: left;
+    font-size: small;
+    vertical-align: bottom;
+    position: relative;
+    padding-top: 10px;
+    left: -4px;
+}
+
+* html .w_skin_notepadskin div.widget-headline h3 {
+    margin: 0px 0px -3px 0px;
+}
+
+/*** noteit ***/
+.w_skin_noteitskin{
+
+}
+
+.w_skin_noteitskin div.widget-content {
+    background: url(/images/skins/Skin_Stickienote_btmR.png) no-repeat bottom right;
+    padding: 4px 30px 27px 7px;
+}
+
+.w_skin_noteitskin div.widget-body {
+    background: url(/images/skins/Skin_Stickienote_btmL.png) no-repeat bottom left;
+    padding-left: 30px;
+}
+
+.w_skin_noteitskin div.widget-headline {
+    background: url(/images/skins/Skin_Stickienote_topR.png) no-repeat top right;
+    height: 30px;
+    width: 100%;
+}
+
+.w_skin_noteitskin div.widget-corner {
+    background: url(/images/skins/Skin_Stickienote_topL.png) no-repeat top left;
+    padding-left: 30px;
+    height: 30px;
+}
+
+.w_skin_noteitskin div.widget-headline h3 {
+    text-align: left;
+    font-size: 11px;
+    vertical-align: bottom;
+    position: relative;
+    padding-top: 10px;
+    left: -4px;
+}
+
+* html .w_skin_noteitskin div.widget-headline h3 {
+    margin: 0px 0px -3px 0px;
+}
+
+/*** speechbubbleskin ***/
+.w_skin_speechbubbleskin {
+
+}
+
+.w_skin_speechbubbleskin div.widget-content {
+    background: url(/images/skins/Skin_Speechbubble_btmR.png) no-repeat bottom right;
+    padding: 10px 10px 25px 5px;
+}
+
+.w_skin_speechbubbleskin div.widget-body {
+    background: url(/images/skins/Skin_Speechbubble_btmL.png) no-repeat bottom left;
+    padding-left: 10px;
+}
+
+.w_skin_speechbubbleskin div.widget-headline {
+    background: url(/images/skins/Skin_Speechbubble_topR.png) no-repeat top right;
+    height: 10px;
+}
+
+.w_skin_speechbubbleskin div.widget-corner {
+    background: url(/images/skins/Skin_Speechbubble_topL.png) no-repeat top left;
+    padding-left: 10px;
+    height: 10px;
+}
+
+.w_skin_speechbubbleskin div.widget-headline h3 {
+    text-align: left;
+    font-size: small;
+    vertical-align: bottom;
+    position: relative;
+    padding-top: 4px;
+    left: -4px;
+}
+
+* html .w_skin_speechbubbleskin div.widget-headline h3 {
+    margin: 0px 0px -10px 0px;
+}
+
+/*** STICKIES ***/
+
+div.stickie {
+    width: 250px;
+}
+
+/*** GOLDSKIN ***/
+.n_skin_goldenskin .stickie-header {
+    background: url(/images/skins/Skin_Goldenframe_topL.png) no-repeat;
+    padding-left: 31px;
+    height: 31px;
+    font-size: 1%;
+}
+
+* html .n_skin_goldenskin .stickie-header {
+    margin: 0 0 -7px 0;
+}
+
+.n_skin_goldenskin .stickie-header h3 {
+    background: url(/images/skins/Skin_Goldenframe_topR.png) no-repeat top right;
+    height: 31px;
+    font-size: 1%;
+}
+
+.n_skin_goldenskin .stickie-body {
+    background: url(/images/skins/Skin_Goldenframe_btmlL.png) no-repeat bottom left;
+    padding-left: 31px;
+}
+
+.n_skin_goldenskin .stickie-content {
+    background: url(/images/skins/Skin_Goldenframe_btmlR.png) no-repeat bottom right;
+}
+
+.n_skin_goldenskin .stickie-content p {
+    vertical-align: top;
+    margin: 5px 28px 5px 5px;
+    padding-bottom: 28px;
+}
+
+/*** BLUESKIN ***/
+.n_skin_defaultskin .stickie-header {
+    background: url(/images/skins/Skin_HabboHomes_topL.png) no-repeat;
+    padding-left: 14px;
+    height: 14px;
+    margin: 0;
+    font-size: 1%;
+}
+
+* html .n_skin_defaultskin .stickie-header {
+    margin: 0 0 -3px 0;
+}
+
+.n_skin_defaultskin .stickie-header h3 {
+    background: url(/images/skins/Skin_HabboHomes_topR.png) no-repeat top right;
+    height: 14px;
+    margin: 0;
+    font-size: 1%;
+}
+
+.n_skin_defaultskin .stickie-body {
+    background: url(/images/skins/Skin_HabboHomes_btmL.png) no-repeat bottom left;
+    padding-left: 14px;
+}
+
+.n_skin_defaultskin .stickie-content {
+    background: url(/images/skins/Skin_HabboHomes_btmR.png) no-repeat bottom right;
+}
+
+.n_skin_defaultskin .stickie-content p {
+    vertical-align: top;
+    margin: 5px;
+}
+
+/*** metalskin ***/
+.n_skin_metalskin .stickie-header {
+    background: url(/images/skins/Skin_Metal_topL.png) no-repeat;
+    padding-left: 24px;
+    height: 24px;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 1%;
+}
+
+* html .n_skin_metalskin .stickie-header {
+    margin: 0 0 -3px 0;
+}
+
+.n_skin_metalskin .stickie-header h3 {
+    background: url(/images/skins/Skin_Metal_topR.png) no-repeat top right;
+    height: 24px;
+    margin: 0;
+    padding-bottom: 0;
+    font-size: 1%;
+}
+
+.n_skin_metalskin .stickie-body {
+    background: url(/images/skins/Skin_Metal_btmL.png) no-repeat bottom left;
+    padding-left: 24px;
+}
+
+.n_skin_metalskin .stickie-content {
+    background: url(/images/skins/Skin_Metal_btmR.png) no-repeat bottom right;
+}
+
+.n_skin_metalskin .stickie-content p {
+    vertical-align: top;
+    margin: 2px 12px 20px 2px;
+}
+
+/*** notepadskin***/
+.n_skin_notepadskin .stickie-header {
+    background: url(/images/skins/Skin_Notepad_topL.png) no-repeat;
+    padding-left: 20px;
+    height: 12px;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 1%;
+}
+
+* html .n_skin_notepadskin .stickie-header {
+    margin: 0 0 -3px 0;
+}
+
+.n_skin_notepadskin .stickie-header h3 {
+    background: url(/images/skins/Skin_Notepad_topR.png) no-repeat top right;
+    height: 12px;
+    margin: 0;
+    padding-bottom: 0;
+    font-size: 1%;
+}
+
+.n_skin_notepadskin .stickie-body {
+    background: url(/images/skins/Skin_Notepad_btmL.png) no-repeat bottom left;
+    padding-left: 27px;
+}
+
+.n_skin_notepadskin .stickie-content {
+    background: url(/images/skins/Skin_Notepad_btmR.png) no-repeat bottom right;
+}
+
+.n_skin_notepadskin .stickie-content p {
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+/*** noteitskin***/
+.n_skin_noteitskin .stickie-header {
+    background: url(/images/skins/Skin_Stickienote_topL.png) no-repeat;
+    padding-left: 30px;
+    height: 30px;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 1%;
+}
+
+* html .n_skin_noteitskin .stickie-header {
+    margin: 0 0 -3px 0;
+}
+
+.n_skin_noteitskin .stickie-header h3 {
+    background: url(/images/skins/Skin_Stickienote_topR.png) no-repeat top right;
+    height: 30px;
+    margin: 0;
+    padding-bottom: 0;
+    font-size: 1%;
+}
+
+.n_skin_noteitskin .stickie-body {
+    background: url(/images/skins/Skin_Stickienote_btmL.png) no-repeat bottom left;
+    padding-left: 30px;
+}
+
+.n_skin_noteitskin .stickie-content {
+    background: url(/images/skins/Skin_Stickienote_btmR.png) no-repeat bottom right;
+    padding-bottom: 15px;
+}
+
+.n_skin_noteitskin .stickie-content p {
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+/*** speechbubleskin***/
+.n_skin_speechbubbleskin .stickie-header {
+    background: url(/images/skins/Skin_Speechbubble_topL.png) no-repeat;
+    padding-left: 10px;
+    height: 10px;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 1%;
+}
+
+* html .n_skin_speechbubbleskin .stickie-header {
+    margin: 0 0 -3px 0;
+}
+
+.n_skin_speechbubbleskin .stickie-header h3 {
+    background: url(/images/skins/Skin_Speechbubble_topR.png) no-repeat top right;
+    height: 10px;
+    margin: 0;
+    padding-bottom: 0;
+    font-size: 1%;
+}
+
+.n_skin_speechbubbleskin .stickie-body {
+    background: url(/images/skins/Skin_Speechbubble_btmL.png) no-repeat bottom left;
+    padding-left: 10px;
+}
+
+.n_skin_speechbubbleskin .stickie-content {
+    background: url(/images/skins/Skin_Speechbubble_btmR.png) no-repeat bottom right;
+}
+
+.n_skin_speechbubbleskin .stickie-content p {
+    vertical-align: top;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}

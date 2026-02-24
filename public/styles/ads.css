@@ -1,0 +1,131 @@
+div.persoscale {
+	margin-top: 8px;
+}
+
+div.persoscale h5 {
+	margin: 0;
+	color: #777777;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 3px 4px;
+}
+
+div.persoscale table {
+	border-spacing: 0;
+    border-collapse: collapse;
+}
+
+div.persoscale td {
+	margin: 0;
+	padding: 0;
+}
+
+td.perso-header-tl {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-top-l.gif) no-repeat;
+}
+
+td.perso-header-t {
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-top-r.gif) no-repeat;
+}
+
+div.persoscale.ad300, div.persoscale.perso160 {
+	margin-top: 0;
+	margin-bottom: 3px;
+}
+
+div.persoscale.perso160 td.perso-header-t {
+	width: 160px;
+}
+
+div.persoscale.ad300 td.perso-header-t {
+	width: 300px;
+}
+
+td.perso-header-tr {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-top-r.gif) no-repeat top right;
+}
+
+td.perso-header-ml
+{
+	width: 4px;
+	background-image: url(../images/ads-scale/bg-banner-top-l.gif);
+	background-repeat: no-repeat;
+	background-position: 0 -15px;
+}
+
+td.perso-header-m {
+	background-color: black;
+	text-align: center;
+}
+
+td.perso-header-mr
+{
+	width: 4px;
+	background-image: url(../images/ads-scale/bg-banner-top-r.gif);
+	background-repeat: no-repeat;
+	background-position: right -15px;
+}
+
+
+td.perso-content-tl {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-l.gif) no-repeat;
+}
+
+td.perso-content-t {
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-r.gif) no-repeat;
+}
+
+td.perso-content-tr {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-r.gif) no-repeat top right;
+}
+
+td.perso-content-ml
+{
+	width: 4px;
+	background-image: url(../images/ads-scale/bg-banner-scale-l.gif);
+	background-repeat: no-repeat;
+	background-position: 0 -15px;
+}
+
+td.perso-content-m {
+	background-color: #004979;
+}
+
+td.perso-content-m table, td.perso-content-m div, td.perso-content-m p, td.perso-content-m object, td.perso-content-m embed, td.perso-content-m img {
+	margin: 0;
+}
+
+td.perso-content-mr
+{
+	width: 4px;
+	background-image: url(../images/ads-scale/bg-banner-scale-r.gif);
+	background-repeat: no-repeat;
+	background-position: right -15px;
+}
+
+td.perso-content-bl {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-btm-l.gif) no-repeat;
+}
+
+td.perso-content-b {
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-btm-r.gif) no-repeat;
+}
+
+td.perso-content-br {
+	width: 4px;
+	height: 4px;
+	background: url(../images/ads-scale/bg-banner-scale-btm-r.gif) no-repeat top right;
+}

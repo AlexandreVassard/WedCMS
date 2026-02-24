@@ -1,0 +1,32 @@
+services:
+  minerva:
+    container_name: minerva
+    image: myself/minerva:latest
+    ports:
+      - '3001:8080'
+  wedcms:
+    container_name: wedcms
+    network_mode: host
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /app/src
+        - action: sync+restart
+          path: ./views
+          target: /app/views
+        - action: sync
+          path: ./public
+          target: /app/public
+        - action: rebuild
+          path: ./package.json
+    volumes:
+      - ./public/v14:/app/public/v14
