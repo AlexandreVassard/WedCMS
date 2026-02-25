@@ -4,6 +4,7 @@ import { join } from 'path';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import hbs from 'hbs';
 import session from 'express-session';
+import { createProxyMiddleware } from 'http-proxy-middleware';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -15,6 +16,17 @@ async function bootstrap() {
       saveUninitialized: false,
     }),
   );
+
+  if (process.env.NODE_ENV !== 'production') {
+    app.use(
+      createProxyMiddleware({
+        pathFilter: (pathname) =>
+          pathname === '/housekeeping' || pathname.startsWith('/housekeeping/'),
+        target: process.env.HOUSEKEEPING_DEV_URL || 'http://localhost:3001',
+        changeOrigin: false,
+      }),
+    );
+  }
 
   app.useStaticAssets(join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
@@ -64,6 +76,8 @@ async function bootstrap() {
         return options.inverse(this);
     }
   });
+
+  app.enableCors({ origin: process.env.CORS_ORIGIN || 'http://localhost:3001', credentials: true });
 
   await app.listen(process.env.PORT ?? 3000);
 }

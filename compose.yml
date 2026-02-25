@@ -1,0 +1,17 @@
+services:
+  minerva:
+    container_name: minerva
+    image: myself/minerva:latest
+    ports:
+      - "3002:8080"
+  wedcms:
+    container_name: wedcms
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - apps/core/.env
+    volumes:
+      - ./apps/core/public/v14:/app/apps/core/public/v14

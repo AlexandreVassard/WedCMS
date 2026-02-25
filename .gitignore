@@ -1,8 +1,12 @@
 # compiled output
-/dist
+dist/
+apps/*/dist
+
 /node_modules
 apps/*/node_modules
+
 /build
+apps/housekeeping/.tanstack
 
 # Logs
 logs

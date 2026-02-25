@@ -3,7 +3,7 @@ services:
     container_name: minerva
     image: myself/minerva:latest
     ports:
-      - '3001:8080'
+      - "3002:8080"
   wedcms:
     container_name: wedcms
     network_mode: host
@@ -12,7 +12,7 @@ services:
       dockerfile: Dockerfile
       target: dev
     ports:
-      - '3000:3000'
+      - "3000:3000"
     env_file:
       - apps/core/.env
     develop:
@@ -30,3 +30,17 @@ services:
           path: ./apps/core/package.json
     volumes:
       - ./apps/core/public/v14:/app/apps/core/public/v14
+  housekeeping:
+    container_name: housekeeping
+    network_mode: host
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: housekeeping-dev
+    develop:
+      watch:
+        - action: sync
+          path: ./apps/housekeeping/src
+          target: /app/apps/housekeeping/src
+        - action: rebuild
+          path: ./apps/housekeeping/package.json

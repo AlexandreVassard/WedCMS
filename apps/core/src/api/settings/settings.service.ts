@@ -16,6 +16,15 @@ export class SettingsService {
     return this.settingsRepository.findOne({ where: { setting } });
   }
 
+  findAll() {
+    return this.settingsRepository.find({ order: { setting: 'ASC' } });
+  }
+
+  async update(key: string, value: string) {
+    await this.settingsRepository.save({ setting: key, value });
+    await this.cacheManager.del('settings.app');
+  }
+
   async getRare() {
     const row = await this.getSetting(SettingKey.RARE);
     if (!row) return null;

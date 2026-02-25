@@ -22,6 +22,7 @@ import { RegisterModule } from './frontend/register/register.module';
 import { MessengerFriendsModule } from './api/messenger-friends/messenger-friends.module';
 import { RoomsModule } from './api/rooms/rooms.module';
 import { UsersModule } from './api/users/users.module';
+import { HousekeepingModule } from './api/housekeeping/housekeeping.module';
 
 @Module({
   imports: [
@@ -59,6 +60,7 @@ import { UsersModule } from './api/users/users.module';
     MessengerFriendsModule,
     RoomsModule,
     UsersModule,
+    HousekeepingModule,
   ],
   providers: [
     {

@@ -2,15 +2,18 @@
   "name": "wedcms",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter core run start:dev",
-    "build": "pnpm --filter core run build",
-    "lint": "pnpm --filter core run lint",
-    "test": "pnpm --filter core run test"
+    "dev": "pnpm --filter wedcms-core run start:dev",
+    "build": "pnpm --filter wedcms-core run build",
+    "lint": "pnpm --filter wedcms-core run lint",
+    "test": "pnpm --filter wedcms-core run test",
+    "housekeeping:dev": "pnpm --filter wedcms-housekeeping run dev",
+    "housekeeping:build": "pnpm --filter wedcms-housekeeping run build"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@nestjs/core",
       "argon2",
+      "esbuild",
       "sharp",
       "unrs-resolver"
     ]

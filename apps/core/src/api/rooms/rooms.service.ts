@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { FindManyOptions, FindOneOptions, Repository } from 'typeorm';
+import { DeepPartial, FindManyOptions, FindOneOptions, Repository } from 'typeorm';
 import { Room } from './entities/room.entity';
 
 @Injectable()
@@ -11,5 +11,13 @@ export class RoomsService {
 
   find(options?: FindManyOptions<Room>) {
     return this.roomsRepository.find(options);
+  }
+
+  findOne(options: FindOneOptions<Room>) {
+    return this.roomsRepository.findOne(options);
+  }
+
+  save(room: DeepPartial<Room>) {
+    return this.roomsRepository.save(room);
   }
 }
