@@ -6,7 +6,9 @@ settings:
 
 importers:
 
-  .:
+  .: {}
+
+  apps/core:
     dependencies:
       '@nestjs/cache-manager':
         specifier: ^3.1.0

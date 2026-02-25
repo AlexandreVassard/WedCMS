@@ -14,19 +14,19 @@ services:
     ports:
       - '3000:3000'
     env_file:
-      - .env
+      - apps/core/.env
     develop:
       watch:
         - action: sync
-          path: ./src
-          target: /app/src
+          path: ./apps/core/src
+          target: /app/apps/core/src
         - action: sync+restart
-          path: ./views
-          target: /app/views
+          path: ./apps/core/views
+          target: /app/apps/core/views
         - action: sync
-          path: ./public
-          target: /app/public
+          path: ./apps/core/public
+          target: /app/apps/core/public
         - action: rebuild
-          path: ./package.json
+          path: ./apps/core/package.json
     volumes:
-      - ./public/v14:/app/public/v14
+      - ./apps/core/public/v14:/app/apps/core/public/v14

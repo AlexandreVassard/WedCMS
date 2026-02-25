@@ -1,0 +1,11 @@
+var swfobj = new SWFObject("HabboRegistration.swf", "habboreg", "406", "327", "7");
+swfobj.addParam("base", "");
+swfobj.addVariable("post_url", "redirect.php?");
+swfobj.addVariable("__app_key", "a5q0jBzgmZN5ZC036s");
+swfobj.addVariable("figuredata_url", "figure.xml");
+swfobj.addVariable("localization_url", "words.xml");
+swfobj.addVariable("post_figure", "figureData");
+swfobj.addVariable("post_gender", "newGender2");
+swfobj.addVariable("figure", "<?php echo $figure; ?>");
+swfobj.addVariable("gender", "<?php echo $gender; ?>");
+swfobj.write("flashcontent");
