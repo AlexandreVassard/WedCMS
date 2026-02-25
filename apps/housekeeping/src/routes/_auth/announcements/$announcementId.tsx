@@ -9,6 +9,7 @@ import { Label } from '../../../components/ui/label'
 import { Textarea } from '../../../components/ui/textarea'
 import { Card, CardContent, CardHeader, CardTitle } from '../../../components/ui/card'
 import { ArrowLeft, Plus, Trash2 } from 'lucide-react'
+import { ImagePickerField } from '../../../components/image-picker-field'
 
 export const Route = createFileRoute('/_auth/announcements/$announcementId')({
   component: AnnouncementEditPage,
@@ -39,14 +40,12 @@ function AnnouncementEditPage() {
 
   const [image, setImage] = useState('')
   const [content, setContent] = useState('')
-  const [position, setPosition] = useState('0')
   const [links, setLinks] = useState<Link[]>([])
 
   useEffect(() => {
     if (item) {
       setImage(item.image)
       setContent(item.content)
-      setPosition(String(item.position))
       setLinks(item.links?.length ? item.links : [{ url: '', text: '' }])
     }
   }, [item])
@@ -56,7 +55,6 @@ function AnnouncementEditPage() {
       api.patch(`/api/housekeeping/announcements/${announcementId}`, {
         image,
         content,
-        position: parseInt(position, 10),
         links,
       }),
     onSuccess: () => {
@@ -100,16 +98,7 @@ function AnnouncementEditPage() {
             onSubmit={(e) => { e.preventDefault(); update.mutate() }}
             className="space-y-4"
           >
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-1.5">
-                <Label>Image filename</Label>
-                <Input value={image} onChange={(e) => setImage(e.target.value)} />
-              </div>
-              <div className="space-y-1.5">
-                <Label>Position</Label>
-                <Input type="number" value={position} onChange={(e) => setPosition(e.target.value)} />
-              </div>
-            </div>
+            <ImagePickerField value={image} onChange={setImage} />
             <div className="space-y-1.5">
               <Label>Content</Label>
               <Textarea rows={4} value={content} onChange={(e) => setContent(e.target.value)} />

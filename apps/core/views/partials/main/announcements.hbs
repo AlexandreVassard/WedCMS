@@ -1,56 +1,64 @@
-<script type="text/javascript">
-    var promoPages = [
-        {{#each announcements}}
-            {
-                image: "<img width=\"425\" height=\"178\" alt=\"Announcement image\" id=\"galleryImage\" src=\"/images/announcement/{{this.image}}.gif\" /\>\n<br /\>",
-                links: [
-                    {{#each this.links}}
-                        "<a href=\"{{this.url}}\">{{this.text}}</a\>",
-                    {{/each}}
-                ],
-                text: "{{this.content}}"
-            },
-        {{/each}}
-    ];
+<script type='text/javascript'>
+  var promoPages = [
+  {{#each announcements}}
+    { image: "<img width=\"425\" height=\"178\" alt=\"Announcement image\"
+    id=\"galleryImage\" src=\"/images/announcement/{{this.image}}.gif\" /\>\n<br
+    /\>", links: [
+    {{#each this.links}}
+      "<a href=\"{{this.url}}\">{{this.text}}</a\>",
+    {{/each}}
+    ], text: "{{this.content}}" },
+  {{/each}}
+  ];
 </script>
-<div id="promoarea">
-    <div id="promoheader">
-        <h2>{{text.index.announcements}}</h2>
-        <ul style="display: none;" id="promoheader-selectors">
-            {{#each announcements}}
-                {{#if @index}}
-                    <li><a href="#" onclick="showPromo(1); return false;">{{inc @index}}</a></li>
-                {{else}}
-                    <li><a href="#" class="selected" onclick="showPromo(0); return false;">1</a></li>
-                {{/if}}
-            {{/each}}
+<div id='promoarea'>
+  <div id='promoheader'>
+    <h2>{{text.index.announcements}}</h2>
+    <ul style='display: none;' id='promoheader-selectors'>
+      {{#each announcements}}
+        {{#if @index}}
+          <li><a href='#' onclick='showPromo(1); return false;'>{{inc
+                @index
+              }}</a></li>
+        {{else}}
+          <li><a
+              href='#'
+              class='selected'
+              onclick='showPromo(0); return false;'
+            >1</a></li>
+        {{/if}}
+      {{/each}}
+    </ul>
+    <script type='text/javascript'>
+      var promoheader = document.querySelector('#promoheader-selectors');
+      promoheader.style.display = "block";
+    </script>
+  </div>
+  <div id='promocontent'>
+    <div id='promobody'>
+      <p id='promoimage'>
+        <img
+          alt='Announcement image'
+          id='galleryImage'
+          src='/images/announcement/{{announcements.[0].image}}'
+          height='178'
+          width='425'
+        />
+        <br />
+      </p>
+      <div class='promotext'>
+        <p id='promotext-content'>{{announcements.[0].content}}<br />
+        </p>
+      </div>
+      <div id='promolinks'>
+        <ul id='promolinks-list'>
+          {{#each announcements.[0].links}}
+            <li>
+              <a href='{{this.url}}'>{{this.text}}</a>
+            </li>
+          {{/each}}
         </ul>
-        <script type="text/javascript">
-            var promoheader = document.querySelector('#promoheader-selectors');
-            promoheader.style.display = "block";
-        </script>
+      </div>
     </div>
-    <div id="promocontent">
-        <div id="promobody">
-            <p id="promoimage">
-                <img alt="Announcement image" id="galleryImage"
-                     src="/images/announcement/{{announcements.[0].image}}.gif"
-                     height="178" width="425"/>
-                <br>
-            </p>
-            <div class="promotext">
-                <p id="promotext-content">{{announcements.[0].content}}<br>
-                </p>
-            </div>
-            <div id="promolinks">
-            <ul id="promolinks-list">
-                {{#each announcements.[0].links}}
-                        <li>
-                            <a href="{{this.url}}">{{this.text}}</a>
-                        </li>
-                {{/each}}
-            </ul>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>

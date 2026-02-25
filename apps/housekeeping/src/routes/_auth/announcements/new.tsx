@@ -9,6 +9,7 @@ import { Label } from '../../../components/ui/label'
 import { Textarea } from '../../../components/ui/textarea'
 import { Card, CardContent, CardHeader, CardTitle } from '../../../components/ui/card'
 import { ArrowLeft, Plus, Trash2 } from 'lucide-react'
+import { ImagePickerField } from '../../../components/image-picker-field'
 
 export const Route = createFileRoute('/_auth/announcements/new')({
   component: NewAnnouncementPage,
@@ -24,7 +25,6 @@ function NewAnnouncementPage() {
   const qc = useQueryClient()
   const [image, setImage] = useState('')
   const [content, setContent] = useState('')
-  const [position, setPosition] = useState('0')
   const [links, setLinks] = useState<Link[]>([{ url: '', text: '' }])
 
   const create = useMutation({
@@ -32,7 +32,6 @@ function NewAnnouncementPage() {
       api.post('/api/housekeeping/announcements', {
         image,
         content,
-        position: parseInt(position, 10),
         links,
       }),
     onSuccess: () => {
@@ -74,20 +73,7 @@ function NewAnnouncementPage() {
             onSubmit={(e) => { e.preventDefault(); create.mutate() }}
             className="space-y-4"
           >
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-1.5">
-                <Label>Image filename</Label>
-                <Input required value={image} onChange={(e) => setImage(e.target.value)} placeholder="banner.gif" />
-              </div>
-              <div className="space-y-1.5">
-                <Label>Position</Label>
-                <Input
-                  type="number"
-                  value={position}
-                  onChange={(e) => setPosition(e.target.value)}
-                />
-              </div>
-            </div>
+            <ImagePickerField value={image} onChange={setImage} />
             <div className="space-y-1.5">
               <Label>Content</Label>
               <Textarea rows={4} value={content} onChange={(e) => setContent(e.target.value)} />

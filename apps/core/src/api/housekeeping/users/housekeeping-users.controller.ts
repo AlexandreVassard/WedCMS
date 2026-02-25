@@ -44,7 +44,7 @@ export class HousekeepingUsersController {
   @Patch(':id')
   async update(
     @Param('id') id: string,
-    @Body() body: { credits?: number; rank?: number; motto?: string; figure?: string },
+    @Body() body: { credits?: number; rank?: number; motto?: string; figure?: string; sex?: string },
   ) {
     const user = await this.usersService.findOne({ where: { id: parseInt(id, 10) } });
     if (!user) throw new NotFoundException();
@@ -52,6 +52,7 @@ export class HousekeepingUsersController {
     if (body.rank !== undefined) user.rank = body.rank;
     if (body.motto !== undefined) user.motto = body.motto;
     if (body.figure !== undefined) user.figure = body.figure;
+    if (body.sex !== undefined) user.sex = body.sex;
     const saved = await this.usersService.save(user);
     const { password, ...rest } = saved;
     return rest;
