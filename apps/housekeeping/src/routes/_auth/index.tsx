@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '../../lib/api'
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card'
-import { Users, Newspaper, Home } from 'lucide-react'
+import { Users, Newspaper, Home, Wifi } from 'lucide-react'
 
 export const Route = createFileRoute('/_auth/')({
   component: Dashboard,
@@ -21,11 +21,18 @@ function Dashboard() {
     queryKey: ['rooms', 'count'],
     queryFn: () => api.get<unknown[]>('/api/housekeeping/rooms?take=1000'),
   })
+  const { data: online } = useQuery({
+    queryKey: ['stats', 'online'],
+    queryFn: () => api.get<{ count: number }>('/api/housekeeping/stats/online'),
+    staleTime: 0,
+    refetchInterval: 5_000,
+  })
 
   const stats = [
     { label: 'Total Users', value: Array.isArray(users) ? users.length : '—', icon: Users, color: 'bg-blue-50 text-blue-600' },
     { label: 'News Articles', value: Array.isArray(news) ? news.length : '—', icon: Newspaper, color: 'bg-green-50 text-green-600' },
     { label: 'Rooms', value: Array.isArray(rooms) ? rooms.length : '—', icon: Home, color: 'bg-purple-50 text-purple-600' },
+    { label: 'Online Now', value: online && typeof online === 'object' && 'count' in online ? online.count : '—', icon: Wifi, color: 'bg-emerald-50 text-emerald-600' },
   ]
 
   return (
@@ -35,7 +42,7 @@ function Dashboard() {
         <p className="text-gray-500 mt-1">Welcome to WedCMS Housekeeping</p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map(({ label, value, icon: Icon, color }) => (
           <Card key={label}>
             <CardHeader className="flex flex-row items-center justify-between pb-2">

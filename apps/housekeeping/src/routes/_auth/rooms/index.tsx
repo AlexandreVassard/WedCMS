@@ -1,6 +1,6 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { useState } from 'react'
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+import { createFileRoute, Link, useNavigate, useSearch } from '@tanstack/react-router'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { api } from '../../../lib/api'
 import { Input } from '../../../components/ui/input'
@@ -10,6 +10,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { Search, Eye, EyeOff } from 'lucide-react'
 
 export const Route = createFileRoute('/_auth/rooms/')({
+  validateSearch: (search: Record<string, unknown>) => ({
+    q: typeof search.q === 'string' ? search.q : '',
+    type: search.type === 'public' ? ('public' as const) : ('private' as const),
+    skip: typeof search.skip === 'number' ? search.skip : 0,
+  }),
   component: RoomsPage,
 })
 
@@ -18,22 +23,43 @@ interface Room {
   name: string
   description: string
   ownerId: string
+  ownerUsername?: string | null
   visitorsNow: number
   visitorsMax: number
   isHidden: number
 }
 
 function RoomsPage() {
-  const [search, setSearch] = useState('')
-  const [skip, setSkip] = useState(0)
+  const navigate = useNavigate()
+  const { q, type, skip } = useSearch({ from: '/_auth/rooms/' })
+  const [inputValue, setInputValue] = useState(q)
   const take = 20
   const qc = useQueryClient()
 
+  useEffect(() => {
+    const t = setTimeout(() => {
+      navigate({ to: '/rooms/', search: (prev) => ({ ...prev, q: inputValue, skip: 0 }) })
+    }, 300)
+    return () => clearTimeout(t)
+  }, [inputValue])
+
+  function setSearch(value: string) {
+    setInputValue(value)
+  }
+
+  function setType(type: 'private' | 'public') {
+    navigate({ to: '/rooms/', search: (prev) => ({ ...prev, type, skip: 0 }) })
+  }
+
+  function setSkip(skip: number) {
+    navigate({ to: '/rooms/', search: (prev) => ({ ...prev, skip }) })
+  }
+
   const { data: rooms = [], isFetching } = useQuery({
-    queryKey: ['rooms', search, skip],
+    queryKey: ['rooms', q, type, skip],
     queryFn: () => {
-      const params = new URLSearchParams({ skip: String(skip), take: String(take) })
-      if (search) params.set('search', search)
+      const params = new URLSearchParams({ skip: String(skip), take: String(take), type })
+      if (q) params.set('search', q)
       return api.get<Room[]>(`/api/housekeeping/rooms?${params}`)
     },
   })
@@ -60,9 +86,23 @@ function RoomsPage() {
           <Input
             placeholder="Search by name…"
             className="pl-9"
-            value={search}
-            onChange={(e) => { setSearch(e.target.value); setSkip(0) }}
+            value={inputValue}
+            onChange={(e) => setSearch(e.target.value)}
           />
+        </div>
+        <div className="flex rounded-lg border border-gray-200 overflow-hidden">
+          <button
+            className={`px-4 py-2 text-sm font-medium transition-colors ${type === 'private' ? 'bg-gray-900 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+            onClick={() => setType('private')}
+          >
+            Private
+          </button>
+          <button
+            className={`px-4 py-2 text-sm font-medium transition-colors border-l border-gray-200 ${type === 'public' ? 'bg-gray-900 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+            onClick={() => setType('public')}
+          >
+            Public
+          </button>
         </div>
       </div>
 
@@ -72,7 +112,7 @@ function RoomsPage() {
             <TableRow>
               <TableHead>ID</TableHead>
               <TableHead>Name</TableHead>
-              <TableHead>Owner</TableHead>
+              {type === 'private' && <TableHead>Owner</TableHead>}
               <TableHead>Visitors</TableHead>
               <TableHead>Status</TableHead>
               <TableHead className="w-20"></TableHead>
@@ -80,15 +120,25 @@ function RoomsPage() {
           </TableHeader>
           <TableBody>
             {isFetching ? (
-              <TableRow><TableCell colSpan={6} className="text-center text-gray-400 py-8">Loading…</TableCell></TableRow>
+              <TableRow><TableCell colSpan={type === 'private' ? 6 : 5} className="text-center text-gray-400 py-8">Loading…</TableCell></TableRow>
             ) : rooms.length === 0 ? (
-              <TableRow><TableCell colSpan={6} className="text-center text-gray-400 py-8">No rooms found</TableCell></TableRow>
+              <TableRow><TableCell colSpan={type === 'private' ? 6 : 5} className="text-center text-gray-400 py-8">No rooms found</TableCell></TableRow>
             ) : (
               rooms.map((room) => (
                 <TableRow key={room.id}>
                   <TableCell className="text-gray-500 text-xs">{room.id}</TableCell>
                   <TableCell className="font-medium">{room.name}</TableCell>
-                  <TableCell className="text-gray-500 text-sm">{room.ownerId}</TableCell>
+                  {type === 'private' && (
+                    <TableCell className="text-sm">
+                      {room.ownerUsername ? (
+                        <Link to="/users/$userId" params={{ userId: room.ownerId }} className="text-blue-600 hover:underline">
+                          {room.ownerUsername}
+                        </Link>
+                      ) : (
+                        <span className="text-gray-400">#{room.ownerId}</span>
+                      )}
+                    </TableCell>
+                  )}
                   <TableCell className="text-sm">{room.visitorsNow}/{room.visitorsMax}</TableCell>
                   <TableCell>
                     {room.isHidden ? (

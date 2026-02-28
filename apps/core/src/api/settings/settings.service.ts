@@ -25,6 +25,15 @@ export class SettingsService {
     await this.cacheManager.del('settings.app');
   }
 
+  async getPlayersOnline(): Promise<number> {
+    const cached = await this.cacheManager.get<number>('stats.online');
+    if (cached !== undefined && cached !== null) return cached;
+    const row = await this.getSetting(SettingKey.PLAYERS_ONLINE);
+    const count = row ? parseInt(row.value, 10) : 0;
+    await this.cacheManager.set('stats.online', count, 5_000);
+    return count;
+  }
+
   async getRare() {
     const row = await this.getSetting(SettingKey.RARE);
     if (!row) return null;

@@ -23,6 +23,10 @@ import { MessengerFriendsModule } from './api/messenger-friends/messenger-friend
 import { RoomsModule } from './api/rooms/rooms.module';
 import { UsersModule } from './api/users/users.module';
 import { HousekeepingModule } from './api/housekeeping/housekeeping.module';
+import { CatalogueItemsModule } from './api/catalogue-items/catalogue-items.module';
+import { CataloguePackagesModule } from './api/catalogue-packages/catalogue-packages.module';
+import { CataloguePagesModule } from './api/catalogue-pages/catalogue-pages.module';
+import { StatsModule } from './api/stats/stats.module';
 
 @Module({
   imports: [
@@ -61,6 +65,10 @@ import { HousekeepingModule } from './api/housekeeping/housekeeping.module';
     RoomsModule,
     UsersModule,
     HousekeepingModule,
+    CatalogueItemsModule,
+    CataloguePackagesModule,
+    CataloguePagesModule,
+    StatsModule,
   ],
   providers: [
     {

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '../../../lib/api'
@@ -6,7 +6,7 @@ import { Input } from '../../../components/ui/input'
 import { Button } from '../../../components/ui/button'
 import { Badge } from '../../../components/ui/badge'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../../components/ui/table'
-import { Search, Pencil } from 'lucide-react'
+import { Search } from 'lucide-react'
 
 export const Route = createFileRoute('/_auth/users/')({
   component: UsersPage,
@@ -21,7 +21,13 @@ interface User {
   figure: string
 }
 
+interface Rank {
+  id: number
+  name: string
+}
+
 function UsersPage() {
+  const navigate = useNavigate()
   const [search, setSearch] = useState('')
   const [skip, setSkip] = useState(0)
   const take = 20
@@ -34,6 +40,13 @@ function UsersPage() {
       return api.get<User[]>(`/api/housekeeping/users?${params}`)
     },
   })
+
+  const { data: ranks = [] } = useQuery({
+    queryKey: ['ranks'],
+    queryFn: () => api.get<Rank[]>('/api/housekeeping/ranks'),
+  })
+
+  const rankMap = new Map(ranks.map((r) => [r.id, r.name]))
 
   return (
     <div className="p-8">
@@ -62,35 +75,33 @@ function UsersPage() {
               <TableHead>Rank</TableHead>
               <TableHead>Credits</TableHead>
               <TableHead>Motto</TableHead>
-              <TableHead className="w-20"></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {isFetching ? (
               <TableRow>
-                <TableCell colSpan={6} className="text-center text-gray-400 py-8">Loading…</TableCell>
+                <TableCell colSpan={5} className="text-center text-gray-400 py-8">Loading…</TableCell>
               </TableRow>
             ) : users.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={6} className="text-center text-gray-400 py-8">No users found</TableCell>
+                <TableCell colSpan={5} className="text-center text-gray-400 py-8">No users found</TableCell>
               </TableRow>
             ) : (
               users.map((user) => (
-                <TableRow key={user.id}>
+                <TableRow
+                  key={user.id}
+                  className="cursor-pointer hover:bg-gray-50"
+                  onClick={() => navigate({ to: '/users/$userId', params: { userId: String(user.id) } })}
+                >
                   <TableCell className="text-gray-500 text-xs">{user.id}</TableCell>
                   <TableCell className="font-medium">{user.username}</TableCell>
                   <TableCell>
-                    <Badge variant={user.rank >= 5 ? 'default' : 'secondary'}>Rank {user.rank}</Badge>
+                    <Badge variant={user.rank >= 5 ? 'default' : 'secondary'}>
+                      {rankMap.get(user.rank) ?? `Rank ${user.rank}`}
+                    </Badge>
                   </TableCell>
                   <TableCell>{user.credits}</TableCell>
                   <TableCell className="text-gray-500 truncate max-w-[200px]">{user.motto}</TableCell>
-                  <TableCell>
-                    <Link to="/users/$userId" params={{ userId: String(user.id) }}>
-                      <Button variant="ghost" size="icon">
-                        <Pencil className="h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </TableCell>
                 </TableRow>
               ))
             )}

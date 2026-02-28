@@ -57,6 +57,9 @@ export class User {
   @Column({ name: 'last_online', default: 0 })
   lastOnline: number;
 
+  @Column({ type: 'tinyint', default: 0 })
+  online: number;
+
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
 

@@ -60,6 +60,71 @@ export class RconService {
     return this.refresh('club', userId);
   }
 
+  refreshMotto(userId: number): Promise<RconResponse> {
+    return this.refresh('motto', userId);
+  }
+
+  refreshBadge(userId: number): Promise<RconResponse> {
+    return this.refresh('badge', userId);
+  }
+
+  userAlert(userId: number, message: string): Promise<RconResponse> {
+    return this.sendRcon('user_alert', new Map([
+      ['userId', userId.toString()],
+      ['message', message],
+    ]));
+  }
+
+  roomAlert(roomId: number, message: string): Promise<RconResponse> {
+    return this.sendRcon('room_alert', new Map([
+      ['roomId', roomId.toString()],
+      ['message', message],
+    ]));
+  }
+
+  disconnectUser(userId: number): Promise<RconResponse> {
+    return this.sendRcon('disconnect_user', new Map([['userId', userId.toString()]]));
+  }
+
+  kickUser(userId: number): Promise<RconResponse> {
+    return this.sendRcon('kick_user', new Map([['userId', userId.toString()]]));
+  }
+
+  muteUser(userId: number, minutes: number): Promise<RconResponse> {
+    return this.sendRcon('mute_user', new Map([
+      ['userId', userId.toString()],
+      ['minutes', minutes.toString()],
+    ]));
+  }
+
+  unmuteUser(userId: number): Promise<RconResponse> {
+    return this.sendRcon('unmute_user', new Map([['userId', userId.toString()]]));
+  }
+
+  massEvent(roomId: number): Promise<RconResponse> {
+    return this.sendRcon('mass_event', new Map([['roomId', roomId.toString()]]));
+  }
+
+  refreshCatalogue(): Promise<RconResponse> {
+    return this.sendRcon('refresh_catalogue', new Map());
+  }
+
+  reloadSettings(): Promise<RconResponse> {
+    return this.sendRcon('reload_settings', new Map());
+  }
+
+  shutdown(minutes: number, message?: string): Promise<RconResponse> {
+    const data = new Map([['minutes', minutes.toString()]]);
+    if (message) data.set('message', message);
+    return this.sendRcon('shutdown', data);
+  }
+
+  shutdownCancel(message?: string): Promise<RconResponse> {
+    const data = new Map<string, string>();
+    if (message) data.set('message', message);
+    return this.sendRcon('shutdown_cancel', data);
+  }
+
   /**
    * Builds a RCON refresh order
    * @param refreshType - Type of the refresh order
@@ -84,6 +149,11 @@ export class RconService {
     return new Promise((resolve, reject) => {
       const socket = new net.Socket();
       const chunks: Buffer[] = [];
+
+      socket.setTimeout(5000, () => {
+        socket.destroy();
+        reject(new Error('RCON timeout'));
+      });
 
       socket.connect(port, host, () => socket.write(command));
       socket.on('data', (chunk) => chunks.push(chunk));

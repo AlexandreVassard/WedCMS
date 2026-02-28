@@ -64,5 +64,5 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 .claude
 .planning
 
-public/v14
+apps/core/public/v14
 .vscode
