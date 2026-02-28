@@ -409,7 +409,7 @@ function UserEditPage() {
                 Moderation
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent>
               <Button
                 variant="outline"
                 size="sm"
@@ -420,30 +420,36 @@ function UserEditPage() {
                 <LogOut className="h-4 w-4" />
                 Kick from room
               </Button>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2 flex items-center gap-1">
-                  <Monitor className="h-3 w-3" />
-                  Login IP History
-                </p>
-                {ipLogs.length === 0 ? (
-                  <p className="text-xs text-gray-400">No records.</p>
-                ) : (
-                  <div className="rounded-md border overflow-hidden">
-                    <table className="w-full text-xs">
-                      <tbody>
-                        {ipLogs.map((log, i) => (
-                          <tr key={i} className="border-b last:border-0">
-                            <td className="px-3 py-1.5 font-mono">{log.ipAddress}</td>
-                            <td className="px-3 py-1.5 text-gray-500 text-right">
-                              {new Date(log.createdAt).toLocaleString()}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-              </div>
+            </CardContent>
+          </Card>
+
+          {/* Login IP History */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Monitor className="h-4 w-4" />
+                Login IP History
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              {ipLogs.length === 0 ? (
+                <p className="text-xs text-gray-400">No records.</p>
+              ) : (
+                <div className="rounded-md border overflow-hidden">
+                  <table className="w-full text-xs">
+                    <tbody>
+                      {ipLogs.map((log, i) => (
+                        <tr key={i} className="border-b last:border-0">
+                          <td className="px-3 py-1.5 font-mono">{log.ipAddress}</td>
+                          <td className="px-3 py-1.5 text-gray-500 text-right">
+                            {new Date(log.createdAt).toLocaleString()}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </CardContent>
           </Card>
 

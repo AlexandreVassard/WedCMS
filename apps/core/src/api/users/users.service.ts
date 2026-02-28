@@ -9,7 +9,8 @@ import * as argon2 from 'argon2';
 export class UsersService {
   constructor(
     @InjectRepository(User) private readonly usersRepository: Repository<User>,
-    @InjectRepository(UserIpLog) private readonly ipLogsRepository: Repository<UserIpLog>,
+    @InjectRepository(UserIpLog)
+    private readonly ipLogsRepository: Repository<UserIpLog>,
   ) {}
 
   async validatePassword(plaintext: string, hash: string): Promise<boolean> {
@@ -36,7 +37,7 @@ export class UsersService {
     return this.ipLogsRepository.find({
       where: { userId },
       order: { createdAt: 'DESC' },
-      take: 50,
+      take: 10,
     });
   }
 }
