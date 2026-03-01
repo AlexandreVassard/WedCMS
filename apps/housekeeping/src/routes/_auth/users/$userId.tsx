@@ -20,6 +20,7 @@ import {
   ShieldUser,
   Monitor,
   LogOut,
+  Unplug,
   VolumeX,
   Volume2,
 } from "lucide-react";
@@ -172,6 +173,12 @@ function UserEditPage() {
   const kickUser = useMutation({
     mutationFn: () => api.post(`/api/housekeeping/rcon/kick/${userId}`, {}),
     onSuccess: () => toast.success("User kicked from room"),
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+  const disconnectUser = useMutation({
+    mutationFn: () => api.post(`/api/housekeeping/rcon/disconnect/${userId}`, {}),
+    onSuccess: () => toast.success("User disconnected from server"),
     onError: (e: Error) => toast.error(e.message),
   });
 
@@ -461,6 +468,16 @@ function UserEditPage() {
               >
                 <LogOut className="h-4 w-4" />
                 Kick from room
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-start gap-2"
+                disabled={!aliveStatus?.online || disconnectUser.isPending}
+                onClick={() => disconnectUser.mutate()}
+              >
+                <Unplug className="h-4 w-4" />
+                Disconnect from server
               </Button>
               {isMuted ? (
                 <Button
