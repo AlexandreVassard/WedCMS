@@ -65,6 +65,13 @@ export class HousekeepingRoomsController {
     }));
   }
 
+  @Get(':id')
+  async findOne(@Param('id') id: string) {
+    const room = await this.roomsService.findOne({ where: { id: parseInt(id, 10) } });
+    if (!room) throw new NotFoundException();
+    return room;
+  }
+
   @Patch(':id')
   async update(@Param('id') id: string, @Body() body: { isHidden?: number }) {
     const room = await this.roomsService.findOne({ where: { id: parseInt(id, 10) } });

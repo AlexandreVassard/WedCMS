@@ -40,6 +40,7 @@ import {
   Package,
   MessageSquare,
   Award,
+  Activity,
 } from "lucide-react";
 
 export const Route = createFileRoute("/_auth/users/$userId")({
@@ -220,7 +221,17 @@ function UserEditPage() {
     refetchInterval: 5000,
   });
 
-  const isInRoom = !!aliveStatus?.online && userInfo?.roomId !== undefined && parseInt(userInfo.roomId, 10) !== -1;
+  const currentRoomId = userInfo?.roomId !== undefined && parseInt(userInfo.roomId, 10) !== -1
+    ? parseInt(userInfo.roomId, 10)
+    : null;
+
+  const { data: currentRoom } = useQuery({
+    queryKey: ["room", currentRoomId],
+    queryFn: () => api.get<Room>(`/api/housekeeping/rooms/${currentRoomId}`),
+    enabled: currentRoomId !== null,
+  });
+
+  const isInRoom = !!aliveStatus?.online && currentRoomId !== null;
   const muteExpiry = userInfo?.muteTime ? parseInt(userInfo.muteTime, 10) : 0;
   const isMuted = muteExpiry > Date.now() / 1000;
 
@@ -462,6 +473,82 @@ function UserEditPage() {
                   {update.isPending ? "Saving…" : "Save Changes"}
                 </Button>
               </form>
+            </CardContent>
+          </Card>
+
+          {/* Live Status */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Activity className="h-4 w-4" />
+                Live Status
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm">
+              {!aliveStatus?.online ? (
+                <p className="text-xs text-gray-400">User is offline — live state unavailable.</p>
+              ) : !userInfo ? (
+                <p className="text-xs text-gray-400">Loading…</p>
+              ) : (
+                <div className="grid grid-cols-3 gap-x-6 gap-y-3">
+                  {(
+                    [
+                      [
+                        "Location",
+                        currentRoomId === null
+                          ? "Hotel lobby"
+                          : currentRoom
+                            ? `${currentRoom.name} #${currentRoomId}`
+                            : `#${currentRoomId}`,
+                      ],
+                      [
+                        "Position (x, y, z)",
+                        parseInt(userInfo.posX, 10) === -1
+                          ? "—"
+                          : `${userInfo.posX}, ${userInfo.posY}, ${userInfo.posZ}`,
+                      ],
+                      [
+                        "Muted until",
+                        parseInt(userInfo.muteTime, 10) === 0
+                          ? "Not muted"
+                          : new Date(parseInt(userInfo.muteTime, 10) * 1000).toLocaleString(),
+                      ],
+                      [
+                        "Statuses",
+                        userInfo.statuses || "None",
+                      ],
+                      [
+                        "Trade partner",
+                        parseInt(userInfo.tradePartnerId, 10) === -1
+                          ? "Not trading"
+                          : `User #${userInfo.tradePartnerId}`,
+                      ],
+                      [
+                        "Current game",
+                        userInfo.currentGameId || "None",
+                      ],
+                      [
+                        "Observing game",
+                        parseInt(userInfo.observingGameId, 10) === -1
+                          ? "None"
+                          : `#${userInfo.observingGameId}`,
+                      ],
+                      ["Walking", userInfo.isWalking === "true" ? "Yes" : "No"],
+                      ["Diving", userInfo.isDiving === "true" ? "Yes" : "No"],
+                      ["IP address", userInfo.ip || "—"],
+                      [
+                        "Ignored list",
+                        userInfo.ignoredList || "None",
+                      ],
+                    ] as [string, string][]
+                  ).map(([label, val]) => (
+                    <div key={label}>
+                      <p className="text-xs text-gray-400">{label}</p>
+                      <p className="text-gray-700 break-all">{val}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </CardContent>
           </Card>
 
