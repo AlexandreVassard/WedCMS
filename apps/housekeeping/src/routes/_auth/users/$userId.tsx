@@ -230,6 +230,7 @@ function UserEditPage() {
 
   const [alertOpen, setAlertOpen] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
+  const [muteOpen, setMuteOpen] = useState(false);
   const [banOpen, setBanOpen] = useState(false);
   const [teleportOpen, setTeleportOpen] = useState(false);
   const [teleportSearch, setTeleportSearch] = useState("");
@@ -254,7 +255,7 @@ function UserEditPage() {
       api.post(`/api/housekeeping/rcon/mute/${userId}`, {
         minutes: parseInt(muteDuration, 10),
       }),
-    onSuccess: () => { toast.success("User muted"); refetchUserInfo(); },
+    onSuccess: () => { toast.success("User muted"); refetchUserInfo(); setMuteOpen(false); },
     onError: (e: Error) => toast.error(e.message),
   });
 
@@ -585,31 +586,16 @@ function UserEditPage() {
                   </span>
                 </Button>
               ) : (
-                <div className="flex gap-2">
-                  <select
-                    value={muteDuration}
-                    onChange={(e) => setMuteDuration(e.target.value)}
-                    disabled={!aliveStatus?.online}
-                    className="flex h-8 flex-1 rounded-md border border-input bg-transparent px-2 py-1 text-xs shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:opacity-50"
-                  >
-                    <option value="1">1 min</option>
-                    <option value="5">5 min</option>
-                    <option value="10">10 min</option>
-                    <option value="30">30 min</option>
-                    <option value="60">1 hour</option>
-                    <option value="1440">1 day</option>
-                  </select>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="gap-1.5"
-                    disabled={!aliveStatus?.online || muteUser.isPending}
-                    onClick={() => muteUser.mutate()}
-                  >
-                    <VolumeX className="h-4 w-4" />
-                    Mute
-                  </Button>
-                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-start gap-2"
+                  disabled={!aliveStatus?.online}
+                  onClick={() => setMuteOpen(true)}
+                >
+                  <VolumeX className="h-4 w-4" />
+                  Mute user
+                </Button>
               )}
               {ban ? (
                 <Button
@@ -670,6 +656,41 @@ function UserEditPage() {
 
         </div>
       </div>
+
+      <Dialog open={muteOpen} onOpenChange={setMuteOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Mute {user.username}</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-1.5">
+            <Label>Duration</Label>
+            <select
+              value={muteDuration}
+              onChange={(e) => setMuteDuration(e.target.value)}
+              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            >
+              <option value="1">1 min</option>
+              <option value="5">5 min</option>
+              <option value="10">10 min</option>
+              <option value="30">30 min</option>
+              <option value="60">1 hour</option>
+              <option value="1440">1 day</option>
+            </select>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setMuteOpen(false)}>
+              Cancel
+            </Button>
+            <Button
+              disabled={muteUser.isPending}
+              onClick={() => muteUser.mutate()}
+            >
+              <VolumeX className="h-4 w-4" />
+              {muteUser.isPending ? "Muting…" : "Mute user"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       <Dialog open={banOpen} onOpenChange={setBanOpen}>
         <DialogContent>
