@@ -99,7 +99,7 @@ function UserEditPage() {
     queryFn: () => api.get<User>(`/api/housekeeping/users/${userId}`),
   });
 
-  const { data: aliveStatus } = useQuery({
+  const { data: aliveStatus, refetch: refetchAliveStatus } = useQuery({
     queryKey: ["user-is-alive", userId],
     queryFn: () =>
       api.get<{ online: boolean }>(
@@ -181,13 +181,13 @@ function UserEditPage() {
 
   const kickUser = useMutation({
     mutationFn: () => api.post(`/api/housekeeping/rcon/kick/${userId}`, {}),
-    onSuccess: () => toast.success("User kicked from room"),
+    onSuccess: () => { toast.success("User kicked from room"); refetchUserInfo(); },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const disconnectUser = useMutation({
     mutationFn: () => api.post(`/api/housekeeping/rcon/disconnect/${userId}`, {}),
-    onSuccess: () => toast.success("User disconnected from server"),
+    onSuccess: () => { toast.success("User disconnected from server"); refetchAliveStatus(); },
     onError: (e: Error) => toast.error(e.message),
   });
 
