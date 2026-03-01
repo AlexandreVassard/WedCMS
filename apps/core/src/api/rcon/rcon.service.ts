@@ -101,6 +101,12 @@ export class RconService {
     return this.sendRcon('unmute_user', new Map([['userId', userId.toString()]]));
   }
 
+  async userInfo(userId: number): Promise<Record<string, string> | null> {
+    const res = await this.sendRcon('user_info', new Map([['userId', userId.toString()]]));
+    if (res.code !== 200) return null;
+    return Object.fromEntries(res.message.split(';').map((pair) => pair.split('=')));
+  }
+
   massEvent(roomId: number): Promise<RconResponse> {
     return this.sendRcon('mass_event', new Map([['roomId', roomId.toString()]]));
   }

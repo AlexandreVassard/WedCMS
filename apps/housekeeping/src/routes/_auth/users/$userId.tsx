@@ -1,5 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { api } from "../../../lib/api";
@@ -20,6 +20,8 @@ import {
   ShieldUser,
   Monitor,
   LogOut,
+  VolumeX,
+  Volume2,
 } from "lucide-react";
 
 export const Route = createFileRoute("/_auth/users/$userId")({
@@ -170,6 +172,45 @@ function UserEditPage() {
   const kickUser = useMutation({
     mutationFn: () => api.post(`/api/housekeeping/rcon/kick/${userId}`, {}),
     onSuccess: () => toast.success("User kicked from room"),
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+  const { data: userInfo, refetch: refetchUserInfo } = useQuery({
+    queryKey: ["user-info", userId],
+    queryFn: () =>
+      api.get<Record<string, string> | null>(
+        `/api/housekeeping/rcon/user-info/${userId}`,
+      ),
+    enabled: !!aliveStatus?.online,
+    refetchInterval: 5000,
+  });
+
+  const muteExpiry = userInfo?.muteTime ? parseInt(userInfo.muteTime, 10) : 0;
+  const isMuted = muteExpiry > Date.now() / 1000;
+
+  const [muteSecondsLeft, setMuteSecondsLeft] = useState(0);
+  useEffect(() => {
+    if (!isMuted) { setMuteSecondsLeft(0); return; }
+    const tick = () => setMuteSecondsLeft(Math.max(0, muteExpiry - Math.floor(Date.now() / 1000)));
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [isMuted, muteExpiry]);
+
+  const [muteDuration, setMuteDuration] = useState("10");
+
+  const muteUser = useMutation({
+    mutationFn: () =>
+      api.post(`/api/housekeeping/rcon/mute/${userId}`, {
+        minutes: parseInt(muteDuration, 10),
+      }),
+    onSuccess: () => { toast.success("User muted"); refetchUserInfo(); },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+  const unmuteUser = useMutation({
+    mutationFn: () => api.post(`/api/housekeeping/rcon/unmute/${userId}`, {}),
+    onSuccess: () => { toast.success("User unmuted"); refetchUserInfo(); },
     onError: (e: Error) => toast.error(e.message),
   });
 
@@ -409,7 +450,7 @@ function UserEditPage() {
                 Moderation
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-2">
               <Button
                 variant="outline"
                 size="sm"
@@ -420,6 +461,51 @@ function UserEditPage() {
                 <LogOut className="h-4 w-4" />
                 Kick from room
               </Button>
+              {isMuted ? (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-start gap-2"
+                  disabled={unmuteUser.isPending}
+                  onClick={() => unmuteUser.mutate()}
+                >
+                  <Volume2 className="h-4 w-4" />
+                  Unmute
+                  <span className="ml-auto text-xs tabular-nums text-gray-400">
+                    {muteSecondsLeft >= 3600
+                      ? `${Math.floor(muteSecondsLeft / 3600)}h ${Math.floor((muteSecondsLeft % 3600) / 60)}m`
+                      : muteSecondsLeft >= 60
+                        ? `${Math.floor(muteSecondsLeft / 60)}m ${muteSecondsLeft % 60}s`
+                        : `${muteSecondsLeft}s`}
+                  </span>
+                </Button>
+              ) : (
+                <div className="flex gap-2">
+                  <select
+                    value={muteDuration}
+                    onChange={(e) => setMuteDuration(e.target.value)}
+                    disabled={!aliveStatus?.online}
+                    className="flex h-8 flex-1 rounded-md border border-input bg-transparent px-2 py-1 text-xs shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:opacity-50"
+                  >
+                    <option value="1">1 min</option>
+                    <option value="5">5 min</option>
+                    <option value="10">10 min</option>
+                    <option value="30">30 min</option>
+                    <option value="60">1 hour</option>
+                    <option value="1440">1 day</option>
+                  </select>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="gap-1.5"
+                    disabled={!aliveStatus?.online || muteUser.isPending}
+                    onClick={() => muteUser.mutate()}
+                  >
+                    <VolumeX className="h-4 w-4" />
+                    Mute
+                  </Button>
+                </div>
+              )}
             </CardContent>
           </Card>
 

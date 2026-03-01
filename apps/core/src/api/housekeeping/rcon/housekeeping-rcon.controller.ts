@@ -1,4 +1,4 @@
-import { BadRequestException, Body, Controller, Param, Post, UseGuards } from '@nestjs/common';
+import { BadRequestException, Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
 import { HousekeepingSessionGuard } from '../housekeeping-session.guard';
 import { RconService } from '../../rcon/rcon.service';
 
@@ -49,6 +49,11 @@ export class HousekeepingRconController {
   @Post('disconnect/:userId')
   disconnect(@Param('userId') userId: string) {
     return this.rconService.disconnectUser(parseInt(userId, 10));
+  }
+
+  @Get('user-info/:userId')
+  userInfo(@Param('userId') userId: string) {
+    return this.rconService.userInfo(parseInt(userId, 10));
   }
 
   @Post('kick/:userId')
