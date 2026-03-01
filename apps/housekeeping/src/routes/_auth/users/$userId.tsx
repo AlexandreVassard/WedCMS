@@ -32,6 +32,7 @@ import {
   VolumeX,
   Volume2,
   Bell,
+  MapPin,
 } from "lucide-react";
 
 export const Route = createFileRoute("/_auth/users/$userId")({
@@ -83,6 +84,15 @@ interface UserBan {
 interface UserIpLog {
   ipAddress: string;
   createdAt: string;
+}
+
+interface Room {
+  id: number;
+  name: string;
+  ownerId: string;
+  ownerUsername?: string;
+  visitorsNow: number;
+  visitorsMax: number;
 }
 
 function formatTimestamp(ts: number) {
@@ -221,6 +231,9 @@ function UserEditPage() {
   const [alertOpen, setAlertOpen] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [banOpen, setBanOpen] = useState(false);
+  const [teleportOpen, setTeleportOpen] = useState(false);
+  const [teleportSearch, setTeleportSearch] = useState("");
+  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
 
   const sendAlert = useMutation({
     mutationFn: () =>
@@ -248,6 +261,31 @@ function UserEditPage() {
   const unmuteUser = useMutation({
     mutationFn: () => api.post(`/api/housekeeping/rcon/unmute/${userId}`, {}),
     onSuccess: () => { toast.success("User unmuted"); refetchUserInfo(); },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+  const { data: roomResults = [], isFetching: roomSearching } = useQuery({
+    queryKey: ["room-search", teleportSearch],
+    queryFn: () =>
+      api.get<Room[]>(
+        `/api/housekeeping/rooms?search=${encodeURIComponent(teleportSearch)}&take=8`,
+      ),
+    enabled: teleportSearch.length >= 1,
+  });
+
+  const teleportUser = useMutation({
+    mutationFn: (room: Room) =>
+      api.post(`/api/housekeeping/rcon/forward/${userId}`, {
+        roomId: room.id,
+        type: parseInt(room.ownerId, 10) === 0 ? 1 : 0,
+      }),
+    onSuccess: () => {
+      toast.success("User teleported");
+      setTeleportOpen(false);
+      setTeleportSearch("");
+      setSelectedRoom(null);
+      refetchUserInfo();
+    },
     onError: (e: Error) => toast.error(e.message),
   });
 
@@ -502,6 +540,16 @@ function UserEditPage() {
                 variant="outline"
                 size="sm"
                 className="w-full justify-start gap-2"
+                disabled={!aliveStatus?.online}
+                onClick={() => setTeleportOpen(true)}
+              >
+                <MapPin className="h-4 w-4" />
+                Teleport to room
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-start gap-2"
                 disabled={!aliveStatus?.online || disconnectUser.isPending}
                 onClick={() => disconnectUser.mutate()}
               >
@@ -691,6 +739,77 @@ function UserEditPage() {
               onClick={() => sendAlert.mutate()}
             >
               {sendAlert.isPending ? "Sending…" : "Send"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog
+        open={teleportOpen}
+        onOpenChange={(open) => {
+          setTeleportOpen(open);
+          if (!open) {
+            setTeleportSearch("");
+            setSelectedRoom(null);
+          }
+        }}
+      >
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Teleport {user.username}</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-3">
+            <div className="space-y-1.5">
+              <Label>Search room</Label>
+              <Input
+                value={teleportSearch}
+                onChange={(e) => {
+                  setTeleportSearch(e.target.value);
+                  setSelectedRoom(null);
+                }}
+                placeholder="Room name or ID…"
+                autoFocus
+              />
+            </div>
+            {teleportSearch.length >= 1 && (
+              <div className="rounded-md border overflow-hidden max-h-48 overflow-y-auto">
+                {roomSearching ? (
+                  <p className="p-2 text-xs text-gray-400">Searching…</p>
+                ) : roomResults.length === 0 ? (
+                  <p className="p-2 text-xs text-gray-400">No rooms found.</p>
+                ) : (
+                  roomResults.map((room) => (
+                    <button
+                      key={room.id}
+                      type="button"
+                      onClick={() => setSelectedRoom(room)}
+                      className={`w-full text-left px-3 py-2 text-sm hover:bg-gray-50 border-b last:border-0 flex items-center justify-between${selectedRoom?.id === room.id ? " bg-gray-50 font-medium" : ""}`}
+                    >
+                      <span>{room.name}</span>
+                      <span className="text-xs text-gray-400 ml-2 shrink-0">
+                        {parseInt(room.ownerId, 10) === 0
+                          ? "Public"
+                          : (room.ownerUsername ?? `#${room.ownerId}`)}{" "}
+                        · #{room.id}
+                      </span>
+                    </button>
+                  ))
+                )}
+              </div>
+            )}
+          </div>
+          <DialogFooter>
+            <Button
+              variant="outline"
+              onClick={() => setTeleportOpen(false)}
+            >
+              Cancel
+            </Button>
+            <Button
+              disabled={!selectedRoom || teleportUser.isPending}
+              onClick={() => selectedRoom && teleportUser.mutate(selectedRoom)}
+            >
+              {teleportUser.isPending ? "Teleporting…" : "Teleport"}
             </Button>
           </DialogFooter>
         </DialogContent>
