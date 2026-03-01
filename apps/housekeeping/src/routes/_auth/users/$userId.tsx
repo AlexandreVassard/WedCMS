@@ -13,6 +13,14 @@ import {
   CardTitle,
 } from "../../../components/ui/card";
 import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "../../../components/ui/dialog";
+import { Textarea } from "../../../components/ui/textarea";
+import {
   ArrowLeft,
   Trash2,
   ShieldBan,
@@ -23,6 +31,7 @@ import {
   Unplug,
   VolumeX,
   Volume2,
+  Bell,
 } from "lucide-react";
 
 export const Route = createFileRoute("/_auth/users/$userId")({
@@ -206,6 +215,23 @@ function UserEditPage() {
   }, [isMuted, muteExpiry]);
 
   const [muteDuration, setMuteDuration] = useState("10");
+
+  const [alertOpen, setAlertOpen] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+
+  const sendAlert = useMutation({
+    mutationFn: () =>
+      api.post(`/api/housekeeping/rcon/user-alert`, {
+        userId: parseInt(userId, 10),
+        message: alertMessage,
+      }),
+    onSuccess: () => {
+      toast.success("Alert sent");
+      setAlertOpen(false);
+      setAlertMessage("");
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
 
   const muteUser = useMutation({
     mutationFn: () =>
@@ -479,6 +505,16 @@ function UserEditPage() {
                 <Unplug className="h-4 w-4" />
                 Disconnect from server
               </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-start gap-2"
+                disabled={!aliveStatus?.online}
+                onClick={() => setAlertOpen(true)}
+              >
+                <Bell className="h-4 w-4" />
+                Send alert
+              </Button>
               {isMuted ? (
                 <Button
                   variant="outline"
@@ -637,6 +673,34 @@ function UserEditPage() {
 
         </div>
       </div>
+
+      <Dialog open={alertOpen} onOpenChange={setAlertOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Send alert to {user.username}</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-1.5">
+            <Label>Message</Label>
+            <Textarea
+              value={alertMessage}
+              onChange={(e) => setAlertMessage(e.target.value)}
+              placeholder="Enter alert message…"
+              rows={4}
+            />
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setAlertOpen(false)}>
+              Cancel
+            </Button>
+            <Button
+              disabled={!alertMessage.trim() || sendAlert.isPending}
+              onClick={() => sendAlert.mutate()}
+            >
+              {sendAlert.isPending ? "Sending…" : "Send"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
