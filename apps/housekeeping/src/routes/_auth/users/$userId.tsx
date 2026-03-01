@@ -33,6 +33,7 @@ import {
   Volume2,
   Bell,
   MapPin,
+  Navigation,
   RefreshCw,
   User,
   Coins,
@@ -109,6 +110,7 @@ function formatTimestamp(ts: number) {
 
 function UserEditPage() {
   const { userId } = Route.useParams();
+  const { user: adminUser } = Route.useRouteContext();
   const navigate = useNavigate();
   const qc = useQueryClient();
 
@@ -122,6 +124,15 @@ function UserEditPage() {
     queryFn: () =>
       api.get<{ online: boolean }>(
         `/api/housekeeping/users/${userId}/is-alive`,
+      ),
+    refetchInterval: 5000,
+  });
+
+  const { data: adminAliveStatus } = useQuery({
+    queryKey: ["user-is-alive", String(adminUser.id)],
+    queryFn: () =>
+      api.get<{ online: boolean }>(
+        `/api/housekeeping/users/${adminUser.id}/is-alive`,
       ),
     refetchInterval: 5000,
   });
@@ -312,6 +323,16 @@ function UserEditPage() {
       setSelectedRoom(null);
       refetchUserInfo();
     },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+  const teleportToPlayer = useMutation({
+    mutationFn: () =>
+      api.post(`/api/housekeeping/rcon/forward/${adminUser.id}`, {
+        roomId: currentRoomId,
+        type: currentRoom && parseInt(currentRoom.ownerId, 10) === 0 ? 1 : 0,
+      }),
+    onSuccess: () => toast.success("Teleported to player"),
     onError: (e: Error) => toast.error(e.message),
   });
 
@@ -647,6 +668,16 @@ function UserEditPage() {
               >
                 <MapPin className="h-4 w-4" />
                 Teleport to room
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-start gap-2"
+                disabled={!adminAliveStatus?.online || !isInRoom || teleportToPlayer.isPending}
+                onClick={() => teleportToPlayer.mutate()}
+              >
+                <Navigation className="h-4 w-4" />
+                Teleport to player
               </Button>
               <Button
                 variant="outline"
