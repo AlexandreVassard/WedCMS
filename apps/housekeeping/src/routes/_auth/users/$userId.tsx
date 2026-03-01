@@ -194,7 +194,7 @@ function UserEditPage() {
     mutationFn: () => api.delete(`/api/housekeeping/users/${userId}/ban`),
     onSuccess: () => {
       toast.success("User unbanned");
-      qc.invalidateQueries({ queryKey: ["user-ban", userId] });
+      qc.setQueryData(["user-ban", userId], null);
     },
     onError: (e: Error) => toast.error(e.message),
   });
