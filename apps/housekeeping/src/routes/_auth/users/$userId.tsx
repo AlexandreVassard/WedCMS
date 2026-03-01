@@ -192,7 +192,7 @@ function UserEditPage() {
     refetchInterval: 5000,
   });
 
-  const isInRoom = userInfo?.roomId !== undefined && parseInt(userInfo.roomId, 10) !== -1;
+  const isInRoom = !!aliveStatus?.online && userInfo?.roomId !== undefined && parseInt(userInfo.roomId, 10) !== -1;
   const muteExpiry = userInfo?.muteTime ? parseInt(userInfo.muteTime, 10) : 0;
   const isMuted = muteExpiry > Date.now() / 1000;
 
