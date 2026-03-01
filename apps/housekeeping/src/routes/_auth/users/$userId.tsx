@@ -185,6 +185,7 @@ function UserEditPage() {
     refetchInterval: 5000,
   });
 
+  const isInRoom = userInfo?.roomId !== undefined && parseInt(userInfo.roomId, 10) !== -1;
   const muteExpiry = userInfo?.muteTime ? parseInt(userInfo.muteTime, 10) : 0;
   const isMuted = muteExpiry > Date.now() / 1000;
 
@@ -455,7 +456,7 @@ function UserEditPage() {
                 variant="outline"
                 size="sm"
                 className="w-full justify-start gap-2"
-                disabled={!aliveStatus?.online || kickUser.isPending}
+                disabled={!isInRoom || kickUser.isPending}
                 onClick={() => kickUser.mutate()}
               >
                 <LogOut className="h-4 w-4" />
