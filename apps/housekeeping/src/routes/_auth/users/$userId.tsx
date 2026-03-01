@@ -33,6 +33,13 @@ import {
   Volume2,
   Bell,
   MapPin,
+  RefreshCw,
+  User,
+  Coins,
+  Crown,
+  Package,
+  MessageSquare,
+  Award,
 } from "lucide-react";
 
 export const Route = createFileRoute("/_auth/users/$userId")({
@@ -272,6 +279,13 @@ function UserEditPage() {
         `/api/housekeeping/rooms?search=${encodeURIComponent(teleportSearch)}&take=8`,
       ),
     enabled: teleportSearch.length >= 1,
+  });
+
+  const refreshUser = useMutation({
+    mutationFn: (type: "looks" | "credits" | "club" | "hand" | "motto" | "badge") =>
+      api.post(`/api/housekeeping/rcon/refresh/${userId}`, { type }),
+    onSuccess: (_, type) => toast.success(`Refreshed ${type}`),
+    onError: (e: Error) => toast.error(e.message),
   });
 
   const teleportUser = useMutation({
@@ -620,6 +634,40 @@ function UserEditPage() {
                   Ban user
                 </Button>
               )}
+            </CardContent>
+          </Card>
+
+          {/* Refresh In-Game State */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <RefreshCw className="h-4 w-4" />
+                Refresh In-Game State
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              {(
+                [
+                  ["looks", "Looks", User],
+                  ["credits", "Credits", Coins],
+                  ["club", "Club", Crown],
+                  ["hand", "Inventory", Package],
+                  ["motto", "Motto", MessageSquare],
+                  ["badge", "Badge", Award],
+                ] as const
+              ).map(([type, label, Icon]) => (
+                <Button
+                  key={type}
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-start gap-2"
+                  disabled={!aliveStatus?.online || refreshUser.isPending}
+                  onClick={() => refreshUser.mutate(type)}
+                >
+                  <Icon className="h-4 w-4" />
+                  {label}
+                </Button>
+              ))}
             </CardContent>
           </Card>
 
