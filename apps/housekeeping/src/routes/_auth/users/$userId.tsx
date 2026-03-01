@@ -166,6 +166,8 @@ function UserEditPage() {
       toast.success("User banned");
       qc.invalidateQueries({ queryKey: ["user-ban", userId] });
       setBanMessage("");
+      setBanDuration("0");
+      setBanOpen(false);
     },
     onError: (e: Error) => toast.error(e.message),
   });
@@ -218,6 +220,7 @@ function UserEditPage() {
 
   const [alertOpen, setAlertOpen] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
+  const [banOpen, setBanOpen] = useState(false);
 
   const sendAlert = useMutation({
     mutationFn: () =>
@@ -560,6 +563,29 @@ function UserEditPage() {
                   </Button>
                 </div>
               )}
+              {ban ? (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-start gap-2"
+                  disabled={unbanUser.isPending || banLoading}
+                  onClick={() => unbanUser.mutate()}
+                >
+                  <ShieldCheck className="h-4 w-4" />
+                  Unban
+                </Button>
+              ) : (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-start gap-2 text-destructive hover:text-destructive"
+                  disabled={banLoading}
+                  onClick={() => setBanOpen(true)}
+                >
+                  <ShieldBan className="h-4 w-4" />
+                  Ban user
+                </Button>
+              )}
             </CardContent>
           </Card>
 
@@ -593,86 +619,54 @@ function UserEditPage() {
             </CardContent>
           </Card>
 
-          {/* Ban */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <ShieldBan className="h-4 w-4" />
-                Ban
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {banLoading ? (
-                <p className="text-sm text-gray-400">Loading…</p>
-              ) : ban ? (
-                <div className="space-y-3">
-                  <div className="rounded-md bg-red-50 border border-red-200 p-3 text-sm space-y-1">
-                    <p className="font-medium text-red-700 flex items-center gap-1">
-                      <ShieldBan className="h-3.5 w-3.5" />
-                      User is banned
-                    </p>
-                    {ban.message && (
-                      <p className="text-red-600">Reason: {ban.message}</p>
-                    )}
-                    <p className="text-red-600">
-                      Until:{" "}
-                      {ban.bannedUntil === 0
-                        ? "Permanent"
-                        : new Date(ban.bannedUntil * 1000).toLocaleString()}
-                    </p>
-                  </div>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => unbanUser.mutate()}
-                    disabled={unbanUser.isPending}
-                    className="flex items-center gap-1"
-                  >
-                    <ShieldCheck className="h-4 w-4" />
-                    Unban
-                  </Button>
-                </div>
-              ) : (
-                <div className="space-y-3">
-                  <div className="space-y-1.5">
-                    <Label>Reason</Label>
-                    <Input
-                      value={banMessage}
-                      onChange={(e) => setBanMessage(e.target.value)}
-                      placeholder="Ban reason…"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <Label>Duration</Label>
-                    <select
-                      value={banDuration}
-                      onChange={(e) => setBanDuration(e.target.value)}
-                      className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                    >
-                      <option value="0">Permanent</option>
-                      <option value="3600">1 hour</option>
-                      <option value="86400">1 day</option>
-                      <option value="604800">1 week</option>
-                      <option value="2592000">30 days</option>
-                    </select>
-                  </div>
-                  <Button
-                    variant="destructive"
-                    size="sm"
-                    onClick={() => banUser.mutate()}
-                    disabled={banUser.isPending}
-                    className="flex items-center gap-1"
-                  >
-                    <ShieldBan className="h-4 w-4" />
-                    Ban User
-                  </Button>
-                </div>
-              )}
-            </CardContent>
-          </Card>
 
         </div>
       </div>
+
+      <Dialog open={banOpen} onOpenChange={setBanOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Ban {user.username}</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-3">
+            <div className="space-y-1.5">
+              <Label>Reason</Label>
+              <Input
+                value={banMessage}
+                onChange={(e) => setBanMessage(e.target.value)}
+                placeholder="Ban reason…"
+              />
+            </div>
+            <div className="space-y-1.5">
+              <Label>Duration</Label>
+              <select
+                value={banDuration}
+                onChange={(e) => setBanDuration(e.target.value)}
+                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              >
+                <option value="0">Permanent</option>
+                <option value="3600">1 hour</option>
+                <option value="86400">1 day</option>
+                <option value="604800">1 week</option>
+                <option value="2592000">30 days</option>
+              </select>
+            </div>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setBanOpen(false)}>
+              Cancel
+            </Button>
+            <Button
+              variant="destructive"
+              disabled={banUser.isPending}
+              onClick={() => banUser.mutate()}
+            >
+              <ShieldBan className="h-4 w-4" />
+              {banUser.isPending ? "Banning…" : "Ban user"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       <Dialog open={alertOpen} onOpenChange={setAlertOpen}>
         <DialogContent>
