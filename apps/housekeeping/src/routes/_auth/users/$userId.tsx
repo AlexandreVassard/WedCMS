@@ -42,6 +42,9 @@ import {
   MessageSquare,
   Award,
   Activity,
+  Pencil,
+  Shirt,
+  Info,
 } from "lucide-react";
 
 export const Route = createFileRoute("/_auth/users/$userId")({
@@ -212,13 +215,20 @@ function UserEditPage() {
 
   const kickUser = useMutation({
     mutationFn: () => api.post(`/api/housekeeping/rcon/kick/${userId}`, {}),
-    onSuccess: () => { toast.success("User kicked from room"); refetchUserInfo(); },
+    onSuccess: () => {
+      toast.success("User kicked from room");
+      refetchUserInfo();
+    },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const disconnectUser = useMutation({
-    mutationFn: () => api.post(`/api/housekeeping/rcon/disconnect/${userId}`, {}),
-    onSuccess: () => { toast.success("User disconnected from server"); refetchAliveStatus(); },
+    mutationFn: () =>
+      api.post(`/api/housekeeping/rcon/disconnect/${userId}`, {}),
+    onSuccess: () => {
+      toast.success("User disconnected from server");
+      refetchAliveStatus();
+    },
     onError: (e: Error) => toast.error(e.message),
   });
 
@@ -232,9 +242,10 @@ function UserEditPage() {
     refetchInterval: 5000,
   });
 
-  const currentRoomId = userInfo?.roomId !== undefined && parseInt(userInfo.roomId, 10) !== -1
-    ? parseInt(userInfo.roomId, 10)
-    : null;
+  const currentRoomId =
+    userInfo?.roomId !== undefined && parseInt(userInfo.roomId, 10) !== -1
+      ? parseInt(userInfo.roomId, 10)
+      : null;
 
   const { data: currentRoom } = useQuery({
     queryKey: ["room", currentRoomId],
@@ -248,8 +259,14 @@ function UserEditPage() {
 
   const [muteSecondsLeft, setMuteSecondsLeft] = useState(0);
   useEffect(() => {
-    if (!isMuted) { setMuteSecondsLeft(0); return; }
-    const tick = () => setMuteSecondsLeft(Math.max(0, muteExpiry - Math.floor(Date.now() / 1000)));
+    if (!isMuted) {
+      setMuteSecondsLeft(0);
+      return;
+    }
+    const tick = () =>
+      setMuteSecondsLeft(
+        Math.max(0, muteExpiry - Math.floor(Date.now() / 1000)),
+      );
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
@@ -284,13 +301,20 @@ function UserEditPage() {
       api.post(`/api/housekeeping/rcon/mute/${userId}`, {
         minutes: parseInt(muteDuration, 10),
       }),
-    onSuccess: () => { toast.success("User muted"); refetchUserInfo(); setMuteOpen(false); },
+    onSuccess: () => {
+      toast.success("User muted");
+      refetchUserInfo();
+      setMuteOpen(false);
+    },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const unmuteUser = useMutation({
     mutationFn: () => api.post(`/api/housekeeping/rcon/unmute/${userId}`, {}),
-    onSuccess: () => { toast.success("User unmuted"); refetchUserInfo(); },
+    onSuccess: () => {
+      toast.success("User unmuted");
+      refetchUserInfo();
+    },
     onError: (e: Error) => toast.error(e.message),
   });
 
@@ -304,8 +328,9 @@ function UserEditPage() {
   });
 
   const refreshUser = useMutation({
-    mutationFn: (type: "looks" | "credits" | "club" | "hand" | "motto" | "badge") =>
-      api.post(`/api/housekeeping/rcon/refresh/${userId}`, { type }),
+    mutationFn: (
+      type: "looks" | "credits" | "club" | "hand" | "motto" | "badge",
+    ) => api.post(`/api/housekeeping/rcon/refresh/${userId}`, { type }),
     onSuccess: (_, type) => toast.success(`Refreshed ${type}`),
     onError: (e: Error) => toast.error(e.message),
   });
@@ -413,7 +438,10 @@ function UserEditPage() {
         <div className="flex flex-col gap-6">
           <Card>
             <CardHeader>
-              <CardTitle>Edit User</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <Pencil className="h-4 w-4" />
+                Edit User
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -507,7 +535,9 @@ function UserEditPage() {
             </CardHeader>
             <CardContent className="text-sm">
               {!aliveStatus?.online ? (
-                <p className="text-xs text-gray-400">User is offline — live state unavailable.</p>
+                <p className="text-xs text-gray-400">
+                  User is offline — live state unavailable.
+                </p>
               ) : !userInfo ? (
                 <p className="text-xs text-gray-400">Loading…</p>
               ) : (
@@ -532,22 +562,18 @@ function UserEditPage() {
                         "Muted until",
                         parseInt(userInfo.muteTime, 10) === 0
                           ? "Not muted"
-                          : new Date(parseInt(userInfo.muteTime, 10) * 1000).toLocaleString(),
+                          : new Date(
+                              parseInt(userInfo.muteTime, 10) * 1000,
+                            ).toLocaleString(),
                       ],
-                      [
-                        "Statuses",
-                        userInfo.statuses || "None",
-                      ],
+                      ["Statuses", userInfo.statuses || "None"],
                       [
                         "Trade partner",
                         parseInt(userInfo.tradePartnerId, 10) === -1
                           ? "Not trading"
                           : `User #${userInfo.tradePartnerId}`,
                       ],
-                      [
-                        "Current game",
-                        userInfo.currentGameId || "None",
-                      ],
+                      ["Current game", userInfo.currentGameId || "None"],
                       [
                         "Observing game",
                         parseInt(userInfo.observingGameId, 10) === -1
@@ -557,10 +583,7 @@ function UserEditPage() {
                       ["Walking", userInfo.isWalking === "true" ? "Yes" : "No"],
                       ["Diving", userInfo.isDiving === "true" ? "Yes" : "No"],
                       ["IP address", userInfo.ip || "—"],
-                      [
-                        "Ignored list",
-                        userInfo.ignoredList || "None",
-                      ],
+                      ["Ignored list", userInfo.ignoredList || "None"],
                     ] as [string, string][]
                   ).map(([label, val]) => (
                     <div key={label}>
@@ -576,7 +599,10 @@ function UserEditPage() {
           {/* Read-only info */}
           <Card>
             <CardHeader>
-              <CardTitle>Info</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <Info className="h-4 w-4" />
+                Info
+              </CardTitle>
             </CardHeader>
             <CardContent className="grid grid-cols-3 gap-x-6 gap-y-3 text-sm">
               {(
@@ -622,9 +648,12 @@ function UserEditPage() {
           {/* Figure */}
           <Card>
             <CardHeader>
-              <CardTitle>Figure</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <Shirt className="h-4 w-4" />
+                Figure
+              </CardTitle>
             </CardHeader>
-            <CardContent className="flex items-center justify-center gap-4 p-4">
+            <CardContent className="flex items-center justify-center gap-4">
               <img
                 src={`/habbo-imaging/avatarimage?figure=${user.figure}`}
                 alt="Habbo avatar"
@@ -673,7 +702,11 @@ function UserEditPage() {
                 variant="outline"
                 size="sm"
                 className="w-full justify-start gap-2"
-                disabled={!adminAliveStatus?.online || !isInRoom || teleportToPlayer.isPending}
+                disabled={
+                  !adminAliveStatus?.online ||
+                  !isInRoom ||
+                  teleportToPlayer.isPending
+                }
                 onClick={() => teleportToPlayer.mutate()}
               >
                 <Navigation className="h-4 w-4" />
@@ -806,7 +839,9 @@ function UserEditPage() {
                     <tbody>
                       {ipLogs.map((log, i) => (
                         <tr key={i} className="border-b last:border-0">
-                          <td className="px-3 py-1.5 font-mono">{log.ipAddress}</td>
+                          <td className="px-3 py-1.5 font-mono">
+                            {log.ipAddress}
+                          </td>
                           <td className="px-3 py-1.5 text-gray-500 text-right">
                             {new Date(log.createdAt).toLocaleString()}
                           </td>
@@ -818,8 +853,6 @@ function UserEditPage() {
               )}
             </CardContent>
           </Card>
-
-
         </div>
       </div>
 
@@ -986,10 +1019,7 @@ function UserEditPage() {
             )}
           </div>
           <DialogFooter>
-            <Button
-              variant="outline"
-              onClick={() => setTeleportOpen(false)}
-            >
+            <Button variant="outline" onClick={() => setTeleportOpen(false)}>
               Cancel
             </Button>
             <Button
